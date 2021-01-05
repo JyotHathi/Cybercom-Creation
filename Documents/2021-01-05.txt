@@ -4,7 +4,7 @@ GIT
 
 --> As I already Worked with Git but using Github desktop so first go through the document and check the flow that flow is different or same.
 --> As it is almost same that first have to clone then before starting work fetching updates if have then pull accordingly after this process only start the work and as when we done with the task commit the data and push it into the server/hub.
---> Main thing which is differing that using CLI we need to remember commands so after go through the document try to remember every command with meaning.
+--> Main thing which is differing that using CLI we need to remember commands so after go through the document tried to remember every command with meaning.
 
 --> Basically Today first go through with every command with practice in GIT-BASH,Command Prompt and Linux Terminal and in that I observe that while I cloning with cmd and GIT-BASH git golder is created as hidden folder by default where as when we create using Linux Terminal git is in visible mode by default.
 --> Today I go through with Commands 
@@ -13,10 +13,10 @@ GIT
 	* To Cloning Repository           
 		1. With Nick-Name     			     (git clone -o <nickname> git@github.com:<username>/<reponame>.git)
 		2. Without Nick Name (Default Name :origin)  (git clone git@github.com:<username>/<reponame>.git)
-	* To Get Nick Name of Repository (get remote -v)
+	* To Get Nick Name of Repository (git remote -v)
 	* To Fetch Repoitory (git fetch nickname)
 	* To Create Branch (git checkout -b <new_branch_name> nickname/<current_branch_name>)
-	* To Check Status (get status <nickname>)
+	* To Check Status (git status <nickname>)
 	* To add file (git add <filename>)
 	* To Commit (git commit -m "meesage/Description"
 	* To push (git push <nickname> <branch_name>)
