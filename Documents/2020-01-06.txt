@@ -42,4 +42,7 @@
 	* To Get Information of Rapo				(git remote show <repo_name>)
 
 --> Store The Command in config with alias 			(git config --global alias.<name> 'command excluding git')
-								(git name)				  				  
+								(git name)
+
+--> Go through few videoes to get more idea about git and github like what is repo, branch, difference between fetch and pull command.
+--> Also Why we use the git & github for version control and what we can do like we can revert/rollback to any commited point.     				  				  
