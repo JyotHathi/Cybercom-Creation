@@ -2,7 +2,7 @@
 			GIT
 ------------------------------------------------------
 
---> Command To Push all files in single add			(git add .)
+--> Command To Push all files in stage				(git add .)
 --> Few Commands Related Log of Git:
 	
 	* To See Log Of Current Branch				(git log)
@@ -11,7 +11,7 @@
 	* To See Only Few Numbers of Latest Logs		(git log -Number)
 	* To Display log in oneline of each activity		(git log --decorate --oneline or git log --oneline) 
 	* To Display log in form of graph			(git log --decorate --graph   or git log --graph)
-	* To Display log in some format (With Colors and Para)	(git log --preety=format:'........')
+	* To Display log in some format (With Colors and Para)	(git log --pretty=format:'........')
 		Note:
 			1. %an 			- Author Name
 			2. %cr 			- Commited Time From Current Time
