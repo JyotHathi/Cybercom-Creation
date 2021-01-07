@@ -25,8 +25,8 @@ Note (Source): https://www.youtube.com/watch?v=nheGzyk7--8&t=405s
                                                              (git revert <hash_of_commit> for commit, git revert -m 1 <hash_of_commit>)
                                                              (git reset <hash_code> , git reset --hard <hash_of_Commit>)   
 
---> As Get Few Conflicts while Undoing of changes, so resolve that.
---> Also Try to create few conflicts and resolve those, so basically also done practice of Resolving conflicts.
+--> As Got Few Conflicts while Undoing of commits, so resolved those.
+--> Also Try to create few conflicts and resolve those, so basically also done practice of Resolving of conflicts.
 --> But Still It take time too solve complex conflicts so practicing on that part as conflict resolving is main part so.
 
 
