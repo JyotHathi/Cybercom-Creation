@@ -1,0 +1,33 @@
+----------------------------------------------------------------------------------------
+                                GIT
+----------------------------------------------------------------------------------------
+
+--> Went Through with Git Video Tutorials to get clear idea about and working of git, which includes 
+
+        * Basic Terminologies of git and github like repo, branch, git and github.
+        * How to Create repo and clone repos (Local to GitHub and GitHub To Local).
+        * How To Perform Commit, Push and Stage The File.
+        * What are the Various Ways to Undo The Commits Like Checkout, Revert, Reset and also understood the all three ways, also get proper idea that which is most safe and also got idea when to use which.
+        * What is Branch, How to create branch, what is use of branch, how to merge the branch and switch the branch.
+        * What is forking and pull request and why we do those.
+        * How to contribute in public repo if we want using forking and how to accept changes using pull request.
+
+Note (Source): https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
+
+--> What is .gitignore and what is Use of that.
+
+        * .gitignore file is use to ignore list of files or folders from version control.
+        * Just When We Update .gitignore file then only have to commit and push the changes, other then that we make any changes in list of files or folders that is ignore by git for version control.
+
+Note (Source): https://www.youtube.com/watch?v=nheGzyk7--8&t=405s
+
+--> Also Done Practice of various techniques to Undo Changes (git checkout <hashcode_of_Commit>)
+                                                             (git revert <hash_of_commit> for commit, git revert -m 1 <hash_of_commit>)
+                                                             (git reset <hash_code> , git reset --hard <hash_of_Commit>)   
+
+--> As Get Few Conflicts while Undoing of changes, so resolve that.
+--> Also Try to create few conflicts and resolve those, so basically also done practice of Resolving conflicts.
+--> But Still It take time too solve complex conflicts so practicing on that part as conflict resolving is main part so.
+
+
+         
