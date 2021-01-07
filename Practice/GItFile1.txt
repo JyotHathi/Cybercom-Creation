@@ -1,4 +1,2 @@
-<<<<<<< HEAD
 Hello My Name IS Jyot Hathi
-=======
->>>>>>> parent of 2448d78 (GitFile1 Updated)
+I am working at cybercom Creation
