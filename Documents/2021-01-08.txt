@@ -1,0 +1,33 @@
+-------------------------------------------------------------------
+                        Javascript
+------------------------------------------------------------------
+
+--> Went Through Videoes.
+--> Learnt basic points of JS like DataTYpes in JS  
+    * Numeric
+    * String
+    * Null
+    * Undefined
+    * Bollean
+
+--> But Generally Declaring var like    
+    var <variable_name> =value;
+    Here It Automaticlally Identify the Data Type.
+
+--> Also Type Coersion 
+ menas
+  var var1 ="String";
+  var var2=5;
+  console.log(var1 + ' '+var2);
+  means can print Many DataTypes values.
+
+--> Also can we can strore any type of value after decalring means type conversion
+    var var1="String";
+        var1=<Numericvalue>;
+
+--> Opeartor Precedence and typeof Opeartor 
+    * While Evalution of expression Precedence table is always there as its standard.
+    * typeof Opeartor is help to identify datatype of variable_name
+    * Ex: typeof("Hello") => string;
+
+--> Also as I have Basic knowledge of function and conditional statements like loops and if else statement so completed all the practice problem too.
