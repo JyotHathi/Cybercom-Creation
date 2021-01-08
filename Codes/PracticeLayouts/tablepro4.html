@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table_Practice 4</title>
+    <style>
+        .centercontent
+        {
+            text-align: center;
+        }
+        tr,th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" style="width: 100%;">
+        <thead>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="centercontent">cell 1 text</td>
+                <td rowspan="2" class="centercontent">cell 2 text A</td>
+                <td rowspan="2" class="centercontent">cell 3 text</td>
+            </tr>
+            <tr>
+                <td class="centercontent">cell 2 text B</td>
+            </tr>
+            <tr>
+                <td class="centercontent">a long piece of cell on one line without a break</td>
+                <td class="centercontent"><i>cell text</i></td>
+                <td class="centercontent">cell text aligned right</td>
+            </tr>
+            <tr>
+                <th class="centercontent">cell text</th>
+                <th></th>
+                <td style="background-image:url(texture.jpg);"><b>graphic background</b></th>
+            </tr>
+            <tr>
+                <th colspan="3">Mid-table Heading</th>
+            </tr>
+            <tr>
+                <td>Things to do today</td>
+                 <th rowspan="5" class="centercontent">W<br />E<br />E<br />K <br /><br /><br />26 </td>
+                <td>Monday</td>
+            </tr>
+            <tr>
+                <td style="background-color: red;"><b>Things to do on Tuesday</b></td>
+                <td style="background-color: red;"><b>Tuesday</b></td>
+            </tr>
+            <tr>
+                <td>Things to do today</td>
+                <td>Wednesday</td>
+            </tr>
+            <tr>
+                <td style="background-color: green;text-align: center;color: white;">Things to do today</td>
+                <td style="background-color: green;font-weight:900;color: white;">Thursady</td>
+            </tr>
+            <tr>
+                <td>Stuff tidy <b style="font-weight: bolder;"><i>before the weekend!!!!</i></b></td>
+                <td>Friday</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
