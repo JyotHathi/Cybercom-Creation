@@ -1,0 +1,15 @@
+-----------------------------------------------------------------------
+                        HTML
+-----------------------------------------------------------------------
+
+--> Have Basic Knowledge of HTMl like
+    DIV
+    Table
+    List
+    Input Controls
+
+and also have badic idea of css like margin, padding, colors etc
+
+--> Today Revise those all consepts and solved all given problems and practice problem.
+--> Got Good Idea of Table and RowSpan and Colspan from practice problem given by Preeti Mam.
+--> Also Form Practice problem got idea related to final year project, I planned to create Photo gallary and for that got solution of that.
