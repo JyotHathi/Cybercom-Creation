@@ -1,0 +1,45 @@
+/*-------------------------- For Div Which Contains Container of Image and Caption  -------------------------------------*/
+.container
+{ 
+    display: inline-block;
+    border: solid 3px rgb(185, 183, 183);
+    padding:3px;
+    margin-left:15px;
+    margin-top:50px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+/*--------------------------Inner Container Which Contains Image And Caption */
+.inercontainer
+{
+    width:215px;
+    height:345px;
+    background-color: rgb(240, 231, 231);
+}
+/*---------------------------For Image-------------------------------------------------------------------*/
+.imagediv
+{
+    width:215px;
+    height:315px;
+    border-radius: 2px;
+}
+
+
+/*--------------------------------For Caption-----------------------------------------------------------*/
+.imagecaption
+{
+    font-size: medium;
+    font-family:'Times New Roman';
+    text-align: center;
+    color:grey;
+    width:215px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+/*------------------------------------------Body----------------------------------------------*/
+body{
+
+    text-align: center;
+}
