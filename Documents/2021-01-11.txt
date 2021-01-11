@@ -1,0 +1,28 @@
+----------------------------------------------------------
+Javascript
+----------------------------------------------------------
+
+* Got the Idea of Array in Function and different operation of Array.
+ - Declaration and use of array.
+ - Insertion and deletion of elements from array.
+ - How to pass array in function as argument
+
+* Function, Function Expression and Function Statement
+ - Also Practice that how to declare function and use the Statement
+ - How To Declare function Expression and Statement and use that
+ - Difference between Function and Function Expression
+
+* Conditional Statements (if, if.else, if.. else if..else)
+ - How To Use Conditional statements for various checking of Conditions
+ - How to use that to know variable is defined or not => as value is null or undefined or 0 or "" or false then these are false values and means not defined with benificial values.
+ - What is Difference between == and ===
+ - Logical Operators in statements
+
+* Switch statements for condion checking 
+ - Structure of switch statement
+ - How It is Helful when many have options and based on that need to take decision.
+
+* Mutation of variable means can assign any type of value to one variable after assignment of data
+
+
+

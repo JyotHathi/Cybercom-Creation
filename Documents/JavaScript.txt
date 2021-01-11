@@ -1,0 +1,82 @@
+_________________________________________________
+To Display Content
+_________________________________________________
+
+* consol.log() : To Display Content in COnsole of Browser  => console.log("Message" + varname);
+* alert ()     : To Display alert  => alert("Message" + varname);
+* prompt()     : To Display prompt with => prompt("Message"+varname); entered value is return to store var varname2 = prompt("Message"+varname);
+* Others are we can paur data in html and can show modal popup but these are using html and css only
+
+_________________________________________________
+DataTypes
+_________________________________________________
+
+* Numeric
+* String
+* Boolean
+* Undefined
+* Null
+
+* But Not Need to care as in javascript we declare variable by   var varname = value and based on value it automatically decide the DataTypes.
+* If Just variable is declared then type is undefined and value is null.
+
+
+_________________________________________________
+Array
+_________________________________________________
+
+* var array_name = [para1,para2, ......]   or var array_name =  new Array(para1,para2, ......);
+* Can access by index like array_name[0] / array_name[n] ...........
+* push() and unshift() methods are there to add the elements 
+    * push() : To Add the element in last position
+    * unshift() : To Add the in first position and other element are shift not deleted.
+
+* pop() and shift() methods to deleted element/
+    * pop() : To Remove element from last index.
+    * shift(): To Remove element from first and other element are shift by one.
+
+* Can Add element at any index as can access index and if in between elements are not present then it show empty values.
+
+
+_________________________________________________
+Function
+_________________________________________________
+
+* Function have name and it may return it may not
+
+    function <fun_name> (may paras)
+    {
+        defination
+        //if thenreturning then return statement
+    }
+
+* Function Expression and statement
+
+    var <para_name> = function (may paras)
+    {
+        defination
+        //if thenreturning then return statement, generally return because otherwise no mean and variable is when access then value is undefined
+    }
+    
+_________________________________________________
+Type Coercion
+_________________________________________________
+
+* Using Console Can Print Multiple elements of DataTypes.
+* because of Type Coercion for compare strily using '===' not "==" 
+
+
+_________________________________________________
+Type Mutation
+_________________________________________________
+
+* After declare and define value can assign other type of value
+ex:
+   var varname=<Numeric_value>;
+   varname=<string_value>
+   varname=<bool_value>
+
+
+
+
+
