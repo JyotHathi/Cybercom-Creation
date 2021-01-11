@@ -1,0 +1,137 @@
+________________________________________
+DIV
+________________________________________
+
+* <div>.....</div>
+* Block Level Element.
+* Have Attributes Like Height, Width, Border, Margin, Padding, etc.
+* To Create Block of elements or can use as container.
+
+________________________________________
+List
+________________________________________
+
+* Mainly Three Types of List :
+    1. Ordered 
+    2. Un-Ordered
+    3. Discription
+* We can nest the list too, can nest any type of list within any type list
+
+1. Ordered List:
+-----------------
+* To Show List Like
+    1 content
+    2 content
+    .
+    .
+* <ol> <li> .. </li> ...... </ol> to create ordered list.
+* To Prepared List Based on Numbered / Alphabets.
+* type is attribute ex. type=1 or type=a or type=A or type=I or type="i"
+* start is property to define starting point ex. start=c or start=50 etc    
+
+2. Un-Ordered List:
+-----------------
+* To Show List Like
+    . content
+    . content
+    .
+    .
+* <ul> <li> .. </li> ...... </ul> to create ordered list.
+* To Prepared List Based on bullets
+* type is attribute ex. list-style-type=disc or square or circle etc.
+
+3. Discription List:
+-----------------
+* To Show List Like
+    content
+        defination.....
+    
+    content
+        defination
+    .
+    .
+* <dl> <dt> <dd> ..</dd> </dt> ...... </dl> to create ordered list.
+* To Prepared list of definations or discription
+* type is attribute ex. list-style-type=disc or square or circle etc.
+
+________________________________________
+Table
+________________________________________
+
+* To Create a Table.
+* Tags:
+ ------
+    * <table> .. </table> : To Create Table 
+    * <tr> .. </tr> : To Create Row
+    * <td> .. </td> : To Create Column
+    * <th> .. </th> : To Create Heading Column
+    * <thead> .. </thead> : Head Part Of Table 
+    * <tbody> .. </tbody> : body part of table. 
+    * <tfoot> ..</tfoot> : FOoter OF Table
+    * <caption> .. </caption> : caption - side important property
+
+* Flow:
+ ------
+ <table>
+    <caption> ... </caption>
+    <thead>
+        <tr>
+            <th>
+            </th>
+        </tr>
+        .
+        .
+        (only tr and in that td / th only)
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+            </td>
+        </tr>
+        .
+        .
+        (only tr and in that td /th only)
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+            </td>
+        </tr>
+        .
+        .
+        (only tr and in that td only)
+    </tfoot>
+</table>
+
+Note : Main Thing is Tfoot is must after caption
+
+* Cospan and Rowspan Property to span multiple cols or rows
+
+________________________________________
+Form
+________________________________________
+
+* There are many form controls Like
+    - Textbox (input type:text) 
+    - Checkbox(input type:Checkbox)
+    - DropDown : (<select> <option> .. </option> </select>, for default selection property is selected )
+    - Submit : (input type:submit)
+    - Reset Button
+    - ANd Many More Like Date, Color, Email
+
+Note: Have to fetch TextArea's data manually because not a input type form control.
+
+* Must have to provide id and name to control for best practice
+* Name and Id is must meaningful also suggest that set both smae
+* Also Assign id and Name to only one control, no duplication allowed to avoid conflicts.
+
+
+________________________________________
+Other
+________________________________________
+
+* Border Radius to provide curve.
+* text-align to align content.
+* box-shadow : <horizontal> <vertical> <color> or <top> <down> <left> <right> <color> 
+* Preferable Units are : pixles, % of screen or vw or vh 
+

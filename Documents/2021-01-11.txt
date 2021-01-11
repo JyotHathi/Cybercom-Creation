@@ -1,0 +1,16 @@
+-----------------------------------------------------
+HTML
+-----------------------------------------------------
+
+* Have Knowledge of HTML and css so completed Pratice Problem 2 and 3.
+    * Recall And Learn Box Shadow propety
+    * Recall Border-radious to create circular image.
+    * Also small consepts like text-align and fonts related properties.
+
+* Got the Clear Idea of Form Controls and usage of it.
+* Also get the key points which need to remember during form like id and name must smae and meanful.
+* Differnt Form Controls of form and also main thing that as textarea is not form control so have to fetch manually for data.
+* Also One Thing Regarding File Upload that can use accept attribute to specify default formats which want to accept.
+
+* Also Done Practice of Table Consept, division consept, list and form consepts.
+ 
