@@ -39,10 +39,11 @@
 }
 .hrhline
 {
-    width: fit-content;
-    border-width:1.2px ;
+    width: 245px;;
+    border-width:0.1vw;
     border-style: solid;
     border-color: rgb(170, 169, 169);
+
     
 }
 .paraname
