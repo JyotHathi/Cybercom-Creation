@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------
+                    HTML
+-------------------------------------------------------------------------
+
+* Done More Practice of table and anchor tag and reserch on that
+    - colgroup in table
+    - more about anchor tag like how to add contact and email related info in good maner using anchor tag   
+        ex  href:tel:<contact number>
+            href="mailto:<email>" , href="mailto:<email>>cc=<email>&bcc=<email>"    href="mailto:<email>?Subject=<subject>&&body=<content>"
+
+* FInd the need of meta tag and done practice of that.
+    - Practice of author, Description, charset, Keywords etc.
+
+* Also Find The Difference Between Local Storage , Session Storage and Cookie
+    - Like ALl are store the data in client side but session have expiration time and as tab closed session storage data is got clear.
+    - Also Cookie data is always sent to server when request is there to identify the user. 
