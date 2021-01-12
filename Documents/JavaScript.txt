@@ -28,12 +28,12 @@ _________________________________________________
 * var array_name = [para1,para2, ......]   or var array_name =  new Array(para1,para2, ......);
 * Can access by index like array_name[0] / array_name[n] ...........
 * push() and unshift() methods are there to add the elements 
-    * push() : To Add the element in last position
-    * unshift() : To Add the in first position and other element are shift not deleted.
+    * push() : To Add the element in last position => Returns length of array.
+    * unshift() : To Add the in first position and other element are shift not deleted.=> Returns length of array.
 
 * pop() and shift() methods to deleted element/
-    * pop() : To Remove element from last index.
-    * shift(): To Remove element from first and other element are shift by one.
+    * pop() : To Remove element from last index.=> Returns poped element of array.
+    * shift(): To Remove element from first and other element are shift by one. =>Returns poped element of array.
 
 * Can Add element at any index as can access index and if in between elements are not present then it show empty values.
 
@@ -77,6 +77,77 @@ ex:
    varname=<bool_value>
 
 
+_________________________________________________
+Working Of javascript
+_________________________________________________
+ 
+* First it parsed by parser and generating a syntax tree and if error is then throws an error.
+* Otherwise generally machine understandable code (Machine code) and then give to machine and then machine execute that.
+* The container of code is known as execution context.
+* One Global Context is there which store variable or function which is not in any function.
+* There are mainly Two Phases are there
+    
+    1. Creation => Variable Object(Hoisting) , Scoping and Scoping Chain , this
+    --------------    
+        a.Varibale Object(Hoisting): 
+          - In this all the function which are pointed or declared are scan one by one.
+          - Also all the variables are set to undefined as it is creating variables for the first time.
+        
+        b.Scoping and Chain: 
+          - In this scope of variable is assign, function can acess global variables + its own variables.
+          - If function is nested then it can also acess parent variables too. 
+         
+        c.this: 
+          - this is pointer which stores the current object, by default it stores the window object also if any function is invoked then also this have address of window object.
+          - But if Method of any object is called / invoked then in that vase this store that object.
+    
+    Note: Because of Hoisting before declared function we can call that but can not call the function expression. 
+    
+    2. Execution => Simple Execution by Machine
+    -------------
+
+_________________________________________________
+Object
+_________________________________________________
+
+* To Create Object we have below methods;
+
+    1. var <object1_name> = 
+        {
+            <prop1>:<value_of_prop1>,
+            <prop2>:<value_of_prop2>,
+            .
+            .
+            <method1_name>:function (){...}
+            .
+            .
+        };
+
+    2. var <object2_name> = new Object();
+        <object_name>.<prop1_name>=<prop1_value>;
+        .
+        .
+        <object_name>.<method1_name>=function () {...};
+
+    3. var <object3_name> = Object.create(<object_name>);
+        here <object_name> can be from previos created object like object1_name or object2_name;
+
+
+* We can Change Values of any property at any moment of time.
+* Can Add Property any moment of time like
+ 
+    object1_name.<prop_name>=value;
+
+
+* To Acess Values 
+
+    1. object_name.prop_name   or   object_name.method_name()
+    2. object_name[<prop_name>].
+    3. var <var_name>="prop_name" => object_name[<var_name>]
+
+
+* Also if we write this.<propname>=value then in that case add the prop in window object.(if bot inside any object's method).
+* And After learning we can say that array is also object.
 
 
 
