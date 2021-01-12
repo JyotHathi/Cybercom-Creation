@@ -4,7 +4,7 @@ ________________________________________
 
 * <div>.....</div>
 * Block Level Element.
-* Have Attributes Like Height, Width, Border, Margin, Padding, etc.
+* Have Properties Like Height, Width, Border, Margin, Padding, etc.
 * To Create Block of elements or can use as container.
 
 ________________________________________
@@ -26,8 +26,8 @@ ________________________________________
     .
 * <ol> <li> .. </li> ...... </ol> to create ordered list.
 * To Prepared List Based on Numbered / Alphabets.
-* type is attribute ex. type=1 or type=a or type=A or type=I or type="i"
-* start is property to define starting point ex. start=c or start=50 etc    
+* type is attributes ex. type=1 or type=a or type=A or type=I or type="i"
+* start is attribute to define starting point ex. start=c or start=50 etc    
 
 2. Un-Ordered List:
 -----------------
@@ -38,7 +38,7 @@ ________________________________________
     .
 * <ul> <li> .. </li> ...... </ul> to create ordered list.
 * To Prepared List Based on bullets
-* type is attribute ex. list-style-type=disc or square or circle etc.
+* list-style-type is property ex. list-style-type=disc or square or circle etc.
 
 3. Discription List:
 -----------------
@@ -52,7 +52,6 @@ ________________________________________
     .
 * <dl> <dt> <dd> ..</dd> </dt> ...... </dl> to create ordered list.
 * To Prepared list of definations or discription
-* type is attribute ex. list-style-type=disc or square or circle etc.
 
 ________________________________________
 Table
@@ -105,7 +104,7 @@ ________________________________________
 
 Note : Main Thing is Tfoot is must after caption
 
-* Cospan and Rowspan Property to span multiple cols or rows
+* Colspan and Rowspan attributes to span multiple cols or rows
 
 ________________________________________
 Form
@@ -127,6 +126,43 @@ Note: Have to fetch TextArea's data manually because not a input type form contr
 
 
 ________________________________________
+Basics of CSS and JS linking
+________________________________________
+
+* To Link External css we use <link href="" type="text/css" rel="" > & for js <script src="" type="text/javascript">
+* Mainly There are three Types like inline, Embbadded and external css and JS
+* For Embbadded css have style tag by which we can include css seprate from element and in a file and for script we have script tag.
+* Also <noscript>...</noscript> tag is there so that if not possible no execute because of disabling then in that case this print the message in browser window.
+* External css and js is advisable for project purpose.
+* Alos we can embadd css or js in head part or body part but generally including in body part to improve speed (if Embbadded needed then only).
+
+
+
+____________________________________________
+Local Storage and Session Storage and cookie
+____________________________________________
+
+* Local , Session and cookie storage all are client side storage areas and as it is client side so not safe as one can share that delete that too.
+* User can clear this area too. 
+
+1.Local Storage:
+----------------
+* It is a storage space of client computer  where sometimes websites store the data in form of key value pair.
+* It is a storage space which is shared by every tabs of comuter.
+* And is not secure as it is in local storage so may possible other webs access that and also user can remove that.
+* Not Affect to serever.
+
+2.Session Storage:
+-----------------
+* Same as local storage it store on the client device and not afffect or transfer to server but it is for particular session only.
+* And as all web have own session area and session content so generally not easy to acess.
+* Also not secure as store the data on client side and it is risky too because if generally local data less affetc the work but if in case session data erase by the user then session may affect or need to restart the session.
+
+3.cookie
+--------
+* Cookie also store data on client side but on every suseqent request sent to the server and if user delet this then server need to set cookie again with neccessary steps for best user experience (To Identify the user).
+* It Also have expiration time which is defined or seted by developer of that web, it may possible that no expiration time is set.  
+________________________________________
 Other
 ________________________________________
 
@@ -134,4 +170,5 @@ ________________________________________
 * text-align to align content.
 * box-shadow : <horizontal> <vertical> <color> or <top> <down> <left> <right> <color> 
 * Preferable Units are : pixles, % of screen or vw or vh 
+
 
