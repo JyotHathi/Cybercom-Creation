@@ -1,3 +1,4 @@
+//***************************************Function Testing************************************/
 // // //Using Function Statement and Expression
 // // var functions = function (inputpara)
 // // {
@@ -36,7 +37,7 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------------------
-
+//***************************************Practice Problem 3************************************/
 // var teamOfJohn, teamOfMike, teamOfMarry, avgOfJohn = 0, avgOfMike = 0, avgOfMarry = 0;
 
 // //------------------------ Array Of Scores of Each Person with Default data
@@ -125,39 +126,40 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------------------
+//***************************************Array Revision************************************/
 
-var array = ["Jyot","Hathi",23,01,2000];
+// var array = ["Jyot","Hathi",23,01,2000];
 
-console.log(array);
+// console.log(array);
 
-array[7]="Cybercom-Creation";
-console.log("Element at 7th Pos");
-console.log(array);
+// array[7]="Cybercom-Creation";
+// console.log("Element at 7th Pos");
+// console.log(array);
 
-array.push("Kachchh");
-console.log("Added Element by push");
-console.log(array);
+// array.push("Kachchh");
+// console.log("Added Element by push");
+// console.log(array);
 
-array.unshift("Er.")
-console.log("Added Element by unshift");
-console.log(array);
+// array.unshift("Er.")
+// console.log("Added Element by unshift");
+// console.log(array);
 
-array.shift();
-console.log("Element Removed by shift");
-console.log(array);
+// array.shift();
+// console.log("Element Removed by shift");
+// console.log(array);
 
-array.pop();
-console.log("Element Removed by pop");
-console.log(array);
+// array.pop();
+// console.log("Element Removed by pop");
+// console.log(array);
 
-console.log("Element Removed by pop: "+array.pop());
-console.log("Element Removed by pop: "+array.shift());
-console.log("Element by push: "+array.push(".."));
-console.log(array);
-console.log("Element by push: "+array.unshift(".."));
-console.log(array);
-console.log("Element by push: "+(array[5]=".."));
-console.log(array);
+// console.log("Element Removed by pop: "+array.pop());
+// console.log("Element Removed by pop: "+array.shift());
+// console.log("Element by push: "+array.push(".."));
+// console.log(array);
+// console.log("Element by push: "+array.unshift(".."));
+// console.log(array);
+// console.log("Element by push: "+(array[5]=".."));
+// console.log(array);
 
 
 
