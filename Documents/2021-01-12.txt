@@ -1,0 +1,28 @@
+------------------------------------------------------------
+                Javascript
+-----------------------------------------------------------
+
+* Gone Through all the videoes.
+* Done Practice of scope chain and nested  function and also got idea how to access nested function 
+    Ex. function fun_name1()
+        {
+            defination
+            function fun_name2()
+            {
+                //defination
+            }
+            fun_name1.nestedfun=fun_name2;
+        }
+        fun_name1();            => fun_name1 called
+        fun_name1.nestedfun();  => fun_name2 called
+
+* Also Done Practice the of object with different methods
+    1. var object = { name1:value....... }
+    2. var object2= Object.create(object);
+    3. var object3=new Object();
+       object3.prop1=value
+       .
+       .
+       .
+* Also Done Practice of Functions and this pointer
+* Observe if we are not any method and execute this.name then it add in local windows object 
