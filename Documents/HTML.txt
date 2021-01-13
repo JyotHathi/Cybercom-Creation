@@ -149,14 +149,14 @@ ____________________________________________
 ----------------
 * It is a storage space of client computer  where sometimes websites store the data in form of key value pair.
 * It is a storage space which is shared by every tabs of comuter.
-* And is not secure as it is in local storage so may possible other webs access that and also user can remove that.
+* And is not secure as it is in local storage.
 * Not Affect to serever.
 
 2.Session Storage:
 -----------------
 * Same as local storage it store on the client device and not afffect or transfer to server but it is for particular session only.
 * And as all web have own session area and session content so generally not easy to acess.
-* Also not secure as store the data on client side and it is risky too because if generally local data less affetc the work but if in case session data erase by the user then session may affect or need to restart the session.
+* Also not secure as store the data on client side and it is risky too because if generally local data less affect the work but if in case session data erase by the user then session may affect or need to restart the session.
 
 3.cookie
 --------
@@ -170,5 +170,12 @@ ________________________________________
 * text-align to align content.
 * box-shadow : <horizontal> <vertical> <color> or <top> <down> <left> <right> <color> 
 * Preferable Units are : pixles, % of screen or vw or vh 
+* Artical Tag use for artical work.
+* Meter For Bar Char like representation.
+* <details><summurry><p></></> Very Helpful For Question Answer or Topic Wise Content.
+* SVG is also useful to drawig.
+* Audio and Video tags are best as with source tag can supply multiple format.
+* DataList and list attri of text is also best for search data <datalist><option></></>
+
 
 
