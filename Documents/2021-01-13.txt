@@ -1,0 +1,14 @@
+----------------------------------------------------------------------
+                            HTML
+----------------------------------------------------------------------
+
+* Explored More about Session and Local Storage.
+* Explore HTML5 Tags like
+    - SVG
+    - Meter
+    - <details> <summury>
+    - <figure> <figurecaption>
+    - DataList and how to use it for batter search
+    - <mark> Tags
+    - Audio and Video Tags
+* Also Practice of all tags and co-relate with application.
