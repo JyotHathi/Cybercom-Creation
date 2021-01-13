@@ -1,0 +1,9 @@
+----------------------------------------------------------------
+                        Javascript
+----------------------------------------------------------------
+
+* Complete All The Videoes and got all clearly.
+* Practiced DOM and Object
+* Completed Practice Problem Based on Javascript
+* Got the DOM and Object Clearly.
+* Get Idea about event handling.
