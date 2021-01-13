@@ -150,4 +150,25 @@ _________________________________________________
 * And After learning we can say that array is also object.
 
 
+_________________________________________________
+How to Interact With HTML using Just
+_________________________________________________
 
+* Basically DOM came in picture in this module => DOM :Document Object Model
+* Whole HTML is in different segments and block of docuemnt.
+* Document is like object and its segments or elements are like member we can fetch by id or class.
+* How to access element of docuemnt :
+    -> docuemnt.querySelector(<id or class>) / querySelectorAll(<class>)[index] => it brings particular element by id or class like css (Which is first in case of multiple).
+        
+        a.     querySelector().textContent = <content>          (Setter Method)
+            or var valueElemnt=querySelector().textContent      (Getter Method)
+
+        b.    querySelector().innerHTML="....."
+
+    Note : Here In case of textContent we can pass any type of value but as a plain text only (In That Case if css / html returns then not apply to content)
+           Whereas In case of innerHtml we can pass string only and as html text (whatever html and css in written that will execute).
+
+        c. querySelector().style.<css prop>=value or querySelector().<attribute>=value
+
+* Can add Eventlistner 
+    docuemnt.querySelector().addEventListner(<event_name>,<fun_name>);
