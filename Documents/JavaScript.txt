@@ -20,6 +20,23 @@ _________________________________________________
 * But Not Need to care as in javascript we declare variable by   var varname = value and based on value it automatically decide the DataTypes.
 * If Just variable is declared then type is undefined and value is null.
 
+* var => Decalre Globbally and Not Depends on sequence means
+    ->  x=9;
+        console.log(x);
+        var x;
+        /*/*/*/*/*
+        Output: 9
+    
+    -> {var x=2;}consol.log(x); //output: 2
+
+* let : Decalre Locally and declartaion Must Before Useful
+
+    ->x=9;console.log(x);let x   // Output: error (Uncought Ref)   => Solution let x;x=9;console.log(x)
+    ->{let x=2;}console.log(x)   // Output: error (Uncought Ref)   => let x=5; {let x=2;} console.log(x);
+
+* const : Smae as let but just one dif is by this if any var is decalre then it become const so after assign can not change val & also have to define value. 
+* Can Create Object & functionexpression using any var / let / const
+
 
 _________________________________________________
 Array
