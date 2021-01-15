@@ -1,0 +1,19 @@
+/* Stylesheet for fibonacic Series (JS Coding Challenge 6) 
+----------------------------------------------------------- */
+
+/*Style For Submit Button Button*/
+#btnlimitinpt {
+    background-color: rgb(119, 119, 250);
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+}
+
+/*Style For Output Text*/
+#poutput {
+    margin: 0px;
+    font-size: medium;
+    font-weight: 300;
+    font-family: 'Courier New';
+}
