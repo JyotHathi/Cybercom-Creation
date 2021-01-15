@@ -1,0 +1,71 @@
+/*-------------Table and Its Basic--------*/
+table
+{
+    width:800px;
+    height:1000px;
+    border-collapse: collapse;
+    margin: 2%;
+    border:double black;
+}
+tr,td
+{
+    border: solid black 2px;
+    padding:.5%;
+}
+
+/*-------------Table1 Caption--------*/
+#captable1
+{
+    text-align: start;
+    font-weight: bold;
+}
+
+/*-------------Table head and Body--------*/
+thead{
+    background-color: rgb(180, 223, 180);
+    font-weight:bold;
+    border-style: double black;
+}
+tbody
+{
+    border: double black;
+}
+
+/*----------------Colgroups For Table1-----------------*/
+.colblue
+{
+    background-color: rgb(199, 234, 235);
+    width:150px;
+    padding:10px;
+    font-weight: bold;
+}
+.colwhite
+{
+    background-color: white;
+}
+.colpink
+{
+    background-color: rgb(241, 163, 189);
+    width:150px;
+}
+.colyellow
+{
+    background-color:rgb(255, 255, 147);
+    width: 165px;
+}
+
+/*----------------Special Case for Table Columns and Text-----------------*/
+.removeupborder
+{
+    border-top:none;
+}
+.removelowborder
+{
+    border-bottom:none;
+}
+
+.boldtext
+{
+    font-weight: bold;
+}
+
