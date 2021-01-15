@@ -1,0 +1,12 @@
+----------------------------------------------------------------
+                        HTML
+---------------------------------------------------------------
+
+* Completed HTMl Practice Problem 4 and 5
+* During Completing Problems
+    - Got Exact Idea about Colgroup, col, thead and tbody
+* Also Got Need of <a href="#!"></a>
+* From These Practical Onwards Try to make
+    - Proper Comments for Batter Understanding.
+    - Seprate Files of HTML and Stylsheet
+    - Very very less use of Inline and Embadded CSS.
