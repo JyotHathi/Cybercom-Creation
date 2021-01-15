@@ -193,18 +193,57 @@
 //***************************************Object Practice************************************
 
 
-var person = {
-    unmae:"",
-    yod:0,
-    calcage:function () {
+// var person = {
+//     unmae:"",
+//     yod:0,
+//     calcage:function () {
     
-        console.log(2021-this.yod);
-    }    
+//         console.log(2021-this.yod);
+//     }    
+// };
+
+// var john =Object.create(person);
+// john.unmae="John";
+// john.yod=1938;
+// john.calcage();
+
+// person.calcage();
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//***************************************Practice 15th Jan 2021************************************
+
+document.querySelector("#myp").innerHTML="Hello";
+console.log(document.querySelector("#h1").innerHTML);    
+
+// Function Cons
+document.querySelector("#txtboxtesting").innerHTML="Jyot Hathi"
+var dataname = function()
+{
+    return "Hello";
+}
+var Person = function (name,age)
+{
+    this.name=name;
+    this.Age=age;
+}
+Person.prototype.Admin = "Jyot Hathi";
+
+var User1= new Person('jyoth001',21);
+
+
+console.log(User1);
+console.log(User1.Admin);
+
+// create method
+
+var person2 = {
+    name:"",
+    Age:0,
+    Admin:"JyotHathi"
 };
+var user2= Object.create(person2,{name:{value:"JyotHathi"},Age:{value:23}});
+console.log(user2);
+console.log(user2.Admin);
 
-var john =Object.create(person);
-john.unmae="John";
-john.yod=1938;
-john.calcage();
 
-person.calcage();

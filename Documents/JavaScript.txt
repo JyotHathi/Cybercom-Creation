@@ -129,8 +129,15 @@ _________________________________________________
         .
         <object_name>.<method1_name>=function () {...};
 
-    3. var <object3_name> = Object.create(<object_name>);
+    3.      var <object3_name> = Object.create(<object_name>);then assign value manually  
+        or  var <object3_name> = Object.create(<object_name>,{prop1:{value:prop1_val1},...}); 
         here <object_name> can be from previos created object like object1_name or object2_name;
+        It inheriting form object prototype which is created Previously.
+    
+    4. var Parent = function (prop1_val1,prop2_val2){this.prop1=prop1_val1;this.prop2=prop2_val2};   //Constructor
+        var child = new Parent();
+        It inheriting using constructur defined property.
+        Parent.prototype.<prop/method_name>=value;
 
 
 * We can Change Values of any property at any moment of time.
@@ -160,10 +167,13 @@ _________________________________________________
 * How to access element of docuemnt :
     -> docuemnt.querySelector(<id or class>) / querySelectorAll(<class>)[index] => it brings particular element by id or class like css (Which is first in case of multiple).
         
-        a.     querySelector().textContent = <content>          (Setter Method)
-            or var valueElemnt=querySelector().textContent      (Getter Method)
+        a.     querySelector().textContent = <content>          (Setter Method, To set text not value).
+            or var valueElemnt=querySelector().textContent      (Getter Method, To get text not value).
 
-        b.    querySelector().innerHTML="....."
+        b.  querySelector().value = <content>                   (Setter Method, To set value not text).
+            or var valueElemnt=querySelector().value            (Getter Method, To get value not text).
+
+        c.    querySelector().innerHTML="....."                 (To Set or get text only not value).
 
     Note : Here In case of textContent we can pass any type of value but as a plain text only (In That Case if css / html returns then not apply to content)
            Whereas In case of innerHtml we can pass string only and as html text (whatever html and css in written that will execute).
@@ -172,3 +182,35 @@ _________________________________________________
 
 * Can add Eventlistner 
     docuemnt.querySelector().addEventListner(<event_name>,<fun_name>);
+
+
+_________________________________________________
+First CLass Function
+_________________________________________________
+
+* We can also pass function as an argument to onother function 
+    ex:
+        function arrayOfAge(array,fun)
+        {
+            var array;
+            .....
+            ..
+            array.push(fun(this.year));
+        }
+        function calcAge(val)
+        {
+            return currentyear(2021)-val;
+        }
+        arrayOfAge(array,calcAge);
+
+_________________________________________________
+Diff Between Premetive Data Types and Objects
+_________________________________________________
+
+* Premetive Data TYpe Store value Directly.
+* Object store the address or ref where actual value is stored.
+* Useful:
+    var a=0;                                var obj1={a:0,b:0};
+    var b=a;                                var obj2=obj1;
+    a=50;                                   obj1.a=50;
+    console.log(a+","+b); => 50,0           console.log(obj1.a+","+obj1.b+"\t"obj1.a+","+obj1.b); =>  50,0    50,0
