@@ -1,0 +1,17 @@
+------------------------------------------------------------------------
+                    Javascript
+-----------------------------------------------------------------------
+
+* Completed All Videoes and Practice Problem.
+* Got Clear Idea of Object.
+* Done The Practice of Premitive and Non Premitive Types and Their Working.
+* Got Clear Idea of querySelector().innerHTML , querySelector().textContent & querySelector().value and also where to use which got properly.
+* First Time Done Work with HTML and JS as backend means take input and proceed using JS and provide result using JS.
+* Got Idea How to Add Events and Event Handling using JS (Using addEventListner).
+* Went Through New Event MouseOver in Practice Problem 5.
+* Got Clear Idea about Inheritance and How To Create Object using
+    - Constructor
+    - Object.create
+        # With Para (Properties)
+        # Without Para (Only Object From Which We want to create Object).
+* Got Very New Concept First Class Function  (How To Pass Function and work with function by treating as variable).
