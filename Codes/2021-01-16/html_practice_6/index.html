@@ -14,38 +14,56 @@
 
         <!---------Container Contains Whole Content hedaing (Image And Heading Text)------------------------>
         <div class="innertopdiv">
-            <img src="background_office.jpg" class="innertopdiv imgback"> <!---back image--->
-            <h2 id="headingtag">CONTACT US</h1> <!---heading--->
+            <img src="background_office.jpg" class="innertopdiv imgback">
+            <!---back image--->
+            <h2 id="headingtag">CONTACT US</h1>
+                <!---heading--->
         </div>
+        <form method="get">
+            <!---------Container Contains Whole Content Body (input filds)------------------------>
+            <div class="deatilcontainer">
 
-        <!---------Container Contains Whole Content Body (input filds)------------------------>
-        <div class="deatilcontainer">
-            
-            <div class="detaildiv"> <!---------Container Contains input and icons----->
-                <img src="person.png" class="icons"> <!---side icon (Name)--->
-                <input type="text" class="inptfilds" id="txtboxname" name="txtboxname" placeholder="Full Name"> <!---Input Fild (Name)--->
+                <div class="detaildiv">
+                    <!---------Container Contains input and icons----->
+                    <img src="person.png" class="icons">
+                    <!---side icon (Name)--->
+                    <input type="text" class="inptfilds" id="txtboxname" name="txtboxname" placeholder="Full Name">
+                    <!---Input Fild (Name)--->
+                </div>
+
+                <div class="detaildiv">
+                    <!---------Container Contains input and icons----->
+                    <img src="Mail.png" class="icons">
+                    <!---side icon (Email)--->
+                    <input type="text" class="inptfilds" id="txtboxemail" name="txtboxemail"
+                        placeholder="Eg. example@email.com">
+                    <!---Input Fild (Email)--->
+                </div>
+
+                <div class="detaildiv">
+                    <!---------Container Contains input and icons----->
+                    <img src="Phone.png" class="icons">
+                    <!---side icon (Contact)--->
+                    <input type="text" class="inptfilds" id="txtboxcontact" name="txtboxcontact"
+                        placeholder="Eg. +1 800 000000">
+                    <!---Input Fild (Contact)--->
+                </div>
+
+                <div class="detaildivtextarea">
+                    <!---------Container Contains input and icons----->
+                    <img src="chat.png" class="icons">
+                    <!---side icon (Comments)--->
+                    <textarea id="txtareacomments" class="textareafild" name="txtareacomments"
+                        placeholder="Your Comments" rows="5" cols="10">
+                </textarea>
+                    <!---Input Fild (Comments)--->
+                </div>
+
             </div>
 
-            <div class="detaildiv"> <!---------Container Contains input and icons----->
-                <img src="Mail.png" class="icons"> <!---side icon (Email)--->
-                <input type="text" class="inptfilds" id="txtboxemail" name="txtboxemail" placeholder="Eg. example@email.com"> <!---Input Fild (Email)--->
-            </div>
-
-            <div class="detaildiv"> <!---------Container Contains input and icons----->
-                <img src="Phone.png" class="icons"><!---side icon (Contact)--->
-                <input type="text" class="inptfilds" id="txtboxcontact" name="txtboxcontact" placeholder="Eg. +1 800 000000"> <!---Input Fild (Contact)--->
-            </div>
-
-            <div class="detaildivtextarea"> <!---------Container Contains input and icons----->
-                <img src="chat.png" class="icons"><!---side icon (Comments)--->
-                <textarea id="txtareacomments" class="textareafild" name="txtareacomments" placeholder="Your Comments" rows="5" cols="10"> 
-                </textarea><!---Input Fild (Comments)--->
-            </div>
-
-        </div>
-
-        <button id="btnsend">SEND NOW</button><!---Button For Submit Data--->
-
+            <button type="submit" id="btnsend">SEND NOW</button>
+            <!---Button For Submit Data--->
+        </form>
     </div>
 
     <!---------------------------------------Including Script File FOr JS-------------------------------->
