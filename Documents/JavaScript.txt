@@ -20,7 +20,7 @@ _________________________________________________
 * But Not Need to care as in javascript we declare variable by   var varname = value and based on value it automatically decide the DataTypes.
 * If Just variable is declared then type is undefined and value is null.
 
-* var => Decalre Globbally and Not Depends on sequence means
+* var => Decalre Globbally (Functional Scope) and Not Depends on sequence means 
     ->  x=9;
         console.log(x);
         var x;
@@ -29,7 +29,7 @@ _________________________________________________
     
     -> {var x=2;}consol.log(x); //output: 2
 
-* let : Decalre Locally and declartaion Must Before Useful
+* let : Decalre Locally (Block Scope) and declartaion Must Before Useful
 
     ->x=9;console.log(x);let x   // Output: error (Uncought Ref)   => Solution let x;x=9;console.log(x)
     ->{let x=2;}console.log(x)   // Output: error (Uncought Ref)   => let x=5; {let x=2;} console.log(x);
@@ -220,6 +220,37 @@ _________________________________________________
         }
         arrayOfAge(array,calcAge);
 
+* We can also return a function like variable , in that case we need to call that return function to complete a prcedure
+    -> function funcall1 (val1,val2)
+        {
+            ..
+            .
+            return function () //anonysmous function
+            {
+                //logic
+            }
+
+        }
+
+        1. var returnedfunction = funcall1(val1,val2);
+            returnedfunction();
+        2. funcall1(val1,val2)();
+
+        Note : Clousre in JS : As We Can see while function return a function and that returned fucnction may contain variables of called function, 
+               and after the function has already returned we can access the values of that function in returned function when it call 
+               becaause after execution of that previously called function Variable Object is still remain available to returned function when it will be called.
+
+* IIFE (Intermediate Invoked Function Expression):
+    - No Need To Call This Function manually.
+    - We Can Not call this manually.
+    - We Are Using this for privacy.
+    ex. 
+    (
+        function ()
+        {
+            //logic
+        }
+    )();
 _________________________________________________
 Diff Between Premetive Data Types and Objects
 _________________________________________________
@@ -231,3 +262,67 @@ _________________________________________________
     var b=a;                                var obj2=obj1;
     a=50;                                   obj1.a=50;
     console.log(a+","+b); => 50,0           console.log(obj1.a+","+obj1.b+"\t"obj1.a+","+obj1.b); =>  50,0    50,0
+
+
+_________________________________________________
+Apply, Bind and Call
+_________________________________________________
+
+* Call : To Borrow a function form anothers object
+    - paras : this(object ref),params of function
+    ex:
+        var obj1 = {
+            name:obj1,
+            function printName(val1)
+            {
+                console.log(this.name+","+val1);
+            }
+        };
+
+        var obj2={name:obj2};
+
+        obj1.printName.call(obj2,val1); //Output :obj2,val1
+
+* Apply : Same as Call But accept Argument as array
+    - paras : this (object ref) ,para of function
+
+    ex:var obj1 = {
+            name:obj1,
+            function printName(val1)
+            {
+                console.log(this.name+","+val1);
+            }
+        };
+
+        var obj2={name:obj2};
+
+        obj1.printName.Apply(obj2,[val1]); //Output :obj2,val1
+
+
+* Bind : To Set Few Args o function
+    - paras: this(object ref), pars 
+      function funName (val1,val2)
+      {
+         console.log(val1+","+val2);
+      }
+      var preset= funName.Bind(this,"Hello");
+      preset("Hi"); // output: Hello,Hi
+
+
+_________________________________________________
+Difference Between ES5 and ES6
+_________________________________________________
+
+* ES5:
+  ----
+    -> var (Function Scope)
+    -> To Concat string using '+' ops
+    -> Less String Functions (Inbuilt);
+
+* ES6:
+  ----
+    -> let and const (Block Scope), can change value of let latter but const is to decalre constant
+    -> To Concat String `message ${var_name}`;
+    -> New String Ops Like startsWith,endsWith, repeat(numberoftime);
+
+
