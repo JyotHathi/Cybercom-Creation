@@ -1,0 +1,12 @@
+-----------------------------------------------------------------
+                        HTML
+-----------------------------------------------------------------
+
+* Done With HTML Problem 6
+* During Solving that problem got new consepts like 
+    - Position relative & absolute
+    - Opacity.
+    - Seting of background using image.
+    - Responsiveness of web using view-port-width.
+    - How Create Best UI to take input.
+    - How to apply css or style on form / input controls. 
