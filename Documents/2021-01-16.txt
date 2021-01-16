@@ -1,0 +1,20 @@
+-------------------------------------------------------------------
+                        JavaScript
+------------------------------------------------------------------
+
+* COmpleted All Videoes of the day.
+* Clear More Idea about Firstclass function that
+    - Function Can Return Function too.
+        # Main Concept in this is closure means main / called function is got over after return the value but still if there are any object / variables are accessible
+          because variable object is present it not get over.
+
+* Alos Gone Through IIFE (Intermediate Invoke Function Expression) 
+    - which is not manually invokable
+    - When JS code is parsing parser at that time IIFE get execute.
+
+* After also gone through ES6 and diff between ES5 and ES6
+    - Can Create Class and Inherite like other OOP just with small different way
+    - Can Create Static function which not call by object by Class only.
+    - New Array function
+    - New String Function
+    - let and const kewords and scopes.  
