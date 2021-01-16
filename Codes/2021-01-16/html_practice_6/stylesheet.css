@@ -1,0 +1,366 @@
+/*StleSheet FIle For HTML Practice 6*/
+
+/*Container Which Contain Whole Content and Div*/
+.maincontainer
+{
+    margin: auto;
+    margin-top: 5vw;
+    width:35vw;
+    height:45vw;
+    display: block;
+    border-radius: 1vw;
+    position: relative;
+}
+
+/*---------------------------------------------------------------------1St Inner Div Which Contain Heading Contact Us----------------------------------------*/
+/*1st Inner COntainer Which COntain Heading*/
+.innertopdiv
+{
+    width:35vw;
+    height:8vw;
+    border-radius: .4vw;
+    background-color: grey;
+}
+/*Style For Haeding*/
+#headingtag{
+    position: absolute;
+    color: white; 
+    top:.8vw;
+    left:9vw;
+    font-weight: bolder;
+    font-size:2.5vw;
+    font-family:Verdana;
+}
+/*Back Image Which is Contain in 1st Div*/    
+.imgback{
+    opacity: .45;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------CSS for Input Filds-----------------------------------------------------------------------*/
+
+/*CSS for container which contaoin all filds include button*/
+.deatilcontainer
+{
+    margin-top:2vw;
+    margin:3vw;    
+}
+/*CSS for div which contain icon with fild*/
+.detaildiv
+{
+    border:rgb(233, 230, 230) solid;
+    margin:auto;
+    display: block;
+    margin-top:2vw;
+    position: relative;
+    padding:.2vw;
+    border-width: .2vw;
+}
+/*CSS for div which contain icon with fild (For Text Area)*/
+.detaildivtextarea
+{
+    border:rgb(233, 230, 230) solid;
+    margin:auto;
+    display: block;
+    margin-top:2vw;
+    position: relative;
+    padding:.2vw;
+    height:8vw;
+    border-width: .2vw;
+}
+/*CSS for ions*/
+.icons
+{
+    width:2vw;
+    height:2vw;
+    border-radius: 1vw;
+}
+/*CSS for Input Fild*/
+.inptfilds
+{
+    border:0;
+    position: absolute;
+    left:3vw;
+    height:80%;
+    width:87%;
+    font-size:1vw;
+    font-weight:bold;
+    color:rgb(121, 120, 120);
+}
+/*CSS for TextArea Fild*/
+.textareafild
+{
+    border:0;
+    position: absolute;
+    left:3vw;
+    height:93%;
+    width:87.50%;
+    max-height:93%;
+    max-width:87.50%;
+    font-size:1vw;
+    font-weight:bold;
+    color:rgb(121, 120, 120);
+}
+/*CSS for Placeholder of Input Fields*/
+.inptfilds::placeholder,.textareafild::placeholder
+{
+    font-size:1vw;
+    color:rgb(179, 176, 176);
+    font-weight:bold;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------CSS For Button Which is for Submit Data------------------------------------------------------*/
+#btnsend
+{
+    width:12vw;
+    height:3.7vw;
+    font-size: 0.9vw;
+    position: absolute;
+    left:12vw;
+    bottom: 3vw;
+    border-radius: 5vw;
+    box-shadow: 0px 5px 50px 0px rgb(190, 158, 253);
+    background-color: mediumpurple;
+    color: white;
+    font-family:Verdana;
+    font-weight:600;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------------------------------------Media Queries for few styles for responsive ness based various Devices-----------------------------*/
+
+/*For Device Which for Maximum Width 1500px*/
+@media screen and (max-width:1500px)
+{
+    /*---------------------------------*/
+    .maincontainer
+    {
+        margin-top: 7vw;
+        width:38vw;
+        height:45vw;
+        border-radius: 1vw;
+    }
+    .innertopdiv
+    {
+        width:38vw;
+        height:8vw;
+        border-radius: .4vw;
+    }
+    #headingtag{
+        font-size:2.5vw;
+        top:.8vw;
+        left:9vw;
+    }
+    /*---------------------------------*/
+    .deatilcontainer
+    {
+        margin-top:2vw;
+        margin:2vw;    
+    }
+    .detaildiv
+    {
+        margin-top:2vw;
+        padding:.2vw;
+        border-width: .2vw;
+    }
+    .detaildivtextarea
+    {
+        margin-top:2vw;
+        padding:.2vw;
+        height:8vw;
+        border-width: .2vw;
+    }
+    .icons
+    {
+        width:2vw;
+        height:2vw;
+        border-radius: 1vw;
+    }
+    .inptfilds
+    {
+        left:3vw;
+        height:80%;
+        width:87%;
+        font-size:1vw;
+    }
+    .textareafild
+    {
+        left:3vw;
+        font-size:1vw;
+    }
+    .inptfilds::placeholder,.textareafild::placeholder
+    {
+        font-size:1vw;
+    }
+
+    /*---------------------------------*/
+    #btnsend
+    {
+        width:12vw;
+        height:3.7vw;
+        font-size: 0.9vw;
+        left:12vw;
+        border-radius: 5vw;
+    }
+
+
+}
+/*For Device Which for Maximum Width 1000px*/
+@media screen and (max-width:1000px)
+{
+    /*---------------------------------*/
+    .maincontainer
+    {
+        margin-top: 8vw;
+        width:55vw;
+        height:60vw;
+        border-radius: 1.3vw;
+    }
+    .innertopdiv
+    {
+        width:55vw;
+        height:14vw;
+        border-radius: .6vw;
+    }
+    #headingtag{
+        font-size:4.20vw;
+        top:1vw;
+        left:15vw;
+    }
+    /*---------------------------------*/
+    .deatilcontainer
+    {
+        margin-top:3vw;
+        margin:4vw;    
+    }
+    .detaildiv
+    {
+        margin-top:2.4vw;
+        padding:.3vw;
+        border-width: .3vw;
+    }
+    .detaildivtextarea
+    {
+        margin-top:2.4vw;
+        padding:.3vw;
+        height:9vw;
+        border-width: .3vw;
+    }
+    .icons
+    {
+        width:2.2vw;
+        height:2.2vw;
+        border-radius: 1.1vw;
+    }
+    .inptfilds
+    {
+        left:4vw;
+        height:80%;
+        width:87%;
+        font-size:1.5vw;
+    }
+    .textareafild
+    {
+        left:4vw;
+        font-size:1.5vw;
+    }
+    .inptfilds::placeholder,.textareafild::placeholder
+    {
+        font-size:1.5vw;
+    }
+
+    /*---------------------------------*/
+    #btnsend
+    {
+        width:15vw;
+        height:5vw;
+        font-size: 1.2vw;
+        left:20vw;
+        border-radius: 5vw;
+        bottom:4vw;
+    }
+
+}
+/*For Device Which for Maximum Width 500px*/
+@media screen and (max-width:500px)
+{
+    /*---------------------------------*/
+    .maincontainer
+    {
+        margin-top: 10vw;
+        width:60vw;
+        height:80vw;
+        border-radius: 1.5vw;
+    }
+    .innertopdiv
+    {
+        width:60vw;
+        height:16vw;
+        border-radius: .8vw;
+    }
+    #headingtag{
+        font-size:4.20vw;
+        top:2vw;
+        left:15vw;
+    }
+    /*---------------------------------*/
+    .deatilcontainer
+    {
+        margin-top:4vw;
+        margin:5vw;    
+    }
+    .detaildiv
+    {
+        margin-top:3vw;
+        padding:.5vw;
+        border-width: .45vw;
+    }
+    .detaildivtextarea
+    {
+        margin-top:3vw;
+        padding:.5vw;
+        height:10.50vw;
+        border-width: .45vw;
+    }
+    .icons
+    {
+        width:2.6vw;
+        height:2.6vw;
+        border-radius: 1.3vw;
+    }
+    .inptfilds
+    {
+        left:5vw;
+        height:80%;
+        width:87%;
+        font-size:2vw;
+    }
+    .textareafild
+    {
+        left:5vw;
+        font-size:2vw;
+    }
+    .inptfilds::placeholder,.textareafild::placeholder
+    {
+        font-size:2vw;
+    }
+
+    /*---------------------------------*/
+    #btnsend
+    {
+        width:19vw;
+        height:7vw;
+        font-size: 1.5vw;
+        left:20vw;
+        border-radius: 5vw;
+        bottom:4vw;
+    }
+
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
