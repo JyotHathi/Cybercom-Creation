@@ -1,0 +1,14 @@
+C:\Users\jyoth\source\repos\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.csprojAssemblyReference.cache
+C:\Users\jyoth\source\repos\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.csproj.CoreCompileInputs.cache
+C:\Users\jyoth\source\repos\Cybercom-Creation\Practice-1\bin\Debug\Practice-1.exe.config
+C:\Users\jyoth\source\repos\Cybercom-Creation\Practice-1\bin\Debug\Practice-1.exe
+C:\Users\jyoth\source\repos\Cybercom-Creation\Practice-1\bin\Debug\Practice-1.pdb
+C:\Users\jyoth\source\repos\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.exe
+C:\Users\jyoth\source\repos\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.pdb
+D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\bin\Debug\Practice-1.exe.config
+D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\bin\Debug\Practice-1.exe
+D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\bin\Debug\Practice-1.pdb
+D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.csprojAssemblyReference.cache
+D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.csproj.CoreCompileInputs.cache
+D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.exe
+D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.pdb
