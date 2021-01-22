@@ -1,0 +1,39 @@
+------------------------------------------------------------------------
+                            DotNet
+------------------------------------------------------------------------
+
+* Gone through all videoes of the day.
+    
+    -> Basic of .Net like Class, Namespace in Brief
+    
+    -> Data Types:
+        # InBuild : sbyte, byte, short, ushort, int, uint, long, ulong, float, double
+        # Others  : String, Structure, Decimal and mANY mORE
+    
+    -> Also What is Difference between value and ref type 
+        # Value Stype Have Default value 0 and by default non-nullable
+            Ex int i=0 //Non-Nullable and can do this
+               int i=null // as non-nullable can not do this
+               int? i=null // Here We Declaring Nullable type so can do this
+               int j = i ?? 0 // To Set Default value if first (i) is nullable.
+
+            Note: Benifit of Nullable Value is if default value indicating any meaning then set the value null is very helpful like 
+                  if 0 => Male 1=>Female 2=>Others Then Here if User Not Selecting Value then it is male By Default which may lead to wrong data as well wrong process.    
+
+        # Reference type Have Default value null and nullable type.
+    
+    -> Common Opertaors like Airthmatic, Relational, Conditional, BitWise, Ternary.
+
+    -> Type Conversion using Convert Class and Its Methods, Parse Method and TryParse method.
+    -> Implicit Conversion possible in that case only when no data loss is there means int to float is possible but float to int is not possible in that case have to explicit type casting
+        int a = 5;
+        float b=5; // Implicit is possible
+       // int c=b;   // Not Possible so
+        int c=(int)b; //Have to Do Explicit Type Cast  
+
+    -> Also few things about array and its advantages and disadvantags.
+        # Have to Access array by index
+        # Storngly Typed.
+        # Basically Fix Size which is main disadvantag no doubt can Resize but as Array Require Continous Memory Location so may Possible that Resize Leads To Error. 
+
+
