@@ -1,0 +1,31 @@
+------------------------------------------------------------------------
+                            DotNet
+------------------------------------------------------------------------
+
+* Gone through all videoes of the day.And Learn New Things which are as below;
+    
+    -> Can Use & instead of && and Same || instead | , Not Using Just Because && and || are more efficient. 
+
+    -> How to Install IL Disassembler and Use That to Open .exe and .dll Files
+    -> How We Can Add IL Disassembler in Visual Studio Tools Section For Easy To Accees.
+
+    -> How We Can Handle Ambiguity when Two Namespace Have Smae Name of Classes.
+    -> How to Give Alias to NameSpace which Including and Use That Alias to resolve Ambiguity.
+
+    -> How to merge cases when have same defination
+        Ex: case 1:
+            case 2: Console.WriteLine($"{number*2+10}");
+            break;
+
+         # Main Thing is if we want to merge the cases then only final case have defination and after that break is must 
+         # if We Try To Merge those cases who have their own defination then getting error that case not fall on another case means break is require.  
+
+* Also Few Concepts got polished and More Strong Like
+    -> Use of Switch Statement
+    -> Use of Goto Statement
+    -> Use of 4 types of Loops and How to replace need of Goto with Do while easily as goto Statement is not good way of coding
+    -> Continue and break Statement in switch and Loops
+    -> How to Create Methods and Need of That
+    -> Value para, ref para, out para, how to pass an array and use of params
+    -> How to create .dll files or class library and include that in project.
+    -> Need of Namespace and use in best way to organize code 
