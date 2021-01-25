@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Sys = System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-///< GenerateDocumentationFile > true </ GenerateDocumentationFile >
-///<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
+
 namespace Practice_1
 {
     class Program
@@ -59,7 +58,7 @@ namespace Practice_1
         /// <exception cref="System.IO.IOException">Exception Details (Optional But Not Visible)</exception>
         public static void MayThrowException(int a)
         {
-            throw new Exception("Exception");
+            throw new Sys.Exception("Exception");
         }
         string line = "";
         /// <value>
@@ -96,7 +95,7 @@ namespace Practice_1
         {
             if ((a == double.MaxValue && b > 0) || (b == double.MaxValue && a > 0))
                 throw new System.OverflowException();
-
+            Sys.Console.WriteLine("Testing of Alias Sys");
             return a + b;
         }
     }
