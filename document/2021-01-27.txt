@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+                            DotNet
+------------------------------------------------------------------------
+
+* Completed All The Videoes of Today and with that also reviced and got more idea of those concepts like
+
+    -> How to Create Class with Constructors, Methods, Data Members
+    
+    -> In Class Data Members and Function can be static or non static (Instanteneous)
+        # Have to Think twise before declaring with static or non static for Memory management
+    
+    -> Default Empthy (Non Parameterized) is always there until devloper not declare any type of constructor manually, Can Declare Non-Parameterized and Parameterized Constructor also 
+       Can Use Concept Named Constructor Reusing
+       
+       Ex: public Constructor() : this/base ("Message") {
+           //Code, Here It Will First Call the Constrctor Which is Reused then inner code.
+       }
+    
+    -> For Polymorephisam
+        -> We Can Overload methods 
+            Same Name, Different Types of args, Diff Numbers of Args, Different Sequence of Args, and Different TYpe In Terms (Reference and value).
+        -> Override a method using Virtual Override keyword (Till Using Override devloper not Override method method of base class is executed).
+        -> If not Use virtual or override to declare same method with same name in inherited class then it known as method hiding and to avoid warning can use new.
+
+    -> We can use Inheritance for code reuseability.       
+        
