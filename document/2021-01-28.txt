@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+                            DotNet
+------------------------------------------------------------------------
+
+* Completed All The Videoes of Today and in that go through with concepts like
+    # Properties
+    # Structures
+    # Multiple Inheritance
+    # Difference Between Class and structures  & Reference type and value type
+    # Implementention of Inheritance methods Implicitly and Explisetly
+
+* Got New Things are:
+
+    # How to Create Directly Member for getting and setting value
+    # Implementention of Inheritance methods Implicitly and Explisetly
+        - If We Explisetly implement method then to access that have to type cast to that particular interface type
+    # What is Key and Main Difference between Class and Structure in depth with exact meaning, got it in very good manner
+
+* Reviced and got more idea on concepts like
+    # Use of Properties and declration & defination of Properties
+    # Multiple Inheritance using interface
+    # Use and Declaration & Defination of Structure
+
+* Done Practice of All the concepts and got all in very good manner
+        
