@@ -1,0 +1,50 @@
+------------------------------------------------------------------------
+                            DotNet
+------------------------------------------------------------------------
+
+* Completed All The Videoes of Today and in that go through with concepts like
+    # Abstract Class and Abstract Methods
+    # Stop Inheritance using Sealed keyword
+    # How to Create Abstract Properties, Abstract Methods
+    # Inheritance of abstract class in class
+    # Use of Delegates and Need Of Delegates.
+    # Differnce Between Interface and Abstract Class
+    # Problem of Multiple Inheritance using Class.
+    # Lamda Function
+
+* Also Went Through Some Additional Concepts like
+    # Using Type.IsInstanceTypeOf(object) can check object is of particualr Class or Not
+    Ex: typeOf(ClassName).IsInstanceTypeOf(object)   =>True if instace of and false if Not
+
+    # Different Types of Arrys & Array Class and Methods of Array Class
+        - OneDimensional
+        - MultiDimensional
+        - Jagged
+
+    # Operator OverLoading in Class, To Perform OPeration using Operator unlike regular numbers or value members.
+        Ex public static <return_type> operator <operator. + / - / * > ()
+        {
+            //Code
+        }
+    
+    * Few Console Related Things like   
+        - How to Chnage Currsur visiblity, position, size
+        - Background and Foreground Color of Console
+        - How to Clear console.
+        - Size of Console Window
+
+    * Lamda Function/Expresion using in-built Func<> delegate 
+        Func<InputParaTypes,ResultType> name = (Input Para) => {//Code};
+        function_name();
+
+
+* Done Prcatice and try to understand every Concept and Got Most of the thind except 
+
+    " Why We Allocating Memory of Child or Sub Class to Reference Variable of type Parent Class / Interface /Abstract Class, Means What is Benifit or Use of that 
+    Concept "
+
+    No Doubt as per my research Got More idea about this concept that
+    # Because of Static Type Checking We Can not Access Fields of Child or Sub Class.
+    # And Just Because of Method Overriding (Polymorephisam) We get output of overriden method of sub class.
+
+    
