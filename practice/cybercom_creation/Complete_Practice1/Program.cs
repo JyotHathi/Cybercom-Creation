@@ -30,7 +30,7 @@ namespace Complete_Practice1
             //********************************* Class, Exception ************************ 
             try
             {
-                Person person1 = new Employee("Jyot",21,"hathijyot3@gmail.com");
+                Person person1 = new Employee();
                 Employee employee1 = new Employee("Jyot Hathi",21,"jyothathi@gmail.com");
                 Person eperson1 = new Employee("abc",01,"abc@gmai.com");
 
@@ -44,29 +44,39 @@ namespace Complete_Practice1
                 //Person person11 = employee1;
                 //person11.DisplayDetails();
 
-            //*****************Operator Overloading****************************
+                //*****************Operator Overloading****************************
                 //Console.WriteLine(person1 + person11);
 
-            //*********************Lamda Expression**************************
+                //*********************Lamda Expression**************************
                 //Func<int, string, int> func = (x, y) =>
                 //  { x = x * x; Console.WriteLine(y); return x; };
                 //func(5,"Hello");
 
-            //*****************Use of Delegate*********************************
-                PrintDeatils ShowEmployeeDetails = new PrintDeatils(()=>Console.WriteLine("Using Delegates\n--------------------------\n" +
-                    "Employee's DisplayDetails:\n"));
-                ShowEmployeeDetails += employee1.DisplayDetails;
-                ShowEmployeeDetails +=() => Console.WriteLine("\nEmployee's DisplayDetails2:\n");
-                ShowEmployeeDetails += employee1.DisplayDetails2;
-                ShowEmployeeDetails();
+                //*****************Use of Delegate*********************************
+                //PrintDeatils ShowEmployeeDetails = new PrintDeatils(()=>Console.WriteLine("Using Delegates\n--------------------------\n" +
+                //    "Employee's DisplayDetails:\n"));
+                //ShowEmployeeDetails += employee1.DisplayDetails;
+                //ShowEmployeeDetails +=() => Console.WriteLine("\nEmployee's DisplayDetails2:\n");
+                //ShowEmployeeDetails += employee1.DisplayDetails2;
+                //ShowEmployeeDetails();
+                Console.WriteLine(60m / 7m);
             }
             catch(WrongDataException we)
             {
-                Console.WriteLine($"{we.Message}");
+                try
+                {
+                    throw new Exception("Manual Exception For Testing of Inner Exception", we);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message + "\n" + ex.InnerException.Message);
+                }
             }
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
+                
+
             }
             Console.ReadLine();
             
