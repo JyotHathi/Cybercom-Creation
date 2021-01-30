@@ -38,7 +38,7 @@
     3. Returns as Data (From Try Block)
 
 So Based Observation Learnt New Things that
-    1. We Can Not Write Return Statement in Finally Block but have to write return Statement in try and finally both
+    1. We Can Not Write Return Statement in Finally Block but have to write return Statement in try and catch both
     2. If We Returning Value then first try/catch  block get excute then finally and then only return Statement will get execute
  
     
