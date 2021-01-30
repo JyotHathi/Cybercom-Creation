@@ -26,5 +26,19 @@
 * Got The Exact idea that why we are using parent ref for child object.
 * Done Practice of all concepts which helped to get more good idea.
 
+
+* Also Got One New Thing That If We Have Function Returning value and in that exception will raise then
+    1. Catch Block's Codee Will Execute
+    2. Finally Block's Code (if**)
+    3. Returns a data (From Catch block)
+
+    -- If Not Exception Will Raise then
+    1. Try Block's Code will excute
+    2. Finally block's Code
+    3. Returns as Data (From Try Block)
+
+So Based Observation Learnt New Things that
+    1. We Can Not Write Return Statement in Finally Block but have to write return Statement in try and finally both
+    2. If We Returning Value then first try/catch  block get excute then finally and then only return Statement will get execute
  
     

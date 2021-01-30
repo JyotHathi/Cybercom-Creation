@@ -30,7 +30,7 @@ namespace Complete_Practice1
             //********************************* Class, Exception ************************ 
             try
             {
-                Person person1 = new Employee();
+                Person person1 = new Employee("Jyot", 22, "jyothathi38@gmail.com");
                 Employee employee1 = new Employee("Jyot Hathi",21,"jyothathi@gmail.com");
                 Person eperson1 = new Employee("abc",01,"abc@gmai.com");
 
@@ -59,7 +59,7 @@ namespace Complete_Practice1
                 //ShowEmployeeDetails +=() => Console.WriteLine("\nEmployee's DisplayDetails2:\n");
                 //ShowEmployeeDetails += employee1.DisplayDetails2;
                 //ShowEmployeeDetails();
-                Console.WriteLine(60m / 7m);
+                //Console.WriteLine(60m / 7m);
             }
             catch(WrongDataException we)
             {
@@ -75,8 +75,10 @@ namespace Complete_Practice1
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-                
-
+            }
+            finally
+            {
+                Console.WriteLine(FinallyReturn());
             }
             Console.ReadLine();
             
@@ -344,6 +346,28 @@ namespace Complete_Practice1
         }
         public delegate void PrintDeatils();
 
+        #endregion
+
+        #region finally block with return statement
+        public static string FinallyReturn()
+        {
+            try
+            {
+                //throw new Exception("Exception From Finally Return Block");
+                Console.WriteLine("Try Block");
+                return "Return From Try Block";
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return "Return From Catch Block";
+            }
+            finally
+            {
+                Console.WriteLine("Finally Block");
+                
+            }
+        }
         #endregion
     }
 }
