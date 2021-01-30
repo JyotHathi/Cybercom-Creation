@@ -1,0 +1,30 @@
+------------------------------------------------------------------------
+                            DotNet
+------------------------------------------------------------------------
+
+* Completed All The Videoes of Today and in that go through with concepts like
+    # Exception Handling
+        -- Got Idea that What is it, When to use, How TO Use.
+    # Different Construcrs of Base Class Exception
+    # Nested Try Catch Block
+    # Multiple Cacth Bocks to catch particular Type Exception
+    # Custome Exception 
+    # What Abuses are there In Exception Handling   
+        -- Every Place Where Error / Exception Is Possible at that point user use exception Handling
+        -- Solution or Best Way to use exception handling Is 
+            - Where We Can Handle error using conditional Statement there we have to use that, or use proper way of storing or manipulate data 
+                Ex. While Storing Integer or Any other data Type based value if we opt Convert.To<Based_on_dataType> () we can use <data_type>.TryParse method so that  
+                    if in case any wrong value is extered by user then no exception raise just we can pass message if issue is there.
+
+                    In Terms of Calculation we can check the values accorfding basic rules of operation instead of put in try block, and pass appropriate Message 
+
+        -- So Main Thing I Get is We Have to first check is there need of Exception Handling or We Can Manually Handle that error, if we know the possible error 
+            or exception then have to write code according that.
+        -- Have to Use Exception Hnadling When We Know There is possiblity of issue which is not predictable like very complex equation solution or Database connectivity
+    # Use of try, catch, throw, and finally block
+
+* Got The Exact idea that why we are using parent ref for child object.
+* Done Practice of all concepts which helped to get more good idea.
+
+ 
+    
