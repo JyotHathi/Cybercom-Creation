@@ -17,7 +17,7 @@ namespace Practice_Code1_ATM
             bool? isQuit = null;
             byte userChoice;
             AtmUsers user;
-            int amount; 
+            int amount;
             do
             {
                 userChoice = WelocmeMethod();
@@ -29,7 +29,7 @@ namespace Practice_Code1_ATM
                         break;
                     case 2:
                         user = AtmUsers.IsUserExists();
-                        if (user!= null)
+                        if (user != null)
                         {
                             byte userSubChoice;
                             do
@@ -39,18 +39,11 @@ namespace Practice_Code1_ATM
                                 switch (userSubChoice)
                                 {
                                     case 1:
-                                        if(user.AtmUser.UserBalance < AtmTransaction.minBalance)
-                                        {
-                                            ErrorMessage($"Your Balance is {user.AtmUser.UserBalance}");
-                                        }
-                                        else
-                                        {
-                                            SuccessMessage($"Your Balance is {user.AtmUser.UserBalance}");
-                                        }
+                                        SuccessMessage($"Your Balance is {user.AtmUser.UserBalance}");
                                         break;
                                     case 2:
                                         OutputText("Please Enter Amount: ");
-                                        if(int.TryParse(Console.ReadLine(),out amount))
+                                        if (int.TryParse(Console.ReadLine(), out amount))
                                         {
                                             user.CashWithdrawal(amount);
                                         }
@@ -111,7 +104,7 @@ namespace Practice_Code1_ATM
             Console.WriteLine("\a" + message);
             Console.ForegroundColor = ConsoleColor.Black;
         }
-        
+
         //-----------------------------------To Clean Screen
         public static void UserWait()
         {
@@ -129,7 +122,7 @@ namespace Practice_Code1_ATM
             Console.WriteLine(message);
             Console.ForegroundColor = ConsoleColor.Black;
         }
-        
+
         //---------------------------------To Print Output Messages
         static public void OutputText(string message)
         {
@@ -177,7 +170,7 @@ namespace Practice_Code1_ATM
 
             return userChoice;
         }
-        
+
         //-------------------------------------Choices After Login
         static public byte LoginChoice(string name)
         {
@@ -339,7 +332,7 @@ namespace Practice_Code1_ATM
     /// <remarks>
     /// It Has Structure Which Contain User Details. 
     /// </remarks>
-    
+
     //--------------------------------------- class AtmTransaction------------------------------------
     class AtmUsers : AtmTransaction
     {
@@ -379,14 +372,14 @@ namespace Practice_Code1_ATM
 
                 Array.Resize(ref User.usedUserPins, User.usedUserPins.Length + 1);
                 User.usedUserPins[User.usedUserPins.Length - 1] = atmUser.UserPin;
-                
+
 
                 Array.Resize(ref users, users.Length + 1);
                 users[users.Length - 1] = this;
                 Program.SuccessMessage("User Created Successfully\nMessage Sent To Your Mobile Number.");
 
             }
-            catch(InvalidUserInputException ex)
+            catch (InvalidUserInputException ex)
             {
                 Program.ErrorMessage(ex.Message + "\n" + "User Registration Failed\nTry Again");
             }
@@ -428,15 +421,16 @@ namespace Practice_Code1_ATM
         public static AtmUsers IsUserExists()
         {
             Program.OutputText("Please Enter Your PIN: ");
-            string userpin=Console.ReadLine();
-            AtmUsers resultuser=null;
-            foreach(AtmUsers user in users)
+            string userpin = Console.ReadLine();
+            AtmUsers resultuser = null;
+            foreach (AtmUsers user in users)
             {
-                if(user.atmUser.UserPin==userpin)
+                if (user.atmUser.UserPin == userpin)
                 {
                     resultuser = user;
                 }
-            }return resultuser;
+            }
+            return resultuser;
         }
 
     }
@@ -444,7 +438,7 @@ namespace Practice_Code1_ATM
     /// <summary>
     /// Structure User is to store User Details
     /// </summary>
-    
+
     //--------------------------------------- Structure User -----------------------------------------
     struct User
     {
@@ -555,7 +549,7 @@ namespace Practice_Code1_ATM
     /// <summary>
     /// This Custome Exception,When Invalid Input is Enter By User
     /// </summary>
-    
+
     //-----------------------------------Class (Exception) InvalidUserInput---------------------------
     class InvalidUserInputException : Exception
     {
@@ -565,5 +559,5 @@ namespace Practice_Code1_ATM
 
         public InvalidUserInputException(string message, Exception inerrexception) : base(message, inerrexception) { }
 
-    } 
+    }
 }
