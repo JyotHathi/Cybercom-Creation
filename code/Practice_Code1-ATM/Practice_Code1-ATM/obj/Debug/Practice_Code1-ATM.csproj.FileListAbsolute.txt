@@ -1,0 +1,7 @@
+E:\Cybercom-creation\code\Practice_Code1-ATM\Practice_Code1-ATM\bin\Debug\Practice_Code1-ATM.exe.config
+E:\Cybercom-creation\code\Practice_Code1-ATM\Practice_Code1-ATM\bin\Debug\Practice_Code1-ATM.exe
+E:\Cybercom-creation\code\Practice_Code1-ATM\Practice_Code1-ATM\bin\Debug\Practice_Code1-ATM.pdb
+E:\Cybercom-creation\code\Practice_Code1-ATM\Practice_Code1-ATM\obj\Debug\Practice_Code1-ATM.csprojAssemblyReference.cache
+E:\Cybercom-creation\code\Practice_Code1-ATM\Practice_Code1-ATM\obj\Debug\Practice_Code1-ATM.csproj.CoreCompileInputs.cache
+E:\Cybercom-creation\code\Practice_Code1-ATM\Practice_Code1-ATM\obj\Debug\Practice_Code1-ATM.exe
+E:\Cybercom-creation\code\Practice_Code1-ATM\Practice_Code1-ATM\obj\Debug\Practice_Code1-ATM.pdb

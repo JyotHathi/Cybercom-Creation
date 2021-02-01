@@ -1,0 +1,74 @@
+----------------------------------------------------------------- Defination or Problem ----------------------------------------------------------------
+Allow user to input only four digit number as their PIN.
+Set amount and max withdrawal amount as per your choice.
+Here The types of ATM transaction are
+1) Create Account
+    Name:
+    Mobile No:
+    Pin No:
+    Balance
+    Withdrawal Amount 
+2) Check Balance.
+3) Cash withdrawal.
+4) Cash deposition.
+5) Quit.
+You can opt any of the above transaction according to 
+your need of transaction.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------- Solution ---------------------------------------------------------------------------------
+
+1. First Created Interface That Have Common Methods which all Have Atm have To Implement Like Universal Rules/Methods for ATM
+2. Inherited That In To Abstract Class which describe design of particualr ATM which have few own methods and members like additional rules for particular ATM
+3. Structure which have basic details of user like name, Mobile Number, PIN, Balance, and Withdrawl amount limit with properties
+4. Create Class Which Inherited From Abstract Class of Particualr ATM, this class is for ATM users so have static array of users and Structure variable of user 
+   to store individual user user.
+5. Also Used Custome Exception which occurs when user not entered value properly like null or empthy or not according to pattern (For Mobile Number and PIN) using 
+   Reguler Expression.
+6. Then Implemented all the methods in ATM user's class.
+7. After That User Have to Choice that 
+    - Have to Register (Create Account)
+    - Login (If Registered and Entered valid PIN)
+
+    Note : Third Option is  Shut Down the ATM Which Have Default PIN 20210201 (TO Terminate the Application)
+            - This Option Added Because as we know ATM is always on or user can to quit the atm machine 
+            - To Implement and test For More then One User.
+8. Once User select Logged in if User has Correct Credentails then get options like 
+    - Check Balance : To Check Balance
+    - Withdrawal : For Withdrawal
+    - Deposition : For Deposition
+    - Quit  : For Logout or Quit 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------- Used Concepts -----------------------------------------------------------------------------------
+1. Basics of Console for color coding like 
+    - Console.ForgroundColor
+    - Console.BackgroundColor
+    - Console.Title
+    - Console.CursorVisible
+    - Console.Clear 
+
+2. Interace, Abstract Class, Class, Structure, Inheritance and Method Overriding
+
+3. Array, Array Class and Its Function like Resize
+
+4. Exception Handling and Custome Exception
+
+5. Conditional Statement 
+    - If else and Nestec If else
+    - Switch
+    - Loops
+    - Use of break
+
+6. Non Static and Static Methods and Variables
+
+7. As Have Minute Knowledge and learning  RegulerExpressions so Used That using
+    - System.Text.RegulerExpressions namespace
+    - Regex Class
+
+8. Also Thread.Sleep(time) to display Text before clear the console.
+
+9. Proper Comments Including XML Comment
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
