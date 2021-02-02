@@ -107,6 +107,7 @@ namespace Practice_2_02_02_2021_
             (string Fname, string Lname, string name) Person = GetPerson();
             Console.WriteLine(Person.Fname + " " + Person.Lname + " " + Person.name);
             Console.WriteLine(valtupple.Id9);
+            Method<string>("TestingofGenerics");
             Console.ReadLine();
             //##########################################################################################################
         }
@@ -119,6 +120,10 @@ namespace Practice_2_02_02_2021_
         public static (string,string,string) GetPerson()
         {
             return ("Jyot", "Hathi","TusharBhai");
+        }
+        public static T Method<T>(T data)
+        {
+            return data;
         }
     }
 
