@@ -1,0 +1,56 @@
+------------------------------------------------------------------------
+                            DotNet
+------------------------------------------------------------------------
+
+* Completed all the videoes of today which covers
+    
+    ========================================================== Enumration Data Type ======================================================================
+    - What is Enumration data Type, How It Is Useful
+    - Enum is value type, we can assign any numeric data type as value like byte, sbyte,short, ushort,int, uint,long, ulong not other then that
+    - Differnt methods of Enum class like GetValues(), GetNames(), GetName()
+    - If we want value then have to type cast in Proper Data Type
+    - Can Not Assign any other type enum to other type
+
+    
+    ========================================================== Attributes ================================================================================
+    - What is Attribute and How It is Useful
+    - Few Builtin Attribute
+    - Also Learn How To Create Custome Attribute and Use that
+
+    
+    ============================================================ Reflaction API ===========================================================================
+    - Different Classes of System.Reflaction like MethodInfo, Assembly, MemberInfo, PropertyInfo, Type, ParameterInfo 
+    - We are using Reflaction to get details like Which types namespace contain, (Members,Methods) of that type contain and many more  about differnt 
+       types and Assembly like .dll
+    - To Code using Late Binding Way
+
+    
+    ============================================================ Differnce Between Early and Late Binding ================================================== 
+    - Main Differnce is that if any typo error is there or missing declaration easily get at compile time which helps a lot which is early binding where as
+      in late binding every check happens at run time which may leads to complex coding and many errors at runtime so not preferable.
+
+    
+    ============================================================  What is Benifit of overriding object claas's methods ======================================
+    - Equals() : As If comparing the objects or reference directly then it check the addresses are same or not, but main aim is to check both are same as
+      per data or not so override of this method allows us to add code which contains conditions to check.
+    
+    -ToString() : If we directly Convert object or refernce tostring then it prints namespace.objectname (of objcet or reference), but we want data when we 
+     need proper data so can write our code while overriding this method.
+
+
+    ================================================================ Generics ================================================================================
+    - As Sometime in code we can passing any type of data for process, or for differnt data type we have to create same code so to overcome this we use 
+      generics.
+      Ex  public void PrintValue<T>(T data)
+          {
+              Console.WriteLine(data);
+          } 
+    - So As Shown In Above Snipet we create generic at Function level where T is generic and accept any value just at time of call have to mention type
+        Ex. PrintValue<string / int /double / decimal>(value in specified datatype)
+
+    - Same we Can Create Generic at Class Level.
+
+* Additionaly Learn Indexer withone para and multi para or index, use of indexer.
+* Tuple and ValueTuple and Use of that to return multiple value and pass multi value.
+
+
