@@ -1,0 +1,23 @@
+------------------------------------------------------------------------------------------------
+                        Dotnet
+------------------------------------------------------------------------------------------------
+
+* Completed All the Given Tutorial Videoes which Covers
+    - Difference Between Convert,ToString() and ToString()
+    - Partial Class and Methods
+    - Indexers and Indexer Overloading
+    - Collections List and Dictionary
+    - Differnt Ways of accepting para like 
+        - How to Make Parameter OPtional Using Params
+        - How to perform Method OverLoading Using Params
+        - Default Parameter
+        - Optional Attributes
+
+* Got All the things Completely and Done Practice of All the concepts.
+* Apart From That Craete Contact Book Using Dictionary and Claas With Storing COntacts and Seraching options.
+* Also Gone Through the concepts like 
+    - DateTime Structre For Date And Time
+    - Static Class and Its Features and Usage.
+    - How To Create Generic Delegate 
+    - And Also Reviced all the concepts in good manner and Corelated Every thing With Each Other To Remember Properly.
+    - Data Structure like Array List, Stack and Queue from Collection Classes
