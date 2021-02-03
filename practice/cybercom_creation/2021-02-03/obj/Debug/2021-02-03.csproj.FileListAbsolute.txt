@@ -1,0 +1,7 @@
+E:\Cybercom-creation\practice\cybercom_creation\2021-02-03\bin\Debug\2021-02-03.exe.config
+E:\Cybercom-creation\practice\cybercom_creation\2021-02-03\bin\Debug\2021-02-03.exe
+E:\Cybercom-creation\practice\cybercom_creation\2021-02-03\bin\Debug\2021-02-03.pdb
+E:\Cybercom-creation\practice\cybercom_creation\2021-02-03\obj\Debug\2021-02-03.csprojAssemblyReference.cache
+E:\Cybercom-creation\practice\cybercom_creation\2021-02-03\obj\Debug\2021-02-03.csproj.CoreCompileInputs.cache
+E:\Cybercom-creation\practice\cybercom_creation\2021-02-03\obj\Debug\2021-02-03.exe
+E:\Cybercom-creation\practice\cybercom_creation\2021-02-03\obj\Debug\2021-02-03.pdb

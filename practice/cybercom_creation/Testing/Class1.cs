@@ -8,7 +8,7 @@ namespace Testing
 {
     public class Class1
     {
-        protected internal string str = "hello";
+        internal string str = "hello";
         protected string str2 = "hello";
         private protected  string str3 = "hello";
 
@@ -19,6 +19,7 @@ namespace Testing
         {
             base.str = "Hello";
             base.str2 = "Hi";
+            base.str3 = "Hei..";
         }
     }
 }
