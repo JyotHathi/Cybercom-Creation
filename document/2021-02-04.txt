@@ -1,0 +1,42 @@
+------------------------------------------------------------------------------------------------
+                        Dotnet
+------------------------------------------------------------------------------------------------
+
+* Completed All the Given Tutorial Videoes which Covers
+    - Different Methods of List class
+        ->Find Elements Based On Conditions
+        ->Check Condition for All The Elements
+        -> And Many More like Convert To Array and Convert To Dictionary
+    - When to use List and When to use Dictionary.
+    - How To Sort Complex Type Data like classes in List and different ways of doin that
+      -> Delegate
+      -> inheriting Interface
+        - IComparable
+        - IComparer
+    - Stack and Queue
+    - Different Methods of Stack and Queue
+    - Real time Use of Stack and Use
+
+* Got All the Topics and Practice is also Done with small application with deatils above
+    -> Contact Book with features
+        - Add Contact
+        - Show Contacts (Dictionary As We Find Contact With Name)
+        - Call (Just To Call for logging)
+        - Call Log (As It Follow Stack so use Stack in this)
+        - Search Facility
+
+* Also went through concepts like
+    -> Generics:    
+        - HashSet
+        - Sorted Set
+        - Sorted Dictionary
+        - Sorted List and Difference Between Sorted List and Sorted Dictionary
+    
+    -> Collections:
+        - ArrayList
+        - Stack
+        - Queue
+        - Sorted List
+        - Hash Table
+
+    
