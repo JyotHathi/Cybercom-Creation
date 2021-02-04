@@ -22,4 +22,5 @@ namespace Testing
             base.str3 = "Hei..";
         }
     }
+
 }

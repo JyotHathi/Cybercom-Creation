@@ -133,14 +133,18 @@ namespace _2021_02_03
             Program.ChangeCheck(pq);
             Console.WriteLine(pq.GetHashCode()+" "+pq.hello);
             //-------------------------------------------------------------------------------------*/
-            #endregion
+            
+            /*-----------------------------------------------------------------------------------------
+            // Generic Delegates 
             Method<string> method = new Method<string>((ele)=> { return "Hello" + ele; });
             Method<string> method2 = new Method<string>((ele)=> { return "Hello" + ele + "..."; });
             method += method2;
             Console.WriteLine(method2("Jyot"));
             Hello<string>.name = "Hello";
             Console.WriteLine(Hello<float>.name);
-            
+            -----------------------------------------------------------------------------------------*/
+            #endregion
+            Pract03_02_2021.ListPractice();
             Console.ReadLine();
         }
         #region Methods
@@ -242,14 +246,18 @@ namespace _2021_02_03
         }
     }
 
-    class ContactBook
+    partial class ContactBook//:IComparable<int>
     {
         string personName;
         string contactNumber;
         string nameForSaving;
-        static Dictionary<string, ContactBook> myContacts;
+        static SortedDictionary<string, ContactBook> myContacts;
         static ContactBook contact = null;
 
+        /*public int CompareTo(ContactBook contact)
+        {
+            return this.NameForSaving.CompareTo(contact.NameForSaving);
+        }*/
         public ContactBook(string name, string number, string saveName)
         {
             this.PersonName = name;
@@ -263,7 +271,7 @@ namespace _2021_02_03
         }
         static ContactBook()
         {
-            myContacts = new Dictionary<string, ContactBook>();
+            myContacts = new SortedDictionary<string, ContactBook>();
         }
         public string PersonName
         {
@@ -334,16 +342,14 @@ namespace _2021_02_03
             }
             else
             {
-                return "";
+                return "No Result Found";
             }
         }
     }
-    #endregion
-
-    public delegate T Method <T>(T value);
+    public delegate T Method<T>(T value);
     struct Hello<T>
     {
-        public static T name; 
+        public static T name;
     }
 
     static class MathClass1
@@ -361,11 +367,14 @@ namespace _2021_02_03
             get;
             set;
         }
-       
+
         public static void Test()
         {
 
         }
-         
+
     }
+    #endregion
+
+
 }
