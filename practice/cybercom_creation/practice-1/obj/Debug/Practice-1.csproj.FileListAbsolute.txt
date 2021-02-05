@@ -12,3 +12,9 @@ D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.
 D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.csproj.CoreCompileInputs.cache
 D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.exe
 D:\Cybercom Creation\Projects\Cybercom-Creation\Practice-1\obj\Debug\Practice-1.pdb
+E:\Cybercom-creation\practice\cybercom_creation\Practice-1\bin\Debug\Practice-1.exe.config
+E:\Cybercom-creation\practice\cybercom_creation\Practice-1\bin\Debug\Practice-1.exe
+E:\Cybercom-creation\practice\cybercom_creation\Practice-1\bin\Debug\Practice-1.pdb
+E:\Cybercom-creation\practice\cybercom_creation\Practice-1\obj\Debug\Practice-1.csproj.CoreCompileInputs.cache
+E:\Cybercom-creation\practice\cybercom_creation\Practice-1\obj\Debug\Practice-1.exe
+E:\Cybercom-creation\practice\cybercom_creation\Practice-1\obj\Debug\Practice-1.pdb
