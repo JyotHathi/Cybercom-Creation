@@ -1,0 +1,30 @@
+------------------------------------------------------------------------------------------------
+                        Dotnet
+------------------------------------------------------------------------------------------------
+
+* Completed All the Given Tutorial Videoes which Covers
+    - Threading and use of that
+    - Multi threading Program
+    - Issues in Multi threading
+        -> Concurent Access of Shared Resources and use of locking to lock for batter access
+        -> DeadLock while locking
+    - Use of Acynck and Await and Differenec Between Threading
+    - Use of Lambda function and anonymous function
+
+* Got Complete Idea about multithreding, async and await, use and application of both and got clear idea that where to use when and how it affect.
+* Done COomplete Practice of All The concepts and got the idea
+* Also Implement Small Application (Windows Form) to get more idea about threading which defines and Covers
+    -> Defines Basic Button Clicks and Concureent access of shared Resource, Digital Clock (Like Regulaer Digital Clock)   
+    -> Covers Concepts 
+        - Async and Await
+        - Thread
+        - Comparision of Both of Them  Async and Await & Thread
+        - Use of Timer 
+        - Date Time
+        - Use of Action Delegate
+        - Lambda Function
+
+
+* Also Went through New Concepts Like
+    - Timer form System.Timers.Timer.
+
