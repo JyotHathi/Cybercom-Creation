@@ -1,0 +1,45 @@
+/*IndexSheet For Css of Index.html*/
+
+
+/* Css For Outer Div Which Contaoins Whole Content*/
+#outerdiv
+{
+    margin: auto;
+    margin-top: 10%;
+    display: block;
+    width:500px;
+    height:800px;
+
+}
+
+/*Css for Login Heading*/
+#headlogin
+{
+    text-align: center;
+}
+
+/* Css for Inner Div Which Contain Input fileds and Buttons*/
+#innerdiv
+{
+    margin: auto;
+    margin-top: 10%;
+    display: block;
+    background-color: rgb(250, 187, 165);
+    padding:20px;
+}
+
+/*Css for Div Which Contain Input Fileds*/
+.inptfields
+{
+  margin-bottom: 5px;
+}
+
+/*Css for placeholder of Input Fileds*/
+.inpttextfields::placeholder
+{
+    color: grey;
+    font-weight: 200;
+    font-size: medium;
+}
+
+
