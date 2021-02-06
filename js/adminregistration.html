@@ -1,0 +1,58 @@
+<!DOCTYPE html5> 
+<html>
+<head>
+    <title>Admin Registration</title>
+    <meta charset="UTF-8">
+    <link href="css/dashboardsheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="OuterDiv">
+        <h1 id="heading">
+            Registration
+        </h1>
+        <div id="Innerdiv">
+            <form method="post">
+            <div class="inputFiled">
+                <label class=>Name: </label>
+                <input type="text" name="txtname" id="txtname" class="inpttxtbox" placeholder="Name">
+            </div>
+            <div class="inputFiled">
+                <label class=>Email: </label>
+                <input type="email" name="txtemail" id="txtemail" class="inpttxtbox" placeholder="Email">
+            </div>
+            <div class="inputFiled">
+                <label class=>Password: </label>
+                <input type="password" name="txtpasssword" id="txtpasssword" class="inpttxtbox" placeholder="Password"> 
+            </div>
+            <div class="inputFiled">
+                <label class=>Confirm Password: </label>
+                <input type="password" name="txtconpassword" id="txtconpassword" class="inpttxtbox" placeholder="Confirm Password">
+            </div>
+            <div class="selectionFiled">
+                <label class=>City: </label><select name="drodowncity" id="drodowncity">
+                    <option value="-1" lclass="selecttext">Select City</option>
+                    <option value="Ahmedanbad" class="selecttext">Ahmedanbad</option>
+                    <option value="Rajkot" class="selecttext">Rajkot</option>
+                    <option value="Vadodara" class="selecttext">Vadodara</option>
+                    <option value="Delhi" class="selecttext">Delhi</option>
+                    <option value="Banaluru" class="selecttext">Banaluru</option>
+                </select>
+            </div>
+            <div class="selectionFiled">
+                <label class=>State: </label><select name="drodownstate" id="drodownstate">
+                    <option value="-1" lclass="selecttext">Select City</option>
+                    <option value="Gujarat" class="selecttext">Gujarat</option>
+                    <option value="Karnataka" class="selecttext">Karnataka</option>
+                    <option value="UttarPradesh" class="selecttext">UttarPradesh</option>
+                </select>
+            </div>
+
+            <div id="chekfiled"></div>
+            <input type="submit" value="Register" id="btnregister" class="SubmitButton" />
+        </form>
+        </div>
+    </div>
+
+    <script src="js/adminregiscript.js"></script>
+</body>
+</html>

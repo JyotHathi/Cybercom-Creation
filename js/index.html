@@ -6,31 +6,38 @@
 <head>
     <title>Login</title>
     <meta charset="UTF-8">
-    <link href="css/indexsheet.css"  rel="stylesheet" >
+    <link href="css/indexsheet.css" rel="stylesheet">
 </head>
 
 <body id="indexbody" onload="onLoadPage()">
 
     <!--Outer Div Which Contains Whole Content-->
     <div id="outerdiv">
-        
+
         <!--Heading Login-->
         <h1 id="headlogin">Login</h1>
-        
+
         <!--Inner Div Which Contains Input Fileds and Buttons-->
         <div id="innerdiv">
-            <div class="inptfields"><!--Input Filed Div-->
-                <label class="">Email: </label><input class="inpttextfields" type="text" name="txtemail" id="txtemail" placeholder="Email" />
-            </div>
-            <div class="inptfields"><!--Input Filed Div--> 
-                <label>Password: </label> 
-                <input class="inpttextfields" type="password" name="txtpasssword" id="txtpasssword" placeholder="Password" />
-            </div>
-            <div class="buttonfileds"><!-- Div contain Buttons-->
-                <button id="btnlogin" name="btnlogin">Login</button>
-                <label id="lblor">OR</label>
-                <button id="btnregister" name="btnregister">Register Now</button>
-            </div>
+            <form method="POST">
+                <div class="inptfields">
+                    <!--Input Filed Div-->
+                    <label class="">Email: </label><input class="inpttextfields" type="email" name="txtemail"
+                        id="txtemail" placeholder="Email" />
+                </div>
+                <div class="inptfields">
+                    <!--Input Filed Div-->
+                    <label>Password: </label>
+                    <input class="inpttextfields" type="password" name="txtpasssword" id="txtpasssword"
+                        placeholder="Password" />
+                </div>
+                <div class="buttonfileds">
+                    <!-- Div contain Buttons-->
+                    <input type="submit" id="btnlogin" name="btnlogin" value="login">
+                    <label id="lblor">OR</label>
+                </div>
+            </form>
+            <button id="btnregister" name="btnregister">Register Now</button>
         </div>
     </div>
     <!-----  Linking IndexScript File ----->

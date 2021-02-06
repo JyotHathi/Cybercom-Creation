@@ -60,11 +60,25 @@ function loginUser()
     else
     {
         let email=document.getElementById("txtemail").value;
-        jsDatabase.findIndex(()=>
+        let password=document.getElementById("txtpasssword").value;
+        let user=jsDatabase.findIndex(()=>
         {
-            this.email===email && this.password=
+            this.email===email && this.password===password;
         }
         );
+        if(user!=-1)
+        {
+            switch(jsDatabase[user])
+            {
+                case 1:window.location="./dashboard.html";
+                    break;
+                case 2:window.location="./udashboard.html";
+                    break;
+            }
+        }
+        else{
+            alert("Invalid Id or Password");
+        }
 
     }
 }
@@ -74,5 +88,19 @@ document.getElementById("btnregister").addEventListener("click",registerAdmin);
 
 function registerAdmin()
 {
+    if(jsDatabase.length===0)
+    {
+        window.location=("./adminregistration.html");
+    }
+    else{
 
+        let user=jsDatabase.findIndex(()=>this.userType===1);
+        if(user!=-1)
+        {
+            alert("Admin Already Registered!!");
+        }
+        else{
+            window.location=("./adminregistration.html");
+        }
+    }
 }

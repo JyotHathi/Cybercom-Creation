@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Usesr</title>
+    <meta charset="UTF-8">
+    <link href="css/dashboardsheet.css" rel="stylesheet">
+    <link href="css/usersheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div id="slidebar">
+            <label id="lblname" class="navlinks"></label><br>
+            <br>
+            <label id="lbldashboard" class="navlinks">DashBoard</label><br>
+            <label id="lblUser" class="navlinks">Users</label><br>
+            <label id="lblsessions" class="navlinks">Login Sessions</label><br>
+            <label id="lbllogout" class="navlinks">logout</label><br>
+        </div>
+
+        <h1>Add User: </h1>
+        <div>
+            <form method="post">
+                Name: <input type="text" name="txtname" id="txtname" class="inptfields" placeholder="name">
+                Email: <input type="email" name="txtemail" id="txtemail" class="inptfields" placeholder="Email">
+                Password: <input type="password" name="txtname" id="txtname" class="inptfields" placeholder="Password">
+                DateOfBirth: <input type="date" name="txtname" id="txtdob" class="inptfields">
+                <input type="submit" value="Add User" >
+            </form>
+        </div>
+        <div>
+                <table id="userTable" border="1">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Date Of Birth</th>
+                    </tr>
+                </table>
+            </div>
+    </div>
+</body>
+
+</html>
