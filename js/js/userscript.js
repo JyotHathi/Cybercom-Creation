@@ -27,7 +27,7 @@ class NormalUser extends DefaultUser {
     }
 }
 
-document.getElementById("lbllogout").addEventListener("click", () => window.location = "./index.html");
+document.getElementById("lbllogout").addEventListener("click", () => { window.location = "./index.html"; sessionStorage.removeItem("userEmail");});
 
 document.getElementById("lblUser").addEventListener("click", () => window.location = "./users.html");
 
@@ -36,6 +36,12 @@ document.getElementById("lblsessions").addEventListener("click", () => window.lo
 document.getElementById("lbldashboard").addEventListener("click", () => window.location = "./dashboard.html");
 
 document.getElementById("btnadduser").addEventListener("click", SubmitData);
+
+var emailId = JSON.parse(sessionStorage.getItem("userEmail"));
+var jsDatabase = JSON.parse(localStorage.getItem("jsDatabase"));
+var user = jsDatabase.find((ele) => ele.email === emailId);
+document.getElementById("lblname").innerHTML = "Hello, " + user.userName;
+
 
 function SubmitData() {
     let name = document.getElementById("txtname").value;
@@ -97,15 +103,10 @@ function CreateTabble(jsDatabase) {
         tableRow.appendChild(tablecol);
 
         tablecol = document.createElement("td");
-        text = document.createTextNode("Edit");
+        text = document.createTextNode("Edit Delete");
         tablecol.appendChild(text);
         tableRow.appendChild(tablecol);
 
-
-        tablecol = document.createElement("td");
-        text = document.createTextNode("Delete");
-        tablecol.appendChild(text);
-        tableRow.appendChild(tablecol);
         document.getElementById("userTable").appendChild(tableRow);
     }
 }
@@ -128,13 +129,7 @@ function AddRow(obj)
         tableRow.appendChild(tablecol);
 
         tablecol = document.createElement("td");
-        text = document.createTextNode("Edit");
-        tablecol.appendChild(text);
-        tableRow.appendChild(tablecol);
-
-
-        tablecol = document.createElement("td");
-        text = document.createTextNode("Delete");
+        text = document.createTextNode("Edit Delete");
         tablecol.appendChild(text);
         tableRow.appendChild(tablecol);
         

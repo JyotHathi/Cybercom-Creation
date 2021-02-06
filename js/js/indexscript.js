@@ -56,8 +56,7 @@ function loginUser() {
             let user = jsDatabase.find((ele) =>ele.email===emailValue && ele.password===passwordValue); 
         
             if (user !=null) {
-                
-                sessionStorage.setItem("userEmail",user.email);
+                sessionStorage.setItem("userEmail",JSON.stringify(user.email));
                 switch (user.userType) {
                     case 1: 
                     window.location = "./dashboard.html";
