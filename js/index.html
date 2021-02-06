@@ -7,6 +7,8 @@
     <title>Login</title>
     <meta charset="UTF-8">
     <link href="css/indexsheet.css" rel="stylesheet">
+    <!-----  Linking IndexScript File ----->
+    <script src="js/indexscript.js"></script>
 </head>
 
 <body id="indexbody" onload="onLoadPage()">
@@ -31,17 +33,16 @@
                     <input class="inpttextfields" type="password" name="txtpasssword" id="txtpasssword"
                         placeholder="Password" />
                 </div>
-                <div class="buttonfileds">
-                    <!-- Div contain Buttons-->
-                </div>
             </form>
-            <button id="btnlogin" name="btnlogin">Login</button>
-                    <label id="lblor">OR</label>
-            <button id="btnregister" name="btnregister">Register Now</button>
+            <div class="buttonfileds">
+                <button id="btnlogin" name="btnlogin" onclick="loginUser()">Login</button>
+                <label id="lblor">OR</label>
+                <button id="btnregister" name="btnregister" onclick="registerAdmin()">Register Now</button>
+            </div>
+
         </div>
     </div>
-    <!-----  Linking IndexScript File ----->
-    <script src="js/indexscript.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 var jsDatabase;
+// Intially to load from local storage.
 if(localStorage.getItem("jsDatabase")!==null)
 {
     jsDatabase=JSON.parse(localStorage.getItem("jsDatabase"));
@@ -7,11 +8,12 @@ else{
     jsDatabase=new Array();
 }
 
+// Default User Class with filds whcih all user have
 class DefaultUser {
     constructor(username, email, password, usertype) {
         this.userName = username;
         this.password = password;
-        this.email - email;
+        this.email = email;
         this.userType = usertype
     }
 }
@@ -25,16 +27,10 @@ class AdminUser extends DefaultUser {
     }
 }
 
-// Normal User CLass Which extends Default User and Also Have Addition Filed named Date of Birth.
-class NormalUser extends DefaultUser {
-    constructor(username, email, password, dateofbirth, userType) {
-        super(username, email, password, userType);
-        this.dateOfBirth = dateofbirth;
-    }
-}
-
+// To Bind Event with register Button
 document.getElementById("btnregister").addEventListener("click",registerAdmin);
 
+// Function To Validate the data and store if correct
 function registerAdmin()
 {
     let username=document.getElementById("txtname").value;
@@ -44,17 +40,21 @@ function registerAdmin()
     let confirmpassword=document.getElementById("txtconpassword").value;
     let city=document.getElementById("drodowncity").value;
     let state=document.getElementById("drodownstate").value;
+    let terms=document.getElementById("chkboxterms").checked;
 
-    if(checkdata(username,email,password,confirmpassword,city,state)==1)
+    if(checkdata(username,email,password,confirmpassword,city,state,terms)==1)
     {
-        var adminUser=new AdminUser(username,email,password,city,state,1);
+        var adminUser=new AdminUser(username,email,password,city,state,1); // usertype 1 is for admin and 2 for users
+        console.log(adminUser);
         jsDatabase.push(adminUser);
         localStorage.setItem("jsDatabase",JSON.stringify(jsDatabase));
         window.location="./index.html";
     }
 }
 
-function checkdata(username,email,password,confirmpassword,city,state)
+
+// Function Which check whether data is insrted or not
+function checkdata(username,email,password,confirmpassword,city,state,terms)
 {
     if(username===null || username==="")
     {
@@ -89,6 +89,11 @@ function checkdata(username,email,password,confirmpassword,city,state)
     else if(state==="-1")
     {
         alert("Please Select State");
+        return 0;
+    }
+    else if(terms===false)
+    {
+        alert("Please Accept Terms And Condition");
         return 0;
     }
     else{
