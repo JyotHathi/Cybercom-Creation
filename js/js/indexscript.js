@@ -4,8 +4,8 @@
 
 
 var jsDatabase = new Array();
-
-// To Refresh the Page When Page Got Load or Refresh and to load the data
+onLoadPage();
+// To Refresh the Page When Page Got Load or Refresh 
 function onLoadPage() {
     document.getElementById("txtemail").value = "";
     document.getElementById("txtpasssword").value = "";
@@ -14,42 +14,63 @@ function onLoadPage() {
     }
 }
 
+// Default User Class Which Contains Common Fileds of Uesr
+class DefaultUser {
+    constructor(username, email, password, usertype) {
+        this.userName = username;
+        this.password = password;
+        this.email - email;
+        this.userType = usertype
+    }
+}
 
-// function that called when login button is press
+// Admin User CLass Which extends Default User and Alos Have Unique Fileds like State and City.
+class AdminUser extends DefaultUser {
+    constructor(username, email, password, city, state, userType) {
+        super(username, email, password, userType);
+        this.city = city;
+        this.state = state;
+    }
+}
+
+// Normal User CLass Which extends Default User and Also Have Addition Filed named Date of Birth.
+class NormalUser extends DefaultUser {
+    constructor(username, email, password, dateofbirth, userType) {
+        super(username, email, password, userType);
+        this.dateOfBirth = dateofbirth;
+    }
+}
+
+// EventListerner For Login Button
+document.getElementById("btnlogin").addEventListener("click", loginUser);
 function loginUser() {
-    // If No Users Are There 
     if (jsDatabase.length == 0) {
         alert("No Users Are available If You are Admin Please Register Your Self First!!");
     }
-
-    // If No Users Are There
     else {
         var emailValue = document.getElementById("txtemail").value;
         var passwordValue = document.getElementById("txtpasssword").value;
         
-        // Checking Whether Inputs are insrete Or Not
         if ((emailValue != null && emailValue != "") && (passwordValue != null && passwordValue != "")) 
         {
-            // Finding User if exists
             let user = jsDatabase.find((ele) =>ele.email===emailValue && ele.password===passwordValue); 
-            
-            // I fuser Exists then 
-            if (user!=null) {
+        
+            if (user !=null) {
+                
+                sessionStorage.setItem("userEmail",user.email);
                 switch (user.userType) {
-                    case 1: window.location = "./dashboard.html";
+                    case 1: 
+                    window.location = "./dashboard.html";
                         break;
                     case 2: window.location = "./udashboard.html";
                         break;
                 }
             }
-            
-            // if not user found
             else {
                 
                 alert("Invalid Id or Password");
             }
         }
-        
         else {
             alert("Please Enter Email and Password");
         }
@@ -57,8 +78,9 @@ function loginUser() {
     }
 }
 
+// EventListerner For Register Button
+document.getElementById("btnregister").addEventListener("click", registerAdmin);
 
-// Function Which Execute When User Clcik Register User
 function registerAdmin() {
     if (jsDatabase.length === 0) {
         console.log(jsDatabase.length);

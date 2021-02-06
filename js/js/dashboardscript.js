@@ -10,8 +10,8 @@ else{
 
 document.getElementById("lbllogout").addEventListener("click",()=>window.location="./index.html");
 
-document.getElementById("lblUser").addEventListener("click",()=>window.location="./users.html")
+document.getElementById("lblUser").addEventListener("click",()=>window.location="./users.html");
 
-document.getElementById("lblsessions").addEventListener("click",()=>window.location="./sessions.html")
+document.getElementById("lblsessions").addEventListener("click",()=>window.location="./sessions.html");
 
-document.getElementById("lbldashboard").addEventListener("click",()=>window.location="./dashboard.html")
+document.getElementById("lbldashboard").addEventListener("click",()=>window.location="./dashboard.html");

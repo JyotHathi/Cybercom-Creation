@@ -1,4 +1,4 @@
-var jsDatabase;
+var jsDatabase=new Array();;
 // Intially to load from local storage.
 if(localStorage.getItem("jsDatabase")!==null)
 {
@@ -29,7 +29,6 @@ class AdminUser extends DefaultUser {
 
 // To Bind Event with register Button
 document.getElementById("btnregister").addEventListener("click",registerAdmin);
-
 // Function To Validate the data and store if correct
 function registerAdmin()
 {

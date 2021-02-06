@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <link href="css/dashboardsheet.css" rel="stylesheet">
     <link href="css/usersheet.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -19,29 +20,33 @@
             <label id="lbllogout" class="navlinks">Logout</label><br>
         </div>
 
+        
         <h1>Add User: </h1>
         <div>
             <form method="post">
                 Name: <input type="text" name="txtname" id="txtname" class="inptfields" placeholder="name">
                 Email: <input type="email" name="txtemail" id="txtemail" class="inptfields" placeholder="Email">
-                Password: <input type="password" name="txtname" id="txtname" class="inptfields" placeholder="Password">
-                DateOfBirth: <input type="date" name="txtname" id="txtdob" class="inptfields">
-                <input type="submit" value="Add User" >
+                Password: <input type="password" name="txtpassword" id="txtpassword" class="inptfields" placeholder="Password">
+                DateOfBirth: <input type="date" name="txtdob" id="txtdob" class="inptfields">
+                <input type="button" value="Add User" id="btnadduser">
             </form>
         </div>
         <div>
-                <table id="userTable" border="1">
+                <table id="userTable" border="1" style="border-collapse: collapse;">
                     <tr>
                         <th>Name</th>
-                        <th>Email</th>
                         <th>Password</th>
+                        <th>Email</th>
                         <th>Date Of Birth</th>
+                        <th>Age</th>
+                        <th></th>
                     </tr>
                 </table>
             </div>
+            <script src="js/userscript.js"></script>
     </div>
 
-    <script src="js/userscript.js"></script>
+    
 </body>
 
 </html>
