@@ -20,6 +20,7 @@ namespace Practice_2_02_02_2021_
         
     }
 
+    [CustomeAttribute("Main Method",DateValue ="8th Feb 2021")]
     class Program : Class1
     {
         static void Main(string[] args)
@@ -113,15 +114,16 @@ namespace Practice_2_02_02_2021_
             //##########################################################################################################
         }
 
-        //[CustomeAttribute("Main Method",Date=DateTime.Now)]
-        //public void Test5(int a)
-        //{
-        //    base.str = "Hello";
-        //}
+        
+        public void Test5(int a)
+        {
+            //base.str = "Hello";
+        }
         public static (string,string,string) GetPerson()
         {
             return ("Jyot", "Hathi","TusharBhai");
         } 
+        [CustomeAttribute("GenericMethod")]
         public static T Method<T>(T data)
         {
             return data;
@@ -129,19 +131,19 @@ namespace Practice_2_02_02_2021_
     }
 
     //-------------------------------------------------------------------------------------------
-    [AttributeUsage(AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.All)]
     class CustomeAttribute : Attribute
     {
         public string message;
-        DateTime date;
-        public DateTime Date
-        {
-            get { return date; }
-            set { date = value; }
-        }
+        string date;
         public CustomeAttribute(string message)
         {
             this.message = message;
+        }
+        public string DateValue
+        {
+            get { return date; }
+            set { date = value; }
         }
     }
 

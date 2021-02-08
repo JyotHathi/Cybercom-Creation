@@ -1,7 +1,0 @@
-E:\Cybercom-creation\practice\cybercom_creation\ThreadPractice\bin\Debug\ThreadPractice.exe.config
-E:\Cybercom-creation\practice\cybercom_creation\ThreadPractice\bin\Debug\ThreadPractice.exe
-E:\Cybercom-creation\practice\cybercom_creation\ThreadPractice\bin\Debug\ThreadPractice.pdb
-E:\Cybercom-creation\practice\cybercom_creation\ThreadPractice\obj\Debug\ThreadPractice.csproj.CoreCompileInputs.cache
-E:\Cybercom-creation\practice\cybercom_creation\ThreadPractice\obj\Debug\ThreadPractice.exe
-E:\Cybercom-creation\practice\cybercom_creation\ThreadPractice\obj\Debug\ThreadPractice.pdb
-E:\Cybercom-creation\practice\cybercom_creation\ThreadPractice\obj\Debug\ThreadPractice.csprojAssemblyReference.cache

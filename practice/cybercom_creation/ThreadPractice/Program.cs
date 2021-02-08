@@ -13,8 +13,9 @@ public class Example
 
         //AsyncAwait(); 
         //ThreadMethod();
+
         Console.WriteLine(DateTime.Now.ToShortTimeString());
-        
+
         #region Commented Text
         //// Threads Intialization
         //thread1 = new Thread(AddNumbers);
@@ -41,9 +42,11 @@ public class Example
         //// Final Output
         //Console.WriteLine(thread1.IsAlive + " " + thread2.IsAlive + " " + " " + total1 + " " + stopwatch.ElapsedMilliseconds);
         #endregion
+        
         Console.ReadLine();
 
     }
+    
     public async static void AsyncAwait()
     {
         Task task1 = new Task(AddNumbers);
@@ -55,7 +58,7 @@ public class Example
         await task2;
         Console.WriteLine("Task-2 Completed:" + total1);
     }
-    public  static void ThreadMethod()
+    public static void ThreadMethod()
     {
         thread1 = new Thread(new ThreadStart(AddNumbers));
         thread2 = new Thread(new ThreadStart(AddNumbers));
@@ -128,7 +131,7 @@ public class Example
 
         for (long i = 0; i < 100000; i++)
         {
-            Interlocked.Increment(ref  total1);
+            Interlocked.Increment(ref total1);
             //total1++;
         }
     }

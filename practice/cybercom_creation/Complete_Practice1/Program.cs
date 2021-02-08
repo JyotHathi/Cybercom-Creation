@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Collections.Generic;
 namespace Complete_Practice1
 {
     class Program
@@ -28,58 +29,64 @@ namespace Complete_Practice1
             //Console.ForegroundColor = ConsoleColor.Green;
 
             //********************************* Class, Exception ************************ 
-            try
-            {
-                Person person1 = new Employee("Jyot", 22, "jyothathi38@gmail.com");
-                Employee employee1 = new Employee("Jyot Hathi",21,"jyothathi@gmail.com");
-                Person eperson1 = new Employee("abc",01,"abc@gmai.com");
+            //try
+            //{
+            //    Person person1 = new Employee("Jyot", 22, "jyothathi38@gmail.com");
+            //    Employee employee1 = new Employee("Jyot Hathi",21,"jyothathi@gmail.com");
+            //    Person eperson1 = new Employee("abc",01,"abc@gmai.com");
 
-                //Console.WriteLine("Is Person=new Employee is type of Employee:"+typeof(Employee).IsInstanceOfType(eperson1));
-                //Console.WriteLine("Is Person=new Employee is type of Person:" + typeof(Person).IsInstanceOfType(eperson1));
-                //Console.WriteLine("Is Employee=new Employee is type of Employee:" + typeof(Employee).IsInstanceOfType(employee1));
-                //Console.WriteLine("Is Employee=new Employee is type of Person:" + typeof(Person).IsInstanceOfType(employee1));
+            //    //Console.WriteLine("Is Person=new Employee is type of Employee:"+typeof(Employee).IsInstanceOfType(eperson1));
+            //    //Console.WriteLine("Is Person=new Employee is type of Person:" + typeof(Person).IsInstanceOfType(eperson1));
+            //    //Console.WriteLine("Is Employee=new Employee is type of Employee:" + typeof(Employee).IsInstanceOfType(employee1));
+            //    //Console.WriteLine("Is Employee=new Employee is type of Person:" + typeof(Person).IsInstanceOfType(employee1));
 
-                //eperson1.DisplayDetails();
-                //Console.WriteLine("--------------------------");
-                //Person person11 = employee1;
-                //person11.DisplayDetails();
+            //    //eperson1.DisplayDetails();
+            //    //Console.WriteLine("--------------------------");
+            //    //Person person11 = employee1;
+            //    //person11.DisplayDetails();
 
-                //*****************Operator Overloading****************************
-                //Console.WriteLine(person1 + person11);
+            //    //*****************Operator Overloading****************************
+            //    //Console.WriteLine(person1 + person11);
 
-                //*********************Lamda Expression**************************
-                //Func<int, string, int> func = (x, y) =>
-                //  { x = x * x; Console.WriteLine(y); return x; };
-                //func(5,"Hello");
+            //    //*********************Lamda Expression**************************
+            //    //Func<int, string, int> func = (x, y) =>
+            //    //  { x = x * x; Console.WriteLine(y); return x; };
+            //    //func(5,"Hello");
 
-                //*****************Use of Delegate*********************************
-                //PrintDeatils ShowEmployeeDetails = new PrintDeatils(()=>Console.WriteLine("Using Delegates\n--------------------------\n" +
-                //    "Employee's DisplayDetails:\n"));
-                //ShowEmployeeDetails += employee1.DisplayDetails;
-                //ShowEmployeeDetails +=() => Console.WriteLine("\nEmployee's DisplayDetails2:\n");
-                //ShowEmployeeDetails += employee1.DisplayDetails2;
-                //ShowEmployeeDetails();
-                //Console.WriteLine(60m / 7m);
-            }
-            catch(WrongDataException we)
-            {
-                try
-                {
-                    throw new Exception("Manual Exception For Testing of Inner Exception", we);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message + "\n" + ex.InnerException.Message);
-                }
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                Console.WriteLine(FinallyReturn());
-            }
+            //    //*****************Use of Delegate*********************************
+            //    //PrintDeatils ShowEmployeeDetails = new PrintDeatils(()=>Console.WriteLine("Using Delegates\n--------------------------\n" +
+            //    //    "Employee's DisplayDetails:\n"));
+            //    //ShowEmployeeDetails += employee1.DisplayDetails;
+            //    //ShowEmployeeDetails +=() => Console.WriteLine("\nEmployee's DisplayDetails2:\n");
+            //    //ShowEmployeeDetails += employee1.DisplayDetails2;
+            //    //ShowEmployeeDetails();
+            //    //Console.WriteLine(60m / 7m);
+            //}
+            //catch(WrongDataException we)
+            //{
+            //    try
+            //    {
+            //        throw new Exception("Manual Exception For Testing of Inner Exception", we);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Console.WriteLine(ex.Message + "\n" + ex.InnerException.Message);
+            //    }
+            //}
+            //catch(Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
+            //finally
+            //{
+            //    Console.WriteLine(FinallyReturn());
+            //}
+
+            //List<Employee> list = new List<Employee>();
+            //list.Find((employee)=> employee.Name.StartsWith("J"));
+            //list.FindAll((employee) => employee.Name.EndsWith("K"));
+            //Dictionary<int, string> keyValuePairs = new Dictionary<int, string>();
+           
             Console.ReadLine();
             
         }
