@@ -1,0 +1,26 @@
+------------------------------------------------------------------------------------------------
+                        Dotnet
+------------------------------------------------------------------------------------------------
+
+* Gone Through the all concepts and try to corelate them for relatime application
+* Done Practice of few confusing concept and get more idea of them like
+    1. Custom Attribute 
+        - How to Give Property Value While Declaring Attribute
+        - We can not Declare value which may change at compilte time like if Date Is there then can not assign value like DateTime.Now.ToLongDateString() 
+          as it given new value.
+    2. Threding and Locking
+        - Build One Application Named (CompletePractice2) based on that defination of that is 
+            " Register Number and Calling to Other Register Person, on call time both user are bussy for 10secs
+              While on call user can not not call other person if try then proper message and
+              if user is busy then if other user call to any of two who are connected then it not accept the call and tell user that person is busy."
+        - Used the locking and try to manage that locking in best possible way.
+        - To Maintain Details of User used Dictionary and also used Dictionary to maintain list of user who are connected and who were connected and used flag to check user is 
+           available or not.
+        - To get more understanding of threding using breakpoint and Diagonsis Tool (Events).
+    3. Got Brief Idea about Mutex and Semaphore no doubt it is not benificial in case of internal threding so try to find about External Threding.  
+        
+        # Got New thing that we can not Use valuetype variable as in lock object can use reference type variables or reference only.
+* Also Revised consepts like ValueTuple and Tuple.
+
+
+              
