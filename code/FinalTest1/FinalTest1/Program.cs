@@ -303,7 +303,17 @@ namespace FinalTest1
 
                         // Nth Number of Fibonacic Series
                         case 20:
-                            Console.WriteLine($"10th Number is {Fibonacci(10)}");
+                            bool isCorrect = false;
+                            int term;
+                            do
+                            {
+                                Console.WriteLine("Enter Term");
+                                if (int.TryParse(Console.ReadLine(), out term))
+                                    isCorrect = true;
+                                else
+                                    Console.WriteLine("Please Enter Proper numeric Value");
+                            } while (!isCorrect);
+                            Console.WriteLine($"{term} Term is {Fibonacci(term-1)}");
                             break;
 
                         // To Exit
@@ -336,7 +346,7 @@ namespace FinalTest1
             bool Ischoiced;
             do
             {
-                Console.WriteLine("Please Choice Code Number:\n--------------------------------\n" +
+                Console.WriteLine("\nPlease Choice Code Number:\n--------------------------------\n" +
                     "1.Palindrome String\n" +
                     "2.TextValue to NumricTextValue\n" +
                     "3.Count 1's in Number\n" +
@@ -725,16 +735,20 @@ namespace FinalTest1
         }
 
         // --Code Number 20:Nth Teram of Fibonacci using recursive Function
+        /// <summary>
+        /// Nth Terms of Fibonacci Series Using Recursive Function
+        /// </summary>
+        /// <param name="term"></param>
+        /// <returns></returns>
         public static int Fibonacci(int term)
         {
-            if (term < 1)
+            if (term <= 1)
                 return 1;
             else
                 return Fibonacci(term - 1) + Fibonacci(term - 2);
         }
         #endregion
     }
-
 
     #region Structures and Interfaces
     // Code Number 1:Structure For Palindrome checking
