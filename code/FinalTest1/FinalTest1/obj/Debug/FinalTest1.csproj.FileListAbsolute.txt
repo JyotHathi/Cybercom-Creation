@@ -1,0 +1,7 @@
+E:\Cybercom-creation\code\FinalTest1\FinalTest1\obj\Debug\FinalTest1.csprojAssemblyReference.cache
+E:\Cybercom-creation\code\FinalTest1\FinalTest1\obj\Debug\FinalTest1.csproj.CoreCompileInputs.cache
+E:\Cybercom-creation\code\FinalTest1\FinalTest1\bin\Debug\FinalTest1.exe.config
+E:\Cybercom-creation\code\FinalTest1\FinalTest1\bin\Debug\FinalTest1.exe
+E:\Cybercom-creation\code\FinalTest1\FinalTest1\bin\Debug\FinalTest1.pdb
+E:\Cybercom-creation\code\FinalTest1\FinalTest1\obj\Debug\FinalTest1.exe
+E:\Cybercom-creation\code\FinalTest1\FinalTest1\obj\Debug\FinalTest1.pdb
