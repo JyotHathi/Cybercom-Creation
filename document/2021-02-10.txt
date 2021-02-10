@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Gone Through the all videoes of today which covers
+    -> What is Sql Server, Sql Server Management Studio and How Both are Different and How To Use them
+    -> Basics of SQL Database like (Using GUI and Sql Query)
+        - How To Create, Delete(Drop),alter and Rename Database
+        - How To Create, Alter, Drop & Rename Table
+        - Differnt Constraints and meaning of them , How To Apply those on columns of table
+            # Check
+            # Default value
+            # Not Null
+            # Unique
+            # Primary Key
+            # Foreign Key
+            # Identity
+        - How To Print Data of Table using Select and Filter and Aggregation using
+            # Where clause
+            # Group By
+            # Order By
+        - Differnt Opearators and use of that like NOT, IN, BETWEEN, LIKE any others like AND OR etc
+        - Differnt Types of Joins and Need and Use of that to get data which is divided in multiple tables.
+            # Inner Join
+            # Left Join
+            # right Join
+            # Full Join
+            # Cross Join
+
+* Done Complete prcatice in both the way using GUI and Query.
+* Done Some Observations and Experiments and Noted Down result like
+
+  1. What if we Set "Set Default" in Insert and Update Specification of Relationship (Foreign Key) without any default value
+     Observation: it works as "Set Null" options means replace the value by null.
+
+  2. What is Indentity is set and insert query gives error
+    Observation : 
+        1. If It is at Compile stage means invalid name of table or column then work smoothly
+        2. But if Error at run time like wrong value then it will increment counter of identity means
+            Ex 
+            a. If Last Sucessful Inserted is at Identity "10"
+            b. Any Errorneous(Logical) insert is happened then as incremented the counter by "11" but record is not Inserted
+            c. So when Successful entry take place it store with identity "12" not "11"
+
+
+
+
+
