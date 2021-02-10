@@ -1,0 +1,113 @@
+------------------------------------- Person Details ----------------------
+--create table PersonDetails
+--(
+--	PersonId int identity(1,1) primary key,
+--	PersonName varchar(50) NOT NULL,
+--	PersonAge int NOt NULL,
+--	PesronAddress varchar(200) NOT NULL,
+
+--    constraint CheckAge check(PersonAge>0 AND PersonAge < 100)
+--)
+
+------------------------------- Person Contacts ----------------------
+--create table PersonContacts
+--(
+--	ContactID int Identity(1,1) primary key,
+--	ContactNo varchar(12) NOT NULL,
+--	PersonID int,
+
+--	constraint FK_PersonDetails_PersonCOntacts Foreign Key(PersonID) references
+--	PersonDetails(PersonId)
+--);
+
+-------------------------------------- Adding Gender Column is PersonDetails --------
+--alter table PersonDetails
+--add Gender int,
+--constraint defaultGender default(4) for Gender;
+
+
+-------------------------------------- Creating Table Gender Master --------------------
+--create table Gendermaster
+--(
+--	GenderID int Identity(1,1) primary key,
+--	GenderValue varchar(10) NOT NUll
+--);
+
+------------------------------------ Adding Foreign Key In PersonDetails ----------
+--alter table PersonDetails
+--add
+--constraint FK_PersonDetails_GenderMaster
+--foreign key(Gender) references GenderMaster(GenderID); 
+
+
+------------------------------ Adding Values in GenderMaster -----------------
+--Insert into GenderMaster
+--values ('Male');
+--Insert into GenderMaster
+--values ('Female');
+--Insert into GenderMaster
+--values ('Other');
+--Insert into GenderMaster
+--values ('Unknown');
+----delete from GenderMaster where GenderID=6 
+
+----------------------------------- Changing Column Name of Person Details ------------
+--exec sp_rename 'PersonDetails.PesronAddress', 'PersonAddress' , 'column' 
+
+
+----------------------------------- Inserting Values in Person Details ----------
+--Insert into PersonDetails
+--(PersonName,PersonAge,PersonAddress,Gender)
+--values('Jyot Hathi',21,'44-B Madhuban Park,Anjar,Kachchh',1);
+
+--Insert into PersonDetails
+--(PersonName,PersonAge,PersonAddress,Gender)
+--values('Prakash Prajapati',18,'22 Madhuban Park,Anjar,Kachchh',1);
+
+--Insert into PersonDetails
+--(PersonName,PersonAge,PersonAddress,Gender)
+--values('Dhruvi Maheta',19,'46 Madhuban Park,Anjar,Kachchh',2);
+
+
+--------------------------------- Adding Data in PersonCOntacts---------------
+--Insert into PersonContacts
+--(ContactNo,PersonID)
+--values('919408244998',1);
+
+--Insert into PersonContacts
+--(ContactNo,PersonID)
+--values('918200621895',1);
+
+--Insert into PersonContacts
+--(ContactNo,PersonID)
+--values('91940824899',2);
+
+--Insert into PersonContacts
+--(ContactNo,PersonID)
+--values('919182489976',3);
+--select * from PersonContacts
+
+
+------------------------------------ Retrieving Data Using Join -------------
+--select pdetails.PersonName as [Person Name], 
+--	   pdetails.PersonAge as [Person Age],
+--	   gmaster.GenderValue as Gender,
+--	   pcontact.ContactNo as Contact,
+--	   pdetails.PersonAddress as [Person Address]
+	   
+--	   from PersonDetails as pdetails
+--	   inner join PersonContacts as pcontact
+--	   on pdetails.PersonID = pcontact.PersonId
+--	   inner join GenderMaster as gmaster
+--	   on pdetails.Gender=gmaster.GenderId;
+
+----------------------------------- Retrieving Data Using Sub Query and Join ---------
+--select pdetails.PersonName as [Person Name],[Total Provided Numbers]
+--		from PersonDetails as pdetails
+--		inner join 
+--		(select pcontact.PersonId as [Person ID],COUNT(pcontact.ContactNo) as [Total Provided Numbers]
+--				from PersonDetails as pdetails
+--				inner join PersonContacts as pcontact
+--					on pdetails.PersonID = pcontact.PersonId
+--						group by pcontact.PersonId) as FetchedData
+--		on pdetails.PersonID=FetchedData.[Person ID];
