@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Gone Through the all videoes of today which covers
+    -> What is Self Join and What is Use of that, Main Thing is Self join is different like others but just main difference is we join table with itself
+    -> What is Union and Union ALL, what is batter and use of Union to retrive data, 
+        also as these are also combine data and Join is also combine data so what is difference between them and where to use what.
+    -> What is Stored Procedure and in which way we can use and which not like
+        # No doubt procedure returns Value but only integers so if we try to return any other type balue then get an error
+        # We have to Use Output Parameter and to retrive output in that while passing also have to mention that Parameter is of type output
+    -> There are lots of benifits to use Stored Procedure in terms of Performance and Security too.
+    -> Different Functions of String which help us to Mange String Values and To Print String Values like
+        # Right, Left, substring
+        # TRIM,RTRIM,LTRIM
+        # ASCII, CHAR
+        # REPLACE, REPLICATE, STUFF, CHARINDEX, PATINDEX
+    -> Ways to Replace Null Values
+        # ISNULL()
+        # case statement
+        # COALESCC() : But it Working Different way, It Returns First Not Null Value
+    -> Different data types relatd Date & Time and where to use where as all are different in terms of accuracy and size
+        # Time
+        # Date
+        # DateTime
+        # SmallDateTime
+
+        # DateTime2
+        # DateTimeOffset
+        Main is IsDATE() not applicable For DateTime2 and DateTimeOffset
+
+* Try To get All concepts and Remamber all in proper manner as there are many ways of perform one thing and all are useful for different purpose.
+* Also practice of all with differnt inputs like observe that what if we give NULL as input in string function and got result that many are give NULL for NULL input.
+* As Many concepts are helpful in my Project so practice according that too and it will become helpful in my project development 
