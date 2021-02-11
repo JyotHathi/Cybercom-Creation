@@ -1,0 +1,52 @@
+--select ASCII('*')
+--select char(257)
+--select LEN(NULL)
+--select LEN(TRIM('123'))
+
+--select LEN(LEFT('Jyot Hathi',25))
+--select SUBSTRING('Jyot Hathi',20,25)
+--select LTRIM(null)
+
+--select REPLICATE('**',null);
+--select UPPER(LOWER('A1B2'))
+--select REVERSE(NULL)
+
+--select CHARINDEX('@','hathi@gmail.com')
+--select PATINDEX(NULL,'Jyot')
+
+--select REPLACE('hathijyot3@gmail.com','gmail','outlook')
+--select stuff('hathijyot3@gmail.com',2,20,'****');
+
+--create table tblUserDetails
+--(
+--	UserId int identity(1,1) primary key,
+--	UserName varchar(50) default('NA'),
+--	DateOfBirth date NOT NULL,
+--	EmailId varchar(100) 
+--);
+
+--Insert into tblUserDetails
+--(UserName,DateOfBirth,EmailId)
+--values('Jyot Hathi','2000-01-23','hathijyot3@gmail.com');
+
+--Insert into tblUserDetails
+--(UserName,DateOfBirth,EmailId)
+--values('Raj Goshwami','1999-01-28','goswamiraj@yahho.com.com');
+
+--create OR alter proc spGetAge
+--as
+--begin
+--declare @age int=0;
+--	select 
+--	CAST(DateDiff(WEEKDAY,DateOfBirth,GETDATE()) as varchar) +' Days' as Age_In_Days,
+--	CAST(DateDiff(day,DateOfBirth,GETDATE()) as varchar) +' Days' as Age_In_WeekDays
+--	from tblUserDetails;
+--end
+
+--exec spGetAge;
+
+--select DAY('Jyot')
+--select DATENAME(day,'2020-20-20')
+--select DATENAME(WEEK,'2020-03-05')
+--select DATENAME(DAY,'2020-03-05')
+--select DATENAME(YEAR,'2020-03-05')
