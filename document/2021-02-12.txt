@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Gone Through the all videoes of today which covers
+    -> Differnt Type of User Define functions like Scaler Value,Inline Table function value and Multi Table value function
+      and difference between all like   
+        # Scaler Function Return only Single value and not Return text, Image, Curssor and TimeStamp Value
+        # Inline Table Value function is treated as View and Multi Table Value Function treated as Stored Procedure
+    
+    -> What is Indexing, What is use of that and How it is useful to get data efficiently
+    -> Tyes of indexing and also how it related with Constraints like Primary Key, Unique using Differnt Types Of Indexing like
+        # Clustered and Non Clustered
+        # Unique and Non Unique
+    -> System's built in  Mathematical Functions like ABS, ROUND, FLOOR and many More
+    -> Convert and Cast and Differe' between them as both are using to convert data Type, Just a small difference between both is Convert provide small benifit is 
+       Style of date, rather than that no difference and CAST is more preferrable.
+    -> What is View and what is use of that and how it is useful in real time big project and security purpose.
+    -> Use of USE ENCRYPTION, USE SCHEMABINDING we can add more facilities in function, view and stored Procedure like
+        # USE ENCRYPTION : We Add Facility that No one can get defination of that
+        # USE SCHEMABINDING : We Can Add Facility that no one can add table which is used in that because otherwise that will throw an error and become useless 
+
+* While Practice Observe that
+    -> In case of View or Inline Table Value Function, using Join Concept multiple tables are joined and we try to insert Update or delete then 
+       it will throw an error that as multiple tables are affetced so this operation is can not perform.
+    -> Same as possibe that may in View or Inline Table Value Function all columns of tables are not passed and also may those columns have not null constraint so in that
+       case Insertion is still not possible.    
