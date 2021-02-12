@@ -1,0 +1,208 @@
+-----------------------------------------
+---- Printing Original Tables 
+-----------------------------------------
+--select * from tblpersondetails;
+--select * from tblpersoncontacts;
+--select * from tblgendemaster;
+
+-----------------------------
+---- Creation Of View
+-----------------------------
+--create or alter view vWPersonDetails
+--WITH SCHEMABINDING
+--as
+--	select
+--		Person.PersonId,
+--		Person.PersonName as [Person Name],
+--		Person.PersonAge as [Person Age],
+--		Person.PersonAddress as [Person Address],
+--		gender.GenderValue as Gender,
+--		Contacts.ContactNo as [Contact Number]
+--	from
+--		dbo.tblgendemaster as gender inner join
+--		dbo.tblpersondetails as Person 
+--	on gender.GenderID=person.Gender
+--		inner join dbo.tblpersoncontacts as Contacts
+--	on Contacts.PersonID=person.PersonId;
+
+----------------------------------------------
+---- Creation of inline Table value Function
+----------------------------------------------
+--create or alter function fun_PersonDetails()
+--Returns Table
+--  WITH SCHEMABINDING
+--as
+--return(
+--	select
+--		Person.PersonId,
+--		Person.PersonName as [Person Name],
+--		Person.PersonAge as [Person Age],
+--		Person.PersonAddress as [Person Address],
+--		gender.GenderValue as Gender,
+--		Contacts.ContactNo as [Contact Number]
+--	from
+--		dbo.tblgendemaster as gender inner join
+--		dbo.tblpersondetails as Person 
+--	on gender.GenderID=person.Gender
+--		inner join dbo.tblpersoncontacts as Contacts
+--	on Contacts.PersonID=person.PersonId);
+
+------------------------------------------
+---- Printing Data From View and Function
+------------------------------------------
+--select * from dbo.fun_PersonDetails()
+--select * from vWPersonDetails
+
+------------------------------------------
+---- Insertion in View and Table // Error As update many table
+------------------------------------------
+
+----Insert into dbo.fun_PersonDetails()
+----([Person Name],[Person Age],[Person Address],Gender,[Contact Number])
+----values('Yash Vaghela',25,'Anjar Kachchh','Male','919408244998');
+
+----Insert into vWPersonDetails
+----([Person Name],[Person Age],[Person Address],Gender,[Contact Number])
+----values('Yash Vaghela',25,'Anjar Kachchh','Male','919408244998');
+
+------------------------------------------
+---- Update in View and Table 
+------------------------------------------
+
+--update vWPersonDetails
+--set [Person Name]='Jyot'
+--where [PersonId]=1;
+
+--update dbo.fun_PersonDetails()
+--set [Person Name]='Jyot Hathi'
+--where [PersonId]=1;
+
+------------------------------------------
+---- Update in View and Table // Error As update many table
+------------------------------------------
+
+--update vWPersonDetails
+--set [Person Name]='Jyot',
+--[Contact Number]='919427390980'
+--where [PersonId]=1;
+
+--update dbo.fun_PersonDetails()
+--set [Person Name]='Jyot Hathi',
+--[Contact Number]='919427390980'
+--where [PersonId]=1;
+
+----------------------------------------------
+---- Deletion in View and Table // Error As update many table
+----------------------------------------------
+
+--delete from vWPersonDetails where PersonId=2;
+
+--delete from dbo.fun_PersonDetails() where PersonId=2;
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+-----------------------------
+---- Creation Of View
+-----------------------------
+--create or alter view vWPerson
+--with SCHEMABINDING   
+--as
+--select PersonId,PersonName,PersonAge from dbo.tblpersondetails
+
+--create or alter function fun_Person()
+--returns TABLE
+--with SCHEMABINDING  
+--as
+--return (select PersonId,PersonName,PersonAge from dbo.tblpersondetails)
+
+
+------------------------------------------
+---- Insertion in View and Table 
+----// Error As Not Have idea that Address Column is there 
+---    so not passing value of that not null fie;d
+------------------------------------------
+
+----Insert into fun_Person()
+----(PersonName,PersonAge)
+----values('Yash Vaghela',25);
+
+----Insert into vWPerson
+----(PersonName,PersonAge)
+----values('Yash Vaghela',25);
+
+
+----------------------------------------------
+---- Deletion in View and Table // Regular error as PersonId is FK in person Contacts
+----------------------------------------------
+
+---delete from vWPerson where PersonId=2;
+----delete from dbo.fun_PersonDetails() where PersonId=2;
+
+--drop table tblpersoncontacts --Error Binded With View and Function so
+
+
+
+----------------------------------------------------
+---- Multivalue Function
+---------------------------------------------------
+--create or alter function mfun_PersonDetails()
+--returns @table table (PersonAddresDetails varchar(500))
+--as
+--begin
+--	Insert into @Table
+--	select 'My Name is'++space(1)+PersonName+space(1)+', I am '+space(1)+
+--	CAST(PersonAge as varchar)+'years old and My Address is'+space(1)+
+--	PersonAddress as [Person Introduction]
+--	from tblpersondetails;
+--	return 
+--end
+
+--select * from dbo.mfun_PersonDetails();
+
+--------------------------------------------------------
+---- Temp[orary Table
+--------------------------------------------------------
+--create table #TempTable
+--(
+--	id int primary key,
+--	Email varchar(100) unique,
+--	Password varchar(100) not null
+--);
+
+--Insert into #TempTable values(1,'hathijyot3@gmail.com','ab@2323');
+--Insert into #TempTable values(2,'hathijyot38@gmail.com','ab@2323');
+--Insert into #TempTable values(3,'hathijyot@gmail.com','ab@2323');
+
+
+--select * from #TempTable;
+
+--create table ##TempTable
+--(
+--	id int primary key,
+--	Email varchar(100) unique,
+--	Password varchar(100) not null
+--);
+
+--Insert into ##TempTable values(1,'hathijyot3@gmail.com','ab@2323');
+--Insert into ##TempTable values(2,'hathijyot38@gmail.com','ab@2323');
+--Insert into ##TempTable values(3,'hathijyot@gmail.com','ab@2323');
+
+
+--select * from ##TempTable;
+-------------------------------------------------------------
+---- Index
+-------------------------------------------------------------
+--create  unique nonclustered index IX_tblPersonDetails
+--on tblPersondetails(PersonName);
+
+
+------------------------------------------------------------
+---- Math Functions
+------------------------------------------------------------
+
+--select POWER(2,25);
+--select LOG10(100);
+--select PI();
+--select SQRT(1.14);
