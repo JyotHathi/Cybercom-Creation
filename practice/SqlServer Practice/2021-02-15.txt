@@ -1,0 +1,107 @@
+--create table tblDayMaster
+--(
+--	dayid int IDENTITY(1,1) primary key,
+--	day varchar(20) NOT NULL
+--);
+
+--Insert Into tblDayMaster values('Mon');
+--Insert Into tblDayMaster values('Tue');
+--Insert Into tblDayMaster values('Wed');
+--Insert Into tblDayMaster values('Thr');
+--Insert Into tblDayMaster values('Fri');
+--Insert Into tblDayMaster values('Sat');
+--Insert Into tblDayMaster values('Sun');
+
+
+--create table tbltimetablemaster
+--(
+--	id int identity(1,1) primary key,
+--	dayid int,
+--	subjectname varchar(20),
+--	[time]        varchar(20),
+--	constraint FK_tbltimetable_tblday 
+--	foreign key(dayid) references tblDayMaster(dayid)
+--);
+
+--Insert into tbltimetablemaster values(1,'Science','9:30-10:30');
+--Insert into tbltimetablemaster values(1,'Maths','11:30-12:30');
+
+--Insert into tbltimetablemaster values(2,'Science','9:30-10:30');
+--Insert into tbltimetablemaster values(2,'Maths','11:30-12:30');
+
+--Insert into tbltimetablemaster values(3,'Science','9:30-10:30');
+--Insert into tbltimetablemaster values(3,'Maths','9:30-10:30');
+
+--Insert into tbltimetablemaster values(4,'Maths','11:30-12:30');
+--Insert into tbltimetablemaster values(4,'Science','9:30-10:30');
+
+--Insert into tbltimetablemaster values(5,'Maths','11:30-12:30');
+--Insert into tbltimetablemaster values(5,'Science','11:30-12:30');
+
+select * from tblDayMaster;
+select * from tbltimetablemaster;
+
+with 
+tblTimeTable([day],timesubj)
+as
+(
+	select [day],[time]+subjectname as timesubj
+	from tbldaymaster inner join tbltimetablemaster
+	on tbldaymaster.dayid=dbo.tbltimetablemaster.dayid
+	group by [day],[time],subjectname
+	 
+)
+select Mon,Tue,Wed,Thr,Fri,Sat from
+(
+select [day],STRING_AGG(timesubj,','+SPACE(3)) as sch from #tempTimeTable
+group by [day]
+)as TempTable
+pivot
+(
+	max(sch) for [day] in (Mon,Tue,Wed,Thr,Fri,Sat)  
+)as FinalTimeTable
+
+---- Trigger to Insert in vwPersonDetails
+--create or alter trigger tr_funPersonDetails
+--on vwPersonDetails
+--Instead of Insert
+--as
+--begin
+--	--select * from inserted;
+--	declare @name varchar(20),@age int,@address varchar(30),@Gender varchar(20),@contactNumber varchar(12);
+--	select @name=[Person Name],
+--		   @age=[Person Age],
+--		   @address=[Person Address],
+--		   @contactNumber =[Contact Number],
+--		   @Gender=Gender
+--		   from inserted;
+--	Insert into tblpersondetails
+--	(PersonName,PersonAge,PersonAddress,Gender)
+--	values(@name,@age,@address,(select GenderId from tblgendemaster where GenderValue=@Gender));
+--	Insert into tblpersoncontacts
+--	(PersonID,ContactNo)
+--	values(SCOPE_IDENTITY(),@contactNumber);
+--end
+
+----- Trigger To delete from vwPersonDetails
+--create or alter trigger tr_DeletevwPersonDetails
+--on vwPersonDetails
+--Instead of delete
+--as
+--begin
+--	delete from tblpersoncontacts where PersonId in (select PersonId from deleted);
+--	delete from tblpersondetails where PersonId in (select PersonId from deleted);
+--end
+
+--insert into vwPersonDetails
+--values(1,'Jyot Hathi',21,'Anjar','Male','9408244998')
+
+--select * from vwPersonDetails;
+
+--delete from vwPersonDetails where PersonId=6;
+--Raiserror('Hello',16,1)
+--declare @tbl TABLE (PersonName varchar(20),PersonAge int);
+--Insert into @tbl
+--select PersonName, PersonAge from tblpersondetails;
+--select * from @tbl;
+--select PersonName, PersonAge into #tbl from tblpersondetails;
