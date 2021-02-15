@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Gone Through the all videoes of today which covers
+    -> What is Indexed View and Where It is usefull mainly like in OLAP.
+    -> What is Triggers, Types of triggers and where it is useful like main thing is if we want to allow view to update, insert and delete 4
+       (In Case of Multiple Table Affection as it throw an error).
+    -> What is Pivoting and What is Need of that.
+    -> Different ways of Derived Tables like
+        1. Using View
+        2. Using table Variable
+        3. Using CTE (Common Table Expression)
+        4. Temporary Table
+        5. Intermediate Table which get data from select query and can perfrom operations on that and print that just like Sub Query.
+    -> Different Things which we can Perform Using CTE using CTE Recursion.
+
+* Done Practice of Concepts and While got idea that I guess We Cant Not Create Triggers for Function Value Expression.
+* Also Try To Resolve one of my project's module Time Table Creation using Dervied Table and Pivoting using two tables as a practice.
+    - Day Master Table which have Days
+    - Time Table Which Store Subject and Time Related Details 
