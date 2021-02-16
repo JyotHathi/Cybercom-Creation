@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Gone Through the all videoes of today which covers
+    -> What Is Transaction and Why It is Useful, In Real time it is benificial as we need to keep Database In Consistant State and Have To Work According ACID rules
+    -> What is Error, how To raise and error, Two differnt ways to handle Error Out of them @@ERROR() is not that much helful as It Get reset befor read single line so.
+      In That Case have to maintain one variable which can store value of @Error.
+    -> Differnt Set Operations and Difference Between Them and Joins.
+    -> CROSS APPLY and OUTER apply and Difference Between that and Join as CROSS and OUTER apply is helpful and tablevalue function.
+    -> What is cursor and How it is not that much helpful as it scan row by row.
+    -> Subquery and How it is useful.
+
+* As Now almost concepts are done also too much concepts with options is there so went through all one more time and clear all concepts in batter way.
+* Practice all the concepts specifically and more on few confusing concepts which we not use daily.
+* But Got All the concepts and Got Answer of question that What is Difference between Inline Table Value Function and view that
+    1. Can Create Indexed View which is capable to store Database
+    2. Can Create Trigger on View Not on Function.
+    3. can Create Index on View But Not Function.
