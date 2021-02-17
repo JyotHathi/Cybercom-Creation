@@ -1,0 +1,106 @@
+--create table tblTeamStocks
+--(
+--	id int Identity(1,1) primary key,
+--	ConName varchar(20),
+--	CountName varchar(20),
+--	CityName varchar(20),
+--	StocksAmount int
+--);
+
+--Insert into tblTeamStocks values('con1','coun1','city1',3000);
+--Insert into tblTeamStocks values('con1','coun1','city2',3000);
+--Insert into tblTeamStocks values('con1','coun2','city1',3000);
+--Insert into tblTeamStocks values('con1','coun2','city2',3000);
+--Insert into tblTeamStocks values('con2','coun1','city1',3000);
+--Insert into tblTeamStocks values('con2','coun1','city2',3000);
+--Insert into tblTeamStocks values('con2','coun2','city1',3000);
+--Insert into tblTeamStocks values('con2','coun2','city2',3000);
+--Insert into tblTeamStocks values('con3','country1','city-1',3000);
+--Insert into tblTeamStocks values('con3','country2','city-2',3000);
+
+
+---- Rollup Is Group In Decrement Order Like 3--- 2--ALL 1--ALL,ALL 0-ALL,ALL,ALL
+--select
+--ISNULL(ConName,'ALL') as ConName,ISNULL(CountName,'ALL') as CountName,
+--ISNULL(CityName,'ALL') as CityName,sum(StocksAmount) as Stocks
+--from tblTeamStocks
+--group by rollup(ConName,CountName,CityName)
+
+
+----- Cube Checks For Every Possiblity LIke 
+----3 ----2--ALL, 2-ALL-, 2 ALL--, 2 ALL ALL -, 2 ALL ALL ALL, 2 ALL-ALL, 2 - ALL ALL ..........   
+--select
+--ISNULL(ConName,'ALL') as ConName,ISNULL(CountName,'ALL') as CountName,
+--ISNULL(CityName,'ALL') as CityName,sum(StocksAmount) as Stocks
+--from tblTeamStocks
+--group by cube(ConName,CountName,CityName)
+--order by ConName
+
+-- Rollup Is Group In Decrement Order Like 3--- 2--ALL 1--ALL,ALL 0-ALL,ALL,ALL
+--select
+--ISNULL(ConName,'ALL') as ConName,ISNULL(CountName,'ALL') as CountName,
+--ISNULL(CityName,'ALL') as CityName,sum(StocksAmount) as Stocks,
+--GROUPING(ConName) as GConName,GROUPING(CountName) as GCountName,
+--GROUPING(CityName) as GCityName,
+--GROUPING_ID(ConName,CountName) as GID
+--from tblTeamStocks
+--group by rollup(ConName,CountName,CityName)
+--order by GID,GConName,GCountName,GCityName
+
+
+--select *,sum(StocksAmount) over(partition by CountName order by CountName) as totalfromcon from tblTeamStocks;
+
+--select ORIGINAL_LOGIN()
+
+-- select IIF(5=2,5,2);
+
+--create function funGetGender(@genderId int)
+--returns varchar(20)
+--as
+--begin
+--	return 
+--	(select IIF(@genderId < =3,
+--	Choose(@genderId,'Male','Female','Other'),'Invalid'));
+--end
+
+--declare @value varchar(20);
+--set @value=dbo.funGetGender(1);
+--print 'Gender is '+@value
+--set @value=dbo.funGetGender(2);
+--print 'Gender is '+@value
+--set @value=dbo.funGetGender(3);
+--print 'Gender is '+@value
+--set @value=dbo.funGetGender(10);
+--print 'Gender is '+@value
+
+--select
+--ISNULL(ConName,'ALL') as ConName,ISNULL(CountName,'ALL') as CountName,
+--ISNULL(CityName,'ALL') as CityName,sum(StocksAmount) as Stocks
+--from tblTeamStocks
+--group by rollup(ConName,CountName,CityName)
+--order by GROUPING(ConName) ASC,GROUPING(CountName) DESC
+
+--create or alter trigger trDisableCreation
+--on all SERVER
+--FOR Create_Table, ALter_Table,Drop_Table
+--as
+--begin
+--	rollback
+--	raiserror('Sorry You Can Not Create, Alter or Delete Table',16,1);
+--end
+--enable trigger trDisableCreation on all server
+
+--create table #table( id int);
+--drop table #table
+--create table ##table( id int);
+----create table [table]( id int);
+--create table [table2]( id int);
+
+--drop table #table
+--drop table ##table
+--drop table [table]
+
+--drop trigger trDisableCreation on All server
+
+
+
