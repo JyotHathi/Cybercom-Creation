@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Gone Through the all videoes of today which covers
+    -> What IS DLL Trigger, Logon Trigger and How we can Create Trigger On Database or server Level.
+    -> How To Enable or Disable Trigger.
+    -> What is Grouping Set, Rollup and Cube and How It Is Useful in grouping of Data.
+    -> What is use of Grouping() to check Aggregated or not and order the data, Grouping_Id(Column List) which Return Binary data And Indirectly Level
+    -> How We Can Create UserDefine DataType using create type name table as ....
+    -> How We Can Pass Table as An Argument
+    -> How to Un Pivot the Data and Is all Data Is Properly Recoverable while Pivoting and Unpivoting.
+    -> Few Differences of Differnt Types of DateTime Data Types and How to Create that Particular Type of date Time using Part Method like DATEFROMPART, DATETIME2FROMPART
+    -> Use of IIF fnction which is simmilar to Ternary Operator in Orograming language
+    -> CHoose Function which is simmilar to Switch Case in Programing language.
+    -> Over Close With Partition with and order by
+
+* Done Practice of all concepts and also More Idea or Rollup and Cube
+ # like Rollup Gives Data like if 3 colmuns are passed then 3, 2-ALL, 1-ALL-ALL, 0-ALL-ALL-ALL
+   where as Cube Gives Data of Every Possiblity like if same 3 columns are passed then 3, 2-> - - ALL,2->ALL - -,2->- All - ,1-> - ALL ALL, 0->ALL-ALL-ALL, ......
+    So Cube Gives More Data
+
+* Also While Perfroming DDL Trigger Observe That DDL triggers not applicable for temp (Local or Global) table if we have created trigger for create, alter and drop
+  though we can perfrom any operation on temp tables.
+
+   
