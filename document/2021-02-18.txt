@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Gone Through the all videoes of today which covers
+    -> What is Sql injection
+      -What is the chances 
+      -where Sql Injection can happen
+      -How we can assure that injection will not happen
+    -> What is Dynamic Sql Query
+      - What is need of that
+      - How It Is Benificiary
+      - What thing need To Remember while Dynamic Sql
+      - What is Batter Store Procedure or Dynamic Sql
+      - How it affects to performance 
+      - What is Difference Between Execute () and sp_executesql
+    -> What is Sequence GUID (UniqueIdentifier), Where to use as big size so
+    -> What is sequence object, What is Difference between Identity and Sequence Object.
+
+* Complete All the Practicals and Got Good Idea of Dynamic Sql which is very helpful to make dynamic queries.
+* Also Gone Through All The Concepts of Sql Server and Try to Distinguous so that can remember easily and use effectivly.
+* Also While Revision Got Idea that need To create trigger carefully because otherwise it cause problem like wise if we create trigger for drop table then may issue is
+  Can Not Drop Trigger easily need to disale and also if with create and alter otherwise cause problem in create DDL trigger too.
+* Got all Concepts of SQL server perfactly and also got clear idea where to use what means we can use choose function istead of case statement if Data is Predefine and 
+  value is integer.Need to Craefull if we want to use GUID.Can Use IIF instead of If else like ternary operator.    
+
+   
