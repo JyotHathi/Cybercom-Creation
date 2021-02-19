@@ -1,0 +1,24 @@
+create table tblTestDelete
+(
+	id int identity(1,1) primary key,
+	[Value] varchar(20) 
+)
+------------------------------------------------------
+Insert Into tblTestDelete values('1');
+Insert Into tblTestDelete values('2');
+Insert Into tblTestDelete values('3');
+---delete from tblTestDelete;
+-----------------------------------------------------
+select IDENT_CURRENT('tblTestDelete');
+select * from tblTestDelete
+-----------------------------------------------------
+Insert Into tblTestDelete values('4');
+Insert Into tblTestDelete values('5');
+Insert Into tblTestDelete values('6');
+---truncate table tblTestDelete;
+------------------------------------------------------
+Insert Into tblTestDelete values('7');
+Insert Into tblTestDelete values('8');
+Insert Into tblTestDelete values('9');
+
+/*Conclusion: Truncate Reset The Identity too Where as Delete Not*/
