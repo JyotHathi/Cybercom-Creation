@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------
+                SQL Server
+------------------------------------------------------------------------
+
+* Done practice of all the concepts as much as possible way like
+  - Choose function inside IIF to sure that if user enter index which is not contain by choose function then can handle that.
+  - Dynamic Sql Query Using Choose Function.
+  - Also While Exeperiment Got the  thing which may I Miss that When We use Select * into tblname from tblname where 1 <> 2 to copy structure of table then only
+    got columns only not a constraint or indexes or any things which is particular for table.
+
+* Got Difference Between Delete and Truncate in terms of Identity when data got delete, Got That
+  - When We Delete Identity Not Get Reset where as in case of truncate along with data identity got reset too.
