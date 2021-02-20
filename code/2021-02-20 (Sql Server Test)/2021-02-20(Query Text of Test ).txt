@@ -1,0 +1,210 @@
+/*Creation of Table tblEmployee*/
+create table tblEmployee
+(
+	Employee_Id int identity(1,1) primary key,
+	First_Name	varchar(50) not null,
+	Last_Name varchar(50) not null,
+	Salary    int not null,
+	Joining_Date datetime not null,
+	Department_Id int,
+	constraint check_Salary_Employee check(Salary >= 0),
+	constraint fk_tblDepartment_tblEmployee 
+		foreign key(Department_Id) references tblDepartment(Deptid)
+);
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('John','Abraham',1000000,'01-JAN-13 12:00:00 AM',1);
+
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('Michael','Clarke',800000,'01-JAN-13 12:00:00 AM',2);
+
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('Roy','Thomas',700000,'01-FEB-13 12:00:00 AM',1);
+
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('Tom','Jose',600000,'01-FEB-13 12:00:00 AM',2);
+
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('Jerry','Pinto',650000,'01-FEB-13 12:00:00 AM',2);
+
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('Philip','Mathew',750000,'01-JAN-13 12:00:00 AM',3);
+
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('TestName1','123',650000,'01-JAN-13 12:00:00 AM',3);
+
+Insert Into tblEmployee
+(First_Name,Last_Name,Salary,Joining_Date,Department_Id)
+values('TestName2','Lname%',600000,'01-FEB-13 12:00:00 AM',2);
+
+-----------------------------------------------------------------------
+/* Department Table Creation (For Normalization from tblEmployee) */
+create table tblDepartment
+(
+	Deptid int identity(1,1) primary key,
+	Department varchar(20) not null
+)
+/*As Initial Data is Available so Inserting data in tblDepartment*/
+Insert into tblDepartment values('Banking');
+Insert into tblDepartment values('Insurance');
+Insert into tblDepartment values('Services');
+------------------------------------------------------------------------
+/* Creation of Incentives table */
+create table tblIncentives
+(
+	Incentive_Id int Identity(1,1) primary key,
+	Employee_ref_id int,
+	Incentive_date date not null,
+	Incentive_amount int not null,
+	constraint fk_tblEmployee_tblIncentives 
+		foreign key(Employee_ref_id) references tblEmployee(Employee_Id),
+	constraint check_Incentive_amount_Incentives check(Incentive_amount >= 0),
+);
+/*As Initial Data is Available so Inserting data in tblIncentives*/
+Insert into tblIncentives 
+(Employee_ref_id,Incentive_date,Incentive_amount)
+values(1,'01-FEB-13',5000);
+
+Insert into tblIncentives 
+(Employee_ref_id,Incentive_date,Incentive_amount)
+values(2,'01-FEB-13',3000);
+
+Insert into tblIncentives 
+(Employee_ref_id,Incentive_date,Incentive_amount)
+values(3,'01-FEB-13',4000);
+
+Insert into tblIncentives 
+(Employee_ref_id,Incentive_date,Incentive_amount)
+values(1,'01-JAN-13',4500);
+
+Insert into tblIncentives 
+(Employee_ref_id,Incentive_date,Incentive_amount)
+values(2,'01-JAN-13',3500);
+
+----------------------------------------------------------------------------------------------------------------
+
+/*Query 1: Get First_Name from employee table using alias name “Employee Name” */
+select First_Name as [Employee Name] from tblEmployee;
+
+/*Query 2: Get position of 'o' in name 'John' from employee table */
+select CHARINDEX('o',First_Name) as Position from tblEmployee where First_Name='John';
+
+/*Query 3: Get FIRST_NAME ,Joining year,Joining Month and Joining Date from employee table  */
+select 
+First_Name,DATENAME(YEAR,Joining_Date) as [Joining year],
+DATENAME(Month,Joining_Date) as [Joining Month],
+DATENAME(day,Joining_Date) as [Joining Date]
+from tblEmployee;
+
+/*Query 4: Get all employee details from the employee table order by First_Name Ascending and Salary
+descending */
+select First_Name,Last_Name,Salary,Convert(varchar,Joining_Date,0)as Joining_Date,Department from 
+tblEmployee
+inner join 
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+order by First_Name,Salary DESC
+
+/*Query 5: Get employee details from employee table whose employee name are not “John” and “Roy”  */
+select First_Name,Last_Name,Salary,Convert(varchar,Joining_Date,0)as Joining_Date,Department from 
+tblEmployee
+inner join 
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+where First_Name NOT IN ('John','Roy');
+
+/*Query 6: Get employee details from employee table whose first name ends with 'n' */
+select First_Name,Last_Name,Salary,Convert(varchar,Joining_Date,0) as Joining_Date,Department from 
+tblEmployee
+inner join 
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+where First_Name LIKE '%n';
+
+/*Query 7:  Get employee details from employee table whose first name ends with 'n' and letters.*/
+select First_Name,Last_Name,Salary,Convert(varchar,Joining_Date,0) as Joining_Date,Department from 
+tblEmployee
+inner join
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+where First_Name LIKE '___n'
+
+/*Query 8: Get employee details from employee table whose Salary less than 800000 */
+select First_Name,Last_Name,Salary,Convert(varchar,Joining_Date,0) as Joining_Date,Department from 
+tblEmployee
+inner join 
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+where Salary < 800000;
+
+/*Query 9: Get employee details from employee table who joined before January 1st 2013 */
+select First_Name,Last_Name,Salary,Convert(varchar,Joining_Date,0) as Joining_Date,Department from 
+tblEmployee
+inner join 
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+where Joining_Date < CAST('01-JAN-13' as datetime);
+
+/*Query 10: Get difference between JOINING_DATE and INCENTIVE_DATE from employee and incentives
+table */
+select First_Name+SPACE(1)+Last_Name as Employee_Name,
+DATEDIFF(day,Joining_Date,Incentive_date) as [Insentive_Date - Joining_Date (In Days)] 
+from tblEmployee inner join tblIncentives
+on tblEmployee.Employee_Id=tblIncentives.Employee_ref_id
+order by Employee_Name,[Insentive_Date - Joining_Date (In Days)] 
+
+/*Query 11: Print database date. */
+print GETDATE();
+
+/*Query 12: Get department,total salary with respect to a department from employee table. */
+select Department,SUM(Salary) as [Total Salary] from 
+tblEmployee
+inner join 
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+group by Department
+
+/*Query 13: Get department,no of employees in a department,total salary with respect to a department
+from employee table order by total salary descending . */
+select Department,Count(Employee_Id) as [Total Employee],SUM(Salary) as [Total Salary] from 
+tblEmployee
+inner join 
+tblDepartment on tblDepartment.Deptid=tblEmployee.Department_Id
+group by Department
+order by [Total Salary] DESC
+
+/*Query 14: Select no of employees joined with respect to year and month from employee table */
+select 
+ISNULL([Joining Year],'ALL') as [Joining Year],
+ISNULL([Joining Month],'ALL') as [Joining Month] ,
+COUNT(Employee_Id) as [Number of Employee] from
+(select
+Employee_Id,
+DATENAME(YEAR,Joining_Date) as [Joining Year], 
+DATENAME(MONTH,Joining_Date) as [Joining Month]
+from tblEmployee
+) 
+as tblYearlyRecuritemnt
+group by ROLLUP([Joining Year],[Joining Month])
+order by [Joining Year] ASC,[Joining Month] DESC
+
+/*Query 15: 15.	Update incentive table with employee's Incentive_amount as '12000' 
+where employee name is 'John'  */
+update tblIncentives
+set Incentive_amount=12000
+where 
+Employee_ref_id=(select Employee_Id from tblEmployee where First_Name='John')
+
+select First_Name, Incentive_amount from
+tblEmployee join tblIncentives on tblIncentives.Employee_ref_id = tblEmployee.Employee_Id
+
+/*Query 16: Select TOP 2 salary from employee table */
+select top 2 Salary from tblEmployee;
+
+/*Query 17: Select 2nd Highest salary from employee table */
+select top 1 Salary from
+(select top 2 Salary from tblEmployee order by Salary DESC) as tbltempEmployee
+order by Salary;
+
+
+
+  
