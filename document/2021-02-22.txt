@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------
+                ADO.net
+------------------------------------------------------------------------
+
+* Complete all the Videoes of today which covers
+    - What is Ado.net
+    - Ado.net is used to deal with with Sql Server/Database from Application.
+    - Different Class like Make Connection, Command, Data Reader, Data Adapter, DataSet from System.Data and System.Data.SqlClient
+    - ConfigurationManager class To get Connection String From Config file from System.Configuratio
+    - What is Sql Injection as well How we can use parametrized query to avoid that.
+    - What is Connection Oriented and Connection Less Communication.
+    - How to Execute Stored Procedure to get data from Database.
+    - How to use Stored Procedure with Output Parameter.
+
+* Also Done Practice of All In Asp.net Application.
+* Also While Dealing with database Realize that Still few case Doing Misatke In Naming Convention of Procedure, Functions and Views so correct that and gothrough 
+  Convention practice and correction of them and I guess Now Not repeat that mistake.
+  - Mistake Like Create Proc by sp_name which is Not Good No Doubt Rearly Done That Misatke.
+  
