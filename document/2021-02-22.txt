@@ -13,7 +13,7 @@
     - How to use Stored Procedure with Output Parameter.
 
 * Also Done Practice of All In Asp.net Application.
-* Also While Dealing with database Realize that Still few case Doing Misatke In Naming Convention of Procedure, Functions and Views so correct that and gothrough 
+* Also While Dealing with database observe that Still in few case Doing Misatke In Naming Convention of Procedure, Functions and Views so correct that and gothrough 
   Convention practice and correction of them and I guess Now Not repeat that mistake.
   - Mistake Like Create Proc by sp_name which is Not Good No Doubt Rearly Done That Misatke.
   
