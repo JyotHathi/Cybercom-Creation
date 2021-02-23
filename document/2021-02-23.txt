@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------
+                ADO.net
+------------------------------------------------------------------------
+
+* Completed All Videoes  which covers
+  # What is Row State and Row Version and What is Role of that in case of Update, Accept Changes and Reject Changes.
+  # What is Sql Bulk Copy Class and How it is Useful in case of XML data to Data Table and One Data Table to Other.
+  # What is Transaction and How We Have to use that to achieve Consistancy of database.
+  # What is Stongrly Typed database.
+
+* Done Practice of That Using Asp.net Application
+* Doing More Research on Strongly Typed Database as Want To Explore More On That and LINQ.
+
+  
