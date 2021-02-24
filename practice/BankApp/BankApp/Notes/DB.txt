@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[tbBankUserDetails] (
+    [UserId]                    INT          IDENTITY (1, 1) NOT NULL,
+    [UserName]                  VARCHAR (50) NOT NULL,
+    [MobileNumber]              VARCHAR (10) NOT NULL,
+    [UserPin]                   VARCHAR (4)  NOT NULL,
+    [Balance]                   BIGINT       NOT NULL,
+    [Minimum Withdrawal Amount] BIGINT       NOT NULL,
+    PRIMARY KEY CLUSTERED ([UserId] ASC),
+    UNIQUE NONCLUSTERED ([MobileNumber] ASC)
+);
+

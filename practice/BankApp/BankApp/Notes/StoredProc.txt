@@ -1,0 +1,78 @@
+CREATE proc sptblBankUserDetails
+@query int=0,
+@Name varchar(50)=null,
+@MobNumber varchar(10)=null,
+@PIN varchar(4)=null,
+@InitAmount bigint=0,
+@MinWithAmount bigint=0,
+@userid int=0
+as
+
+begin
+
+	if @query = 1
+	begin
+		select count(UserId) from tbBankUserDetails where MobileNumber=@MobNumber;
+	end
+	
+	else if @query = 2
+	begin
+		begin tran
+			begin try
+				Insert into tbBankUserDetails
+				(UserName,MobileNumber,UserPin,Balance,[Minimum Withdrawal Amount])
+				values(@Name,@MobNumber,@PIN,@InitAmount,@MinWithAmount);
+			commit tran;
+			end try 
+		
+			begin catch
+				rollback tran;
+			end catch
+	end
+
+	else if @query = 3
+	begin
+		select ISNULL(UserId,0) from tbBankUserDetails
+		where MobileNumber=@MobNumber AND UserPin=@PIN;
+	end
+
+	else if @query = 4
+	begin
+		begin tran
+			begin try
+				update tbBankUserDetails
+				set 
+				Balance -=@InitAmount
+				where UserId=@userid;
+			commit tran;
+			end try 
+			
+			begin catch
+				rollback tran;
+			end catch
+	end
+	
+	else if @query = 5
+	begin
+		begin tran
+			begin try
+				update tbBankUserDetails
+				set 
+				Balance +=@InitAmount
+				where UserId=@userid;
+			commit tran;
+			end try 
+			
+			begin catch
+				rollback tran;
+			end catch
+	end
+
+	else if @query = 6
+	begin
+		select Balance from tbBankUserDetails where UserId=@userid
+	end
+
+	else if @query = 7
+		select UserName,Balance,[Minimum Withdrawal Amount] as MinWidthAmount from tbBankUserDetails where UserId=@userid
+end
