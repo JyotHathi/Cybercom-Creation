@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------
+                          ADO.net
+---------------------------------------------------------------------------
+
+* Completed Practice Code Which Given (Bank Application which is Developed in Console => Asp.net and Ado.net).
+* Used Asp.net, Boostrap and ADO.net.
+* Also In Project In Notes Folder Added Files Which Contain StoredProcedure and Table Defination(Query) so that if want to test Application than can do that.
+* Also Got Idea that What is Typed Data base, LINQ and How it is useful and Breief Idea about them from disucssion.
+
+
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Gone Through all the Videoes of To Day Which Include
+    -> What is ASP.net and Life Cycle of the Asp.net
+    -> What is ViewState in Asp.net
+    -> Few Controls of Asp.net with different Properties and How To Fill data in that From Database like
+        # Textbox Controls
+        # Checkbox Controls
+        # Radio Button Controls
+        # Button Controls
+        # Hyperlink Control 
+        # Label Control.
+        # Dropdown Control.
+
+* Done Practice of all and 
+  Get More Idea of Few Control and got chance to explore more on individually from above controls, No doubt have some idea as already used in ADo.net Series and during Acadmic.  
