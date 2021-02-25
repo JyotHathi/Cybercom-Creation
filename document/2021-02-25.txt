@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Gone Through all the Videoes of To Day Which Include
+    -> How to Bind Data in Diffreent Controls like List Control, Dropdown.
+    -> Different List Control like RadioButoonList, ChecboxList, ListBox, BulletedList
+    -> New Control Wizard Control.
+    -> Different Events and Properties of different Controls.
+    -> UserSubmitBehaviour of Button Control.
+    -> FileUpload Control, How to Add Constraint on File Upload and check Before Save File.
+
+* Done Practice of all and also extremly new control Wizard control.
