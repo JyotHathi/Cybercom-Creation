@@ -1,0 +1,34 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Completed Today's Video Which Covers
+    -> What is Litrel Control and How It is Different From lablel Control
+    -> Panel Control which is Just Like Html Div control but it is server Side control to manage from server, And Main it is use to group
+       - Also How We Can Add Control dynamically in panel control just like AppendChild of JS.
+
+    -> Different Validation Control Like
+        - RequireFiled
+        - RegulaerExpression
+        - Compare
+        - Custome
+        - Range
+        - Validation Summury To Display Summury instead of Individual Message
+        
+    -> Differnt Ways of Page Navigation
+        - Simple Using Button, Link Button or Hyperlink
+        - Using Response.Redirect
+        - Using Server.Execute and Server.Transfer  
+            # How Bind Stongrly Using Properties 
+        - Using window.Open() (Js Function)
+
+    -> Differnt Ways To Transfer Data from One Page to other Page
+       - Context.Handler : Get Last Page Retrive Data, Technique is similar which used in Server.Execute or Server.Tansfer and Server.Execute
+       - QueryString
+       - Cookies
+        # Persistant and Non Persistant
+        # Check Browser Supports Cookie or not
+        # Then Redirection same Page and Cookie Storing and Retrival to check Cookie is enabled Or Not.
+
+* Got All the concepts, few things got polished like few properties of few ValidationControl and also learnt new things like ways of Navigation 
+  Using Server.Tansfer and Server.Execute.
