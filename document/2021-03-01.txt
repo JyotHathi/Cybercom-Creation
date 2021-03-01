@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Completed Today's Video Which Covers
+    -> Different Types of Storing Session like
+        # Inproc
+        # Outproc (State Server)
+        # Sql Server
+        # Off
+        # And Also Difference, advantages and Disadvantages between all of them
+    -> How to create custom control, How to use that in Project.
+    -> Different Ways of Handle Error 
+        # Try Catch and Print Error as Text or alert
+        # Using Error Pages at page level and Application level
+        # Custom Errors using Error Code Which is already Defined Like 401,500
+        # How To Log those Exception which is help to developers to improve the performance by Resolving them
+    -> How to Send mail, No doubt as It Require Secure Connection So not able to send Mail but Got The Proper Idea How to send mail and Store mail related Credentials 
+       in web.cnfig file
+
+* Learn That How To Use Different server for more efficient Web Application.
+* How Actually Custome Control Work which we are importing and Using when it needed.
