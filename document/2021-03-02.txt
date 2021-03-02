@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Completed Today's Video Which Covers
+    -> More about User Control Like
+        # How to Create Events For The User Control
+        # How To Add Properties of User Control.
+        # How User Control is Differ From Server Control.
+    
+    -> Learn About Server Control in that got idea about
+        # How to Create Server Control
+        # How to add Properties and Events of That.
+        # How to Add Custom Events and Use No Doubt it is Similar Like User Control.
+        # How to Add Image of the Server Control
+        # How to Add Server Control in To Tool Box.
+        # How it is Differ From User Control.
+    
+    -> What is AJAX Control and Two Different AJAAX Control Timer and Update Panel, How we Can Create Slide Show Using AJAX Cotrol With Batter Way. 
+
+* Also Got Idea That How to reduce The Load of Postback to server using Update Panel Control so that only that much is get Postback which require Not Full Page.
+* Got Differnce Between User and Server Control that 
+    -> Can Use User Control as it is easy to implement in case when we not need that in future or in too much project
+      But is not helpful when need in too much project as we have to perform to much changes, as well if there are too much user controls are there then may take project
+      take more time as User Control get Compile With project
+    -> Where as Server Control is Hard So we can use User Control if Not Need in many much Project as May Take Time, Nut For Large Project or when we want to use Control in
+       Many Project That Benificial as they are Precompiled and Just Have To Change One .dll File Which We Included, Also if needed then can Push That in to Global assembly 
+       Cachec for Batter performnace.
