@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Completed Today's Video Which Covers
+    -> How to Upload and Download The File In Data base or server.
+    -> How To Store Data or Retrive Data from Server Folder or Database.
+    -> How to Use Master Pages and Content Page In Project.
+    -> How To Acces Controls of Master Page in Content Page.
+    -> How to Use Captcha Control in Asp.net
+    -> How to Add Icon in Tab of Web page.
+
+* Also Got Clear Idea How to Send Mail as Previously Faced issue in sending Mail But Now Clear about that, Got The Problem / Error and Sended Email Properly.
+* How To Use Grid View For Data Display with Templte Editing.
+* As Per My Observation got Idea that Now Google is Supporting Captcha Version 2 and 3 Not Version1.
+* From examples given in Tutorials got idea how to that How to Use Different Concepts in Realtime Application like Via Contact us Page, Searching option to find Data easily.
+* Also Got Some Idea about asmx Web Services in Dotnet While Learning Autocomplete TextBox. 
