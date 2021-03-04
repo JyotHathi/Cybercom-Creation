@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Completed Today's Video Which Covers
+    -> Calander Control
+    -> Authentication In IIS
+    -> How The Forgot Password Works
+    -> How The Locking Works in case of Wrong Credentials Entering For Multiple Time
+    -> How the actually Unlocking Works In Database using Sql Server Agent's Job Feature
+
+* Also Gone Through ASMX Web Service videoes to Get More Idea about that as used in Autocomplete Textbox.
+* Got Great Idea that How the GUID is useful In case of sharing link of Foregot Password or Anyother Activation Link.
+* How Automatically Can Create JOb to Perform Task like Unlocking of Account, Expire a link after Duration.
+* Also Try To Find How to use notification Feature of Job of Sql Server Agent.
+* At The End Of This Series Got Great Idea about many things which we are using in real life and how to implement that using ASP.net, Many New Controls like Wizard.
