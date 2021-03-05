@@ -96,15 +96,6 @@ namespace BankApp
         protected global::System.Web.UI.WebControls.Button btnSubmit;
 
         /// <summary>
-        /// updtpnlop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updtpnlop;
-
-        /// <summary>
         /// pnlop control.
         /// </summary>
         /// <remarks>
@@ -141,6 +132,15 @@ namespace BankApp
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqfilvali;
 
         /// <summary>
+        /// rangevali control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rangevali;
+
+        /// <summary>
         /// btnsubmitdata control.
         /// </summary>
         /// <remarks>
@@ -148,5 +148,23 @@ namespace BankApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsubmitdata;
+
+        /// <summary>
+        /// BtnCancle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCancle;
+
+        /// <summary>
+        /// BtnAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnAll;
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using System.Text;
 
 namespace BankApp
 {
@@ -45,9 +45,11 @@ namespace BankApp
             pnlop.Visible = true;
             pnlop.Enabled = true;
             pnlselect.Enabled = false;
+            BtnAll.Visible = false;
             if (drodownSelectOption.SelectedValue.Equals("Check balance"))
             {
                 btnsubmitdata.Visible = false;
+                BtnCancle.Visible = false;
                 txtboxopdata.Enabled = false;
                 lblopstatus.Text = "Your Blance";
                 txtboxopdata.Text = ((DataTable)Session["UserData"]).Rows[0]["Balance"].ToString();
@@ -56,6 +58,7 @@ namespace BankApp
             else if (drodownSelectOption.SelectedValue.Equals("Deposit Amount"))
             {
                 btnsubmitdata.Visible = true;
+                BtnCancle.Visible = true;
                 txtboxopdata.Enabled = true;
                 lblopstatus.Text = "Enter Amount";
                 txtboxopdata.Text = "";
@@ -63,9 +66,19 @@ namespace BankApp
             else if (drodownSelectOption.SelectedValue.Equals("Withdrawal Amount"))
             {
                 btnsubmitdata.Visible = true;
+                BtnCancle.Visible = true;
                 txtboxopdata.Enabled = true;
                 lblopstatus.Text = "Enter Amount";
                 txtboxopdata.Text = "";
+            }
+            else if (drodownSelectOption.SelectedValue.Equals("Download Statement"))
+            {
+                btnsubmitdata.Visible = true;
+                BtnCancle.Visible = true;
+                txtboxopdata.Enabled = true;
+                lblopstatus.Text = "Enter Number of Transaction";
+                txtboxopdata.Text = "";
+                BtnAll.Visible = true;
             }
             else
             {
@@ -74,7 +87,7 @@ namespace BankApp
             }
 
             updtpnlSelection.Update();
-            updtpnlop.Update();
+            //updtpnlop.Update();
         }
         
         // Action In Case of Deposit to Widhdrawal amount
@@ -117,6 +130,50 @@ namespace BankApp
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Warning", "alert('Exceeds Minimum Widthdrawal Amount or After Widthrawal Minimum Balance Not Maintain');", true);
                     }
                 }
+                else if (drodownSelectOption.SelectedValue.Equals("Download Statement"))
+                {
+                    pnlselect.Enabled = true;
+                    updtpnlSelection.Update();
+                    cmd.Parameters.AddWithValue("@userid", (int)Session["UserId"]);
+                    cmd.Parameters.AddWithValue("@query",8);
+                    if(string.IsNullOrEmpty(txtboxopdata.Text))
+                    {
+                        cmd.Parameters.AddWithValue("@all", 1);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@all", 0);
+                        cmd.Parameters.AddWithValue("@trans", Convert.ToInt32(txtboxopdata.Text));
+                    }
+                    using (SqlDataAdapter adapter=new SqlDataAdapter(cmd))
+                    {
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet);
+                        if(dataSet.Tables[0].Rows.Count>0)
+                        {
+                            StringBuilder data=new StringBuilder();
+                            data.Append(lbluname.Text.Split(',')[1]+ "\n______________________________________________________________\n______________________________________________________________\n");
+                            data.Append("Transcation Time \t\t||\tType \t||\tAmount || Balance\n------------------------------------------------------------\n");
+                            foreach (DataRow dataRow in dataSet.Tables[0].Rows)
+                            {
+                                data.Append(Convert.ToDateTime(dataRow[0]).ToString("dd MMMM yyyy hh:mm:ss tt") + " ||\t" + dataRow[1] + " ||\t" + dataRow[2] + " || " + dataRow[3] + "\n");
+                            }
+                            pnlselect.Enabled = true;
+                            updtpnlSelection.Update();
+                            Response.Clear();
+                            Response.ContentType = "application/txt";
+                            Response.Buffer = true;
+                            Response.AppendHeader("content-disposition", "attachement;filename=Statement.txt");
+                            Response.BinaryWrite(Encoding.UTF8.GetBytes(data.ToString()));
+                            Response.End();
+                            Response.Flush();
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "alert('No Transaction Perfomed Yet');", true);
+                        }
+                    }
+                }
             }
             catch
             {
@@ -130,7 +187,7 @@ namespace BankApp
                 pnlselect.Enabled = true;
                 SessonData();
                 updtpnlSelection.Update();
-                updtpnlop.Update();
+                //updtpnlop.Update();
             }
         }
 
@@ -142,7 +199,7 @@ namespace BankApp
             drodownSelectOption.SelectedValue = "--Select--";
 
             updtpnlSelection.Update();
-            updtpnlop.Update();
+            //updtpnlop.Update();
         }
 
         // To Fill The Session Data
@@ -173,7 +230,7 @@ namespace BankApp
                 con.Dispose();
 
                 updtpnlSelection.Update();
-                updtpnlop.Update();
+                //updtpnlop.Update();
             }
         }
 
@@ -182,6 +239,14 @@ namespace BankApp
         {
             Session.RemoveAll();
             Response.Redirect("~/Login.aspx");
+        }
+
+        protected void BtnCancle_Click(object sender, EventArgs e)
+        {
+            pnlop.Enabled = false;
+            pnlselect.Enabled = true;
+            updtpnlSelection.Update();
+            //updtpnlop.Update();
         }
     }
 }
