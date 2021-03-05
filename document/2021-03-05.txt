@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Gone Through every Concept as Part of Revision and Get More Information about Life Cycle Events of ASP.net and Master page Content Page as These Events Are Useful When 
+  we want to add Controls or Itialize Dynamic Master Page.
+
+* Also As Per New Things Which Learnt Modify The Bank App Which Implement As A part of Dontnet and Data Base Practice
+    -> Implemented Download Statement like Passbook
+    -> User Can Also Downloaded Few Number of Recent Records Instead of All, Number will Give By User as Input.
+
+* Got Idea of Most of The Concept from ASP.net also Learnt ASMX Web Service Which is Helpful in AutoComplete Textbox.
