@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Solved the Errr Which Facing is Include Web Method for Autocomplete Textbox.
+  -> Solution : Along with Web Method Have to Include ScriptMethod Attribute as we want to use via script.
+
+* Also Gone Through with .ASHX (Active Server Handler File Extenstion) or Generic Handler, Got Idea About That Which Includes
+  -> How To Create Generic Handler
+  -> How To Use / Call That Via Jquery
+  -> How to Pass Data in Generic Handler from Jquery
+  -> How to Retrieve Different Type of Data in Handler Like
+    - Object Which is Inform of JSON
+    - Array of Object Which is Inform of JSON   
+    - How To Retrive Data From Query String
+
+* Created Small Application Using Generic Handler Which is Call by Jquery 
+  -> Passing Data of Person
+  -> Handler Storing The Data in XML File
+
+* Learn That How To Convert data is JSOn Format - (Serialize the Data) & 
+  How to Convert JSON Data into Objects(c# Based DataType or Collection) - (De Serialize the Data) 
+
+* Based on My Observation I can Say that Using Generic Handler We Can Create Web Which Using HTML Control and Javascript for Ui Designing and .net Framework as Backend 
+  just like aspx and aspx.cs file , which is Very Simillar like Backend Using Php or Python and Frontend Puerly Using HTML, CSS and JS.
+  -> Which May Helpful To Create Lite Web Site as in Case of Serer Control(aspx) may server involvment is High In Compare of 
+     Web Using HTML Control and JS , Generic Event Handler.
+  -> It is Quite Simillar to Web Service.
