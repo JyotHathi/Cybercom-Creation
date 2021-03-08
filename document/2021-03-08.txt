@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Done Practice of Downloading and Uploading of File using Storing Them In Data Base.
+* Also Developed Image Gallary Which Have Name or Artist and Description
+* Form Which Include Insertion, Deletion and Edition using  
+  -> Update Panel
+  -> Repeter
+  -> Modal Poup From Backend
+
+* Postabck Triggers in Update Panel As If We Want to Upload File From Update Panel Then We Need Post back triggers.
+* Good Pratice of ADO.net, Repeter Control with UI using Bootstrap.
+
