@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Created Application Using Google recaptcha V2 Check Box inclding
+  - Database from XML
+  - Validation That User Checked Captcha or Not If Not Then First Tell To Checked
+    # Got Idea That We Need to Call Google API to check Whether User Checked or Not 
+    # For That Created The Class Which is According Google's API Response Object
+    # Deserialize That Object And Check Whether User Checked Or Not
+
+* Also Done Practice of Generic Handler
+  - From Calling of Google API for Captcha Response try to call According That and Successfully Called Generic Handler From Backend
+  - Also Got Idea That How We Can Store and Get Data of Response so Applied that and Check User is Enter Proper Credentials or not 
+    (Got Idea From same Google API Calling and Checking To Check Captcha Response).
+  - So Finally Can Successfully Called ANd Get Response From Generic Handler.
+
+* Created Small Login App Which Has Captcha Control with validations of Bith Data and Captcha, Using XMl DataFile as Database, and To Verfiy that User exists or Not
+  Used Generic Handler Which Gives Response as True If User and if Not Then False. 
