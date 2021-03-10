@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Revised Concepts like How to Handle Errors 
+  ->Block Level Using Try Cathch, 
+  ->Page Level using Page_Error Event and Error Page Attribute of page directive
+  ->Application Level using Application_Error Event
+  ->Custom Error In Web Config
+  ->Navigation Techniquese Like Server.Transfer and Server.Execute
+
+* Also Additionaly Gone Through with the new Concept chart
+  -> How To Create Chart Using Chart Control
+  -> Using Backend To Create Dynamic charts
+    -> Using Namespace System.Web.UI.DataVisualization.Charting
+    -> Chart, Series, ChartArea classes.
