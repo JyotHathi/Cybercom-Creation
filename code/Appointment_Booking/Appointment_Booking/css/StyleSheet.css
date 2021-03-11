@@ -1,0 +1,37 @@
+﻿.cardModify
+{
+    width:80vw;
+    margin:auto;
+    margin-top:5vw;
+    display:block;
+}
+#ManageDoctors
+{
+    background-color:azure;
+}
+#Appoinments
+{
+    background-color:aliceblue;
+}
+#Doctors{
+    background-color:cornsilk;
+}
+h1{
+    text-align:center;
+    color:brown;
+}
+table{
+    width:70vw;
+}
+thead {
+    background-color: #c8e6fa;
+    color:black;
+}
+tr:nth-child(2n) {
+    background-color: #f2f3f4;
+    color: black;
+}
+tr:nth-child(2n+1) {
+    background-color: #e8daef;
+    color: black;
+}
