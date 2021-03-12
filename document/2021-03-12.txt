@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------
+                          ASP.net
+---------------------------------------------------------------------------
+
+* Optimize the Code Done on 11th March 2021 and Also Implemented additional Features Which are Given like
+    -> Verify The User Existance to remove Duplication but Check As User Enter Mobile Number or Email using web JQUERY AJAX and Web Service Instead of 
+       Submistion Directly
+    -> Take Interval Duration From Doctor and Based on that Show Slots at time of Appointments.
+    -> Display Slot as Interval like HH:MM to HH:MM
+    -> Allow Deletion of Appointments Which Have Date ToDay or Feature Day and In case Of Same Day Time Must of Feature Not Past.
+
+* Completed All Features But Just Because of System Issue, Pushed Work In Git little late.
