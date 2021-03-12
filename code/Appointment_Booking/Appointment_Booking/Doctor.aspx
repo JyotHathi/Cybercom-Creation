@@ -6,6 +6,7 @@
     <div class="card cardModify" id="Doctors">
         <div class="card-body">
             <!---------------Data---------------------->
+            <h1>Doctors List With Associated Appointments</h1>
             <table>
                 <thead>
                     <tr>
@@ -50,25 +51,24 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <asp:Label ID="LblImage" Text="Image:" runat="server"></asp:Label>
-                    <asp:Image ID="DocImg" Width="50px" runat="server" />
+                    <asp:Image ID="DocImg" Width="100px" runat="server" />
                     <br />
-                    <asp:Label ID="LblVDocName" Text="Doctor's Name:" runat="server"></asp:Label>
+                    <asp:Label ID="LblVDocName" Font-Bold="true" Text="Doctor's Name:" runat="server"></asp:Label>
                     <asp:Label ID="LblValDocName" runat="server" Text="Label"></asp:Label>
                     <br />
-                    <asp:Label ID="LblVDocDesignation" runat="server" Text="Designation:"></asp:Label>
+                    <asp:Label ID="LblVDocDesignation" Font-Bold="true" runat="server" Text="Designation:"></asp:Label>
                     <asp:Label ID="LblVValDocDesignation" runat="server" Text="Label"></asp:Label>
                     <br />
-                    <asp:Label ID="LblVEmail" runat="server" Text="Email:"></asp:Label>
+                    <asp:Label ID="LblVEmail" Font-Bold="true" runat="server" Text="Email:"></asp:Label>
                     <asp:Label ID="LblValEmail" runat="server" Text="Label"></asp:Label>
                     <br />
-                    <asp:Label ID="LblVMobileNumber" runat="server" Text="Contact Number:"></asp:Label>
+                    <asp:Label ID="LblVMobileNumber" Font-Bold="true" runat="server" Text="Contact Number:"></asp:Label>
                     <asp:Label ID="LblValMobileNumber" runat="server" Text="Label"></asp:Label>
                     <br />
-                    <asp:Label ID="LblVAvailFrom" runat="server" Text="Avail From:"></asp:Label>
+                    <asp:Label ID="LblVAvailFrom" Font-Bold="true" runat="server" Text="Avail From:"></asp:Label>
                     <asp:Label ID="LblValAvailFrom" runat="server" Text="Label"></asp:Label>
                     <br />
-                    <asp:Label ID="LblVAvilTill" runat="server" Text="Avail Till:"></asp:Label>
+                    <asp:Label ID="LblVAvilTill" Font-Bold="true" runat="server" Text="Avail Till:"></asp:Label>
                     <asp:Label ID="LblValAvilTill" runat="server" Text="Label"></asp:Label>
                 </div>
                 <div class="modal-footer">

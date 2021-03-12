@@ -34,6 +34,7 @@ namespace Appointment_Booking
             }
         }
 
+        // To Load Designataions
         protected void LoadDesgnations()
         {
             DroDownDesignation.DataTextField = "Designation";
@@ -49,6 +50,8 @@ namespace Appointment_Booking
 
 
         }
+        
+        // To Handle View, Update and Delete
         protected void RptrDoctors_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             DataTable dt = (DataTable)Session["DoctorsData"];
@@ -59,6 +62,7 @@ namespace Appointment_Booking
                 DroDownUDesignation.DataTextField = "Designation";
                 DroDownUDesignation.DataValueField = "Designation_Id";
                 DroDownUDesignation.DataSource = (DataTable)Session["Designations"];
+                Session["DoctorImage"]= (byte[])dataRow["Doctor Image"];
                 DroDownUDesignation.DataBind();
                 ListItem listItem = new ListItem("Select Designation", "-1");
                 DroDownUDesignation.Items.Add(listItem);
@@ -89,6 +93,7 @@ namespace Appointment_Booking
             LoadData();
         }
 
+        // To Load Doctor's Data 
         protected void LoadData()
         {
             DataSet ds = doctorMaster.SelectDoctors();
@@ -101,6 +106,8 @@ namespace Appointment_Booking
             else
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ErrorMessage", "alert('Try After Some Time');", true);
         }
+
+        // To Handle Deletion COnfirmation
         protected void BtnWarningYes_Click(object sender, EventArgs e)
         {
             doctorMaster.DoctorId = (int)Session["DocterId"];
@@ -110,6 +117,7 @@ namespace Appointment_Booking
         }
 
         #region Insert
+        // To Handle Server Validation of From Time
         protected void CusValiFromTime_ServerValidate(object source, ServerValidateEventArgs args)
         {
             DateTime dateTime = Convert.ToDateTime(TxtBoxFromTime.Text);
@@ -123,6 +131,7 @@ namespace Appointment_Booking
             }
         }
 
+        // To Handle Server Validation of To Time
         protected void CusValiToTime_ServerValidate(object source, ServerValidateEventArgs args)
         {
             DateTime dateTime = Convert.ToDateTime(TxtBoxFromTime.Text);
@@ -136,6 +145,7 @@ namespace Appointment_Booking
                 args.IsValid = false;
             }
         }
+        // To Handle Server Validation of Photo
         protected void CusValiPhoto_ServerValidate(object source, ServerValidateEventArgs args)
         {
             if (FileUpldPhoto.HasFile &&
@@ -151,6 +161,8 @@ namespace Appointment_Booking
             }
 
         }
+
+        // To Submit / Insert The Data
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
             if (IsValid)
@@ -170,6 +182,7 @@ namespace Appointment_Booking
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "SuccessMessage", "alert('Added Sucessfully')", true);
                     LoadData();
+                    ClearControls();
                 }
                 else
                 {
@@ -184,10 +197,12 @@ namespace Appointment_Booking
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ErorrMessage", "alert('Please Fill Data Properly')", true);
             }
         }
+        // To Reset The Data
         protected void BtnReset_Click(object sender, EventArgs e)
         {
             ClearControls();
         }
+        // To Clear Controls
         protected void ClearControls()
         {
             TxtBoxDocName.Text = "";
@@ -200,12 +215,13 @@ namespace Appointment_Booking
         #endregion
 
         #region Update
+        // To Handle Server Validation of Photo Update Popup
         protected void CusValiUPhoto_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            if (FileUpldUPhoto.HasFile &&
+            if ((FileUpldUPhoto.HasFile &&
                 FileUpldUPhoto.PostedFile.ContentLength < 50000
                 && (Path.GetExtension(FileUpldUPhoto.PostedFile.FileName).ToUpper().Equals(".JPG") ||
-                Path.GetExtension(FileUpldUPhoto.PostedFile.FileName).ToUpper().Equals(".PNG")))
+                Path.GetExtension(FileUpldUPhoto.PostedFile.FileName).ToUpper().Equals(".PNG")))||Session["DoctorImage"]!=null)
             {
                 args.IsValid = true;
             }
@@ -215,6 +231,7 @@ namespace Appointment_Booking
             }
 
         }
+        // To Handle Server Validation of From Time in Update Popup
         protected void CusValiFromUTime_ServerValidate(object source, ServerValidateEventArgs args)
         {
             DateTime dateTime = Convert.ToDateTime(TxtBoxFromUTime.Text);
@@ -227,7 +244,7 @@ namespace Appointment_Booking
                 args.IsValid = false;
             }
         }
-
+        // To Handle Server Validation of To Time in Update Popup
         protected void CusValiUToTime_ServerValidate(object source, ServerValidateEventArgs args)
         {
             DateTime dateTime = Convert.ToDateTime(TxtBoxFromUTime.Text);
@@ -241,7 +258,8 @@ namespace Appointment_Booking
                 args.IsValid = false;
             }
         }
-
+        
+        // To Submit Updated Data
         protected void BtnUpdate_Click(object sender, EventArgs e)
         {
             if (IsValid)
@@ -253,10 +271,18 @@ namespace Appointment_Booking
                 doctorMaster.DoctorMobileNumber = TxtBoxUMobNum.Text;
                 doctorMaster.FromTime = Convert.ToDateTime(TxtBoxFromUTime.Text);
                 doctorMaster.ToTime = Convert.ToDateTime(TxtBoxUToTime.Text);
-                Stream stream = FileUpldUPhoto.PostedFile.InputStream;
-                BinaryReader binaryReader = new BinaryReader(stream);
-                doctorMaster.DoctorImage = binaryReader.ReadBytes((int)stream.Length);
-                doctorMaster.DoctorId = (int)Session["DocterId"];
+                if (FileUpldUPhoto.HasFile)
+                {
+                    Stream stream = FileUpldUPhoto.PostedFile.InputStream;
+                    BinaryReader binaryReader = new BinaryReader(stream);
+                    doctorMaster.DoctorImage = binaryReader.ReadBytes((int)stream.Length);
+                }
+                else
+                {
+                    doctorMaster.DoctorImage = (byte[])Session["DoctorImage"];
+                    
+                }
+                    doctorMaster.DoctorId = (int)Session["DocterId"];
                 if (doctorMaster.UpdateDoctor())
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "SuccessMessage", "alert('Updated Sucessfully')", true);

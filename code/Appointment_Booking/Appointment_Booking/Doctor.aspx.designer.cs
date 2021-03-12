@@ -24,15 +24,6 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.Repeater RptrDoctors;
 
         /// <summary>
-        /// LblImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblImage;
-
-        /// <summary>
         /// DocImg control.
         /// </summary>
         /// <remarks>

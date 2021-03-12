@@ -199,61 +199,6 @@ namespace Appointment_Booking
                 return null;
             }
         }
-
-        /// <summary>
-        /// To Get Doctor
-        /// </summary>
-        /// <returns>true:Object of DoctorMaster, Null if Error Occured</returns>
-        public DoctorMaster GetDoctor()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(StoredProcedre.ConnectionString);
-                SqlCommand command = new SqlCommand("spDoctorMaster", con);
-                command.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter sqlData = new SqlDataAdapter(command);
-                DataSet ds = new DataSet();
-                try
-                {
-                    command.Parameters.AddWithValue("@query", 4);
-                    command.Parameters.AddWithValue("@doctorid", this.DoctorId);
-                    sqlData.Fill(ds);
-                    if (ds.Tables.Count != 0 && ds.Tables[0].Rows.Count != 0)
-                    {
-                        DoctorMaster doctorMaster = new DoctorMaster();
-                        doctorMaster.DoctorId = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
-                        doctorMaster.DoctorEmail = ds.Tables[0].Rows[0]["Email"].ToString();
-                        doctorMaster.DoctorMobileNumber = ds.Tables[0].Rows[0]["Doctor ContactNo."].ToString();
-                        doctorMaster.Designation = Convert.ToInt32(ds.Tables[0].Rows[0]["Doctor_Designation"]);
-                        doctorMaster.DoctorImage = (byte[])ds.Tables[0].Rows[0]["Doctor Image"];
-                        doctorMaster.DoctorImage = (byte[])ds.Tables[0].Rows[0]["Doctor Image"];
-                        doctorMaster.FromTime = Convert.ToDateTime(ds.Tables[0].Rows[0]["From Time"]);
-                        doctorMaster.ToTime = Convert.ToDateTime(ds.Tables[0].Rows[0]["To Time"]);
-                        return doctorMaster;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-
-                }
-                catch
-                {
-                    return null;
-                }
-                finally
-                {
-                    sqlData.Dispose();
-                    command.Dispose();
-                    con.Dispose();
-                }
-
-            }
-            catch
-            {
-                return null;
-            }
-        }
         #endregion
     }
 

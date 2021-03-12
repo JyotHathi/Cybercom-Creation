@@ -18,6 +18,7 @@ namespace Appointment_Booking
             }
         }
 
+        // To Handle View & View Today's Appointments
         protected void RptrDoctors_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             DataTable dt = (DataTable)Session["DoctorsData"];
@@ -71,6 +72,8 @@ namespace Appointment_Booking
             }
             
         }
+
+        // To Load Doctor's Information
         protected void LoadData()
         {
             DataSet ds = doctorMaster.SelectDoctors();

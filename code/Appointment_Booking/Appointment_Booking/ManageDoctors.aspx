@@ -111,8 +111,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <asp:Label ID="LblImage" Text="Image:" Font-Bold="true" runat="server"></asp:Label>
-                    <asp:Image ID="DocImg" Width="50px" runat="server" />
+                    <asp:Image ID="DocImg" Width="100px" runat="server" />
                     <br />
                     <asp:Label ID="LblVDocName" Font-Bold="true" Text="Doctor's Name:" runat="server"></asp:Label>
                     <asp:Label ID="LblValDocName" runat="server" Text="Label"></asp:Label>
@@ -190,7 +189,7 @@
                     <asp:Label runat="server" AssociatedControlID="TxtBoxUToTime" ID="LblUToTime" Text="Available Till<b style='color:red'> *</b>"></asp:Label>
                     <asp:TextBox ID="TxtBoxUToTime" CssClass="form-control" TextMode="Time" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ControlToValidate="TxtBoxUToTime" ForeColor="Red" Display="Dynamic" ValidationGroup="valiDocUpdate" ID="ReqFilvaliUToTime" runat="server" ErrorMessage="Please Select Available Till Time"></asp:RequiredFieldValidator><br />
-                    <asp:CustomValidator ValidationGroup="valiUDocUpdate" ControlToValidate="TxtBoxUToTime" ForeColor="Red" Display="Dynamic" ID="CusValiUToTime" OnServerValidate="CusValiUToTime_ServerValidate" runat="server" ErrorMessage="Please Select Time Properly, Time Must be After 8:00AM & Greater Then From Time"></asp:CustomValidator>
+                    <asp:CustomValidator ControlToValidate="TxtBoxUToTime" ForeColor="Red" Display="Dynamic" ID="CusValiUToTime" OnServerValidate="CusValiUToTime_ServerValidate" ValidationGroup="valiDocUpdate" runat="server" ErrorMessage="Please Select Time Properly, Time Must be After 8:00 AM & Greater Then Avil From Time"></asp:CustomValidator>
                     <br />
 
                     <!--Image-->
