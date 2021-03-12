@@ -10,11 +10,20 @@ namespace Appointment_Booking
     public partial class Doctor : System.Web.UI.Page
     {
         DoctorMaster doctorMaster = new DoctorMaster();
+        AppointmentMaster appointmentMaster = new AppointmentMaster();
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
             {
-                LoadData();
+                if (Session["DoctorsData"] == null)
+                {
+                    LoadData();
+                }
+                else
+                {
+                    RptrDoctors.DataSource =(DataTable)Session["DoctorsData"];
+                    RptrDoctors.DataBind();
+                }
             }
         }
 
@@ -25,7 +34,6 @@ namespace Appointment_Booking
             DataRow dataRow = dt.Select($"Doctor_Id='{e.CommandArgument}'")[0];
             if (e.CommandName.Equals("View"))
             {
-                
                 LblValDocName.Text = dataRow["Doctor Name"].ToString();
                 LblVValDocDesignation.Text = dataRow["Doctor_Designation"].ToString();
                 LblValEmail.Text = dataRow["Doctor Email"].ToString();
@@ -33,42 +41,31 @@ namespace Appointment_Booking
                 LblValAvilTill.Text = dataRow["To time"].ToString();
                 LblValMobileNumber.Text = dataRow["Doctor ContactNo."].ToString();
                 DocImg.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])dataRow["Doctor Image"]);
+                LblValSlot.Text = dataRow["SlotText"].ToString();
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ViewPopup", "$('#ViewDoctorModal').modal('show');", true);
             }
             else if(e.CommandName.Equals("ViewApointments"))
             {
-                AppointmentMaster appointmentMaster = new AppointmentMaster();
-                DataSet ds=appointmentMaster.GetAppoineMents();
-                if(ds!=null)
+                appointmentMaster.DoctorId = Convert.ToInt32(e.CommandArgument);
+                DataSet ds = appointmentMaster.GetAppoinment();
+                appointmentMaster.DoctorId = Convert.ToInt32(e.CommandArgument);
+                if (ds != null)
                 {
-                    
-                    if(ds.Tables[0].Rows.Count!=0)
+                    if (ds.Tables[0].Rows.Count != 0)
                     {
-                        DataRow[] datarow = ds.Tables[0].Select($"Doctor_Id='{Convert.ToInt32(e.CommandArgument)}' AND Appointment_Date='{DateTime.Now.Date}'");
-                        if (datarow.Length!=0)
-                        {
-                            DataTable dataTable = new DataTable();
-                            dataTable.Columns.Add("Time");
-                            dataTable.Columns.Add("PatientName");
-                            foreach(DataRow dr in datarow)
-                            {
-                                dataTable.Rows.Add(dr["Appointment_Time"], dr["Patient_Name"]);
-                            }
-                            RptrListofAppointments.DataSource = dataTable;
-                            RptrListofAppointments.DataBind();
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "ViewPopup", "$('#AppoinmentList').modal('show');", true);
-                        }
-                        else
-                        {
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "NoData", "alert('No Appoinments');", true);
-                        }
+                        RptrListofAppointments.DataSource = ds.Tables[0];
+                        RptrListofAppointments.DataBind();
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "ViewPopup", "$('#AppoinmentList').modal('show');", true);
                     }
                     else
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "NoData", "alert('No Appoinments');", true);
                     }
                 }
-                
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Error", "alert('Please Try After Some Time');", true);
+                }
             }
             
         }

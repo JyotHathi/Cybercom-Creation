@@ -23,10 +23,6 @@ h1{
 table{
     width:70vw;
 }
-thead {
-    background-color: #c8e6fa;
-    color:black;
-}
 tr:nth-child(2n) {
     background-color: #f2f3f4;
     color: black;
@@ -34,4 +30,9 @@ tr:nth-child(2n) {
 tr:nth-child(2n+1) {
     background-color: #e8daef;
     color: black;
+}
+.trthead {
+    background-color: #c8e6fa;
+    color: black;
+    border-bottom: solid;
 }

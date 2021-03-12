@@ -177,15 +177,6 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFilValiFromTime;
 
         /// <summary>
-        /// CusValiFromTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CusValiFromTime;
-
-        /// <summary>
         /// LblToTime control.
         /// </summary>
         /// <remarks>
@@ -220,6 +211,33 @@ namespace Appointment_Booking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator CusValiToTime;
+
+        /// <summary>
+        /// LblSlot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblSlot;
+
+        /// <summary>
+        /// DroDownSlot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DroDownSlot;
+
+        /// <summary>
+        /// ReqFilValiSlots control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFilValiSlots;
 
         /// <summary>
         /// LblPhoto control.
@@ -393,6 +411,24 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.Label LblValAvilTill;
 
         /// <summary>
+        /// LblVSlot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblVSlot;
+
+        /// <summary>
+        /// LblValSlot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblValSlot;
+
+        /// <summary>
         /// LblUDocName control.
         /// </summary>
         /// <remarks>
@@ -555,15 +591,6 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFilValiUFromTime;
 
         /// <summary>
-        /// CusValiuFromTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CusValiuFromTime;
-
-        /// <summary>
         /// LblUToTime control.
         /// </summary>
         /// <remarks>
@@ -598,6 +625,33 @@ namespace Appointment_Booking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator CusValiUToTime;
+
+        /// <summary>
+        /// LbluSlot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbluSlot;
+
+        /// <summary>
+        /// DroDownUSlot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DroDownUSlot;
+
+        /// <summary>
+        /// ReqFilValiSlotTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFilValiSlotTime;
 
         /// <summary>
         /// LbluPhoto control.

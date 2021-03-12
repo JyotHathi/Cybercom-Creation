@@ -5,11 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="card cardModify" id="Doctors">
         <div class="card-body">
-            <!---------------Data---------------------->
+            <!-----------------------Data------------------------------->
             <h1>Doctors List With Associated Appointments</h1>
             <table>
                 <thead>
-                    <tr>
+                    <tr class="trthead">
                         <th>Doctor Name</th>
                         <th>Doctor Designation</th>
                         <th></th>
@@ -17,6 +17,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!--Repeter of Doctors Data Show-->
                     <asp:Repeater runat="server" ID="RptrDoctors" OnItemCommand="RptrDoctors_ItemCommand">
                         <ItemTemplate>
                             <tr>
@@ -35,11 +36,16 @@
                             </tr>
                         </ItemTemplate>
                     </asp:Repeater>
+                    <!--Repeter Ends----->
                 </tbody>
             </table>
+
         </div>
     </div>
+    <!---------------------------------------------------------------------------------------------->
+
     <!---------------Modal Popup------------------>
+
     <!-- view ---->
     <div class="modal" tabindex="-1" id="ViewDoctorModal">
         <div class="modal-dialog">
@@ -70,6 +76,9 @@
                     <br />
                     <asp:Label ID="LblVAvilTill" Font-Bold="true" runat="server" Text="Avail Till:"></asp:Label>
                     <asp:Label ID="LblValAvilTill" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <asp:Label ID="LblVSlot" runat="server" Font-Bold="true" Text="Slot Interval Duration"></asp:Label>
+                    <asp:Label ID="LblValSlot" runat="server"></asp:Label>
                 </div>
                 <div class="modal-footer">
                     <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
@@ -77,6 +86,9 @@
             </div>
         </div>
     </div>
+    <!---------------------------------------------------------------------------------------------->
+
+    <!--Appoinment List---------------->
     <div class="modal" tabindex="-1" id="AppoinmentList">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -87,28 +99,28 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <table style="width:auto">
+                    <table style="width: auto">
                         <tr>
-                            <th>
-                                Appointment time
+                            <th>Appointment time
                             </th>
-                            <th>
-                                Patient Name
+                            <th>Patient Name
                             </th>
                         </tr>
-                    <asp:Repeater runat="server" ID="RptrListofAppointments">
-                        <ItemTemplate>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" Text='<%#Eval("Time") %>'></asp:Label>
-                                </td>
-                                <td>
-                                     <asp:Label runat="server" Text='<%#Eval("PatientName") %>'></asp:Label>
-                                </td>
-                            </tr>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                        </table>
+                        <!--Repeter of Doctors Data Show-->
+                        <asp:Repeater runat="server" ID="RptrListofAppointments">
+                            <ItemTemplate>
+                                <tr>
+                                    <td>
+                                        <asp:Label runat="server" Text='<%#Eval("Appointment_Time") %>'></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label runat="server" Text='<%#Eval("Patient_Name") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <!--Repeter Ends-->
+                    </table>
                 </div>
                 <div class="modal-footer">
                     <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
@@ -116,4 +128,5 @@
             </div>
         </div>
     </div>
+    <!---------------------------------------------------------------------------------------------->
 </asp:Content>

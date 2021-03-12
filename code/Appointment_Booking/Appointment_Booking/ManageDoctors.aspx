@@ -5,52 +5,59 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="card cardModify" id="ManageDoctors">
         <div class="card-body">
+            <!------------------------------- Form data---------------------------->
             <h1>Manage Doctors</h1>
             <br />
             <p style="color: red">* Indicate Mandatory Field</p>
             <br />
             <br />
-            <!--Name-->
+            <!---Name--->
             <asp:Label runat="server" ID="LblDocName" Text="Doctor's Name<b style='color:red'> *</b>" AssociatedControlID="TxtBoxDocName"></asp:Label>
             <asp:TextBox ID="TxtBoxDocName" CssClass="form form-control" runat="server" Placeholder="Enter Doctor's Name"></asp:TextBox>
             <asp:RequiredFieldValidator ControlToValidate="TxtBoxDocName" ID="ReqFilValiDocName" runat="server" ErrorMessage="Please Enter Doctor's Name" Display="Dynamic" ForeColor="Red" ValidationGroup="valiDocInsert"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegexFilValiDocName" runat="server" ErrorMessage="Please Enter Name Properly, Alphabets and Space Only" ControlToValidate="TxtBoxDocName" Display="Dynamic" ForeColor="Red" ValidationGroup="valiDocInsert" ValidationExpression="^([a-zA-Z]+\s)*[a-zA-Z]+$"></asp:RegularExpressionValidator>
             <br />
 
-            <!--Mobile Number-->
+            <!----Mobile Number---->
             <asp:Label runat="server" ID="LblMobNum" Text="Mobile Number<b style='color:red'> *</b>" AssociatedControlID="TxtBoxMobNum"></asp:Label>
             <asp:TextBox ID="TxtBoxMobNum" Placeholder="Enter Mobile Number" TextMode="Phone" CssClass="form form-control" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="ReqFilValiMobNum" runat="server" ErrorMessage="Please Enter Mobile Number" ControlToValidate="TxtBoxMobNum" Display="Dynamic" ForeColor="Red" ValidationGroup="valiDocInsert"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegexFilValiMobnum" ValidationExpression="^((\+){1}91){1}[1-9]{1}[0-9]{9}$" runat="server" ErrorMessage="Please Enter Mobile Number Properly(+91xxxxxxxxx)" ControlToValidate="TxtBoxMobNum" Display="Dynamic" ForeColor="Red" ValidationGroup="valiDocInsert"></asp:RegularExpressionValidator>
+
             <br />
 
-            <!--Email-->
+            <!-----Email---->
             <asp:Label runat="server" ID="LblEmail" Text="Email <b style='color:red'> *</b>" AssociatedControlID="TxtBoxEmail"></asp:Label>
             <asp:TextBox ID="TxtBoxEmail" TextMode="Email" PlaceHolder="Enter Your Email" CssClass="form-control" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="ReqFilValiEmail" runat="server" ErrorMessage="Please Enter Email" ControlToValidate="TxtBoxEmail" Display="Dynamic" ForeColor="Red" ValidationGroup="valiDocInsert"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegexFilValiEmail" runat="server" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ErrorMessage="Please Enter Valid Email" ControlToValidate="TxtBoxEmail" Display="Dynamic" ForeColor="Red" ValidationGroup="valiDocInsert"></asp:RegularExpressionValidator>
             <br />
 
-            <!--Designation-->
+            <!----Designation---->
             <asp:Label runat="server" ID="LblDesignation" Text="Designation<b style='color:red'> *</b>" AssociatedControlID="DroDownDesignation"></asp:Label>
             <asp:DropDownList runat="server" ID="DroDownDesignation" CssClass="form-control"></asp:DropDownList>
             <asp:RequiredFieldValidator ControlToValidate="DroDownDesignation" ID="ReqFilValiDesignation" runat="server" ErrorMessage="Please Select Designation" InitialValue="-1" ValidationGroup="valiDocInsert" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
             <br />
 
-            <!--From Time-->
+            <!----From Time---->
             <asp:Label runat="server" Text="Available From Time<b style='color:red'> *</b>" ID="LblFromTime" AssociatedControlID="TxtBoxFromTime"></asp:Label>
             <asp:TextBox ID="TxtBoxFromTime" TextMode="Time" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:RequiredFieldValidator ControlToValidate="TxtBoxFromTime" ForeColor="Red" Display="Dynamic" ValidationGroup="valiDocInsert" ID="ReqFilValiFromTime" runat="server" ErrorMessage="Please Select Available Time"></asp:RequiredFieldValidator><br />
-            <asp:CustomValidator ControlToValidate="TxtBoxFromTime" ForeColor="Red" Display="Dynamic" ID="CusValiFromTime" OnServerValidate="CusValiFromTime_ServerValidate" ValidationGroup="valiDocInsert" runat="server" ErrorMessage="Please Select Time Properly (After 8:00AM Only)"></asp:CustomValidator>
 
-            <!--To Time-->
+            <!----To Time---->
             <asp:Label runat="server" AssociatedControlID="TxtBoxToTime" ID="LblToTime" Text="Available Till<b style='color:red'> *</b>"></asp:Label>
             <asp:TextBox ID="TxtBoxToTime" CssClass="form-control" TextMode="Time" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ControlToValidate="TxtBoxToTime" ForeColor="Red" Display="Dynamic" ValidationGroup="valiDocInsert" ID="ReqFilvaliToTime" runat="server" ErrorMessage="Please Select Available Till Time"></asp:RequiredFieldValidator><br />
-            <asp:CustomValidator ValidationGroup="valiDocInsert" ControlToValidate="TxtBoxToTime" ForeColor="Red" Display="Dynamic" ID="CusValiToTime" OnServerValidate="CusValiToTime_ServerValidate" runat="server" ErrorMessage="Please Select Time Properly, Time After 8:00AM Only And Greater Then From Time"></asp:CustomValidator>
+            <asp:CustomValidator ValidationGroup="valiDocInsert" ControlToValidate="TxtBoxToTime" ForeColor="Red" Display="Dynamic" ID="CusValiToTime" OnServerValidate="CusValiToTime_ServerValidate" runat="server" ErrorMessage="Please Select Time Properly,Greater Then From Time"></asp:CustomValidator>
             <br />
 
-            <!--Image-->
+            <!----SlotTime---->
+            <asp:Label runat="server" ID="LblSlot" Text="Slot Interval Duration<b style='color:red'> *</b>" AssociatedControlID="DroDownSlot"></asp:Label>
+            <asp:DropDownList runat="server" ID="DroDownSlot" CssClass="form-control"></asp:DropDownList>
+            <asp:RequiredFieldValidator ControlToValidate="DroDownSlot" ID="ReqFilValiSlots" runat="server" ErrorMessage="Please Select Slot Interval Time" InitialValue="-1" ValidationGroup="valiDocInsert" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+            <br />
+
+            <!----Image---->
             <asp:Label ID="LblPhoto" runat="server" Text="Photo<b style='color:red'> *</b>"></asp:Label>
             <asp:FileUpload ID="FileUpldPhoto" CssClass="form-control" runat="server" />
             <asp:CustomValidator ValidationGroup="valiDocInsert" ValidateEmptyText="true" ControlToValidate="FileUpldPhoto" ForeColor="Red" Display="Dynamic" ID="CustomValidator1" OnServerValidate="CusValiPhoto_ServerValidate" runat="server" ErrorMessage="Please Upload Photo in .png  / .jpg and Size Less Then 50kb"></asp:CustomValidator>
@@ -62,10 +69,12 @@
             <asp:Button ID="BtnReset" runat="server" Text="Reset" OnClick="BtnReset_Click" CssClass="btn btn-secondary" />
             <br />
             <br />
-            <!---------------Data---------------------->
+            <!---------------------------------Form Ends------------------------------------>
+
+            <!---------------Data of Doctors---------------------->
             <table>
                 <thead>
-                    <tr>
+                    <tr class="trthead">
                         <th>Doctor Name</th>
                         <th>Doctor Designation</th>
                         <th></th>
@@ -74,6 +83,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!---------Repeter Starts for Data of Doctors--------->
                     <asp:Repeater runat="server" ID="RptrDoctors" OnItemCommand="RptrDoctors_ItemCommand">
                         <ItemTemplate>
                             <tr>
@@ -95,10 +105,13 @@
                             </tr>
                         </ItemTemplate>
                     </asp:Repeater>
+                    <!--------------------Repter Ends-------------->
                 </tbody>
             </table>
         </div>
     </div>
+    <!--------------------------Data Of Doctors Table End------------------->
+
     <!---------------Modal Popup------------------>
     <!-- view ---->
     <div class="modal" tabindex="-1" id="ViewDoctorModal">
@@ -130,6 +143,9 @@
                     <br />
                     <asp:Label ID="LblVAvilTill" Font-Bold="true" runat="server" Text="Avail Till:"></asp:Label>
                     <asp:Label ID="LblValAvilTill" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <asp:Label ID="LblVSlot" runat="server" Font-Bold="true" Text="Slot Interval Duration"></asp:Label>
+                    <asp:Label ID="LblValSlot" runat="server"></asp:Label>
                 </div>
                 <div class="modal-footer">
                     <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
@@ -137,6 +153,7 @@
             </div>
         </div>
     </div>
+    <!------------------------------------------------------------->
 
     <!-- Update ---->
     <div class="modal" tabindex="-1" id="EditDoctorModal">
@@ -149,6 +166,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <!-------------------------- Update Form Starts ----------------->
                     <p style="color: red">* Indicate Mandatory Field</p>
                     <br />
                     <br />
@@ -183,13 +201,18 @@
                     <asp:Label runat="server" Text="Available From Time<b style='color:red'> *</b>" ID="LblFromUTime" AssociatedControlID="TxtBoxFromuTime"></asp:Label>
                     <asp:TextBox ID="TxtBoxFromUTime" TextMode="Time" runat="server" CssClass="form-control"></asp:TextBox>
                     <asp:RequiredFieldValidator ControlToValidate="TxtBoxFromUTime" ForeColor="Red" Display="Dynamic" ValidationGroup="valiDocUpdate" ID="ReqFilValiUFromTime" runat="server" ErrorMessage="Please Select Available Time"></asp:RequiredFieldValidator><br />
-                    <asp:CustomValidator ControlToValidate="TxtBoxFromuTime" ForeColor="Red" Display="Dynamic" ID="CusValiuFromTime" OnServerValidate="CusValiFromUTime_ServerValidate" ValidationGroup="valiDocUpdate" runat="server" ErrorMessage="Please Select Time Properly, Time Must be After 8:00 AM"></asp:CustomValidator>
 
                     <!--To Time-->
                     <asp:Label runat="server" AssociatedControlID="TxtBoxUToTime" ID="LblUToTime" Text="Available Till<b style='color:red'> *</b>"></asp:Label>
                     <asp:TextBox ID="TxtBoxUToTime" CssClass="form-control" TextMode="Time" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ControlToValidate="TxtBoxUToTime" ForeColor="Red" Display="Dynamic" ValidationGroup="valiDocUpdate" ID="ReqFilvaliUToTime" runat="server" ErrorMessage="Please Select Available Till Time"></asp:RequiredFieldValidator><br />
-                    <asp:CustomValidator ControlToValidate="TxtBoxUToTime" ForeColor="Red" Display="Dynamic" ID="CusValiUToTime" OnServerValidate="CusValiUToTime_ServerValidate" ValidationGroup="valiDocUpdate" runat="server" ErrorMessage="Please Select Time Properly, Time Must be After 8:00 AM & Greater Then Avil From Time"></asp:CustomValidator>
+                    <asp:CustomValidator ControlToValidate="TxtBoxUToTime" ForeColor="Red" Display="Dynamic" ID="CusValiUToTime" OnServerValidate="CusValiUToTime_ServerValidate" ValidationGroup="valiDocUpdate" runat="server" ErrorMessage="Please Select Time Properly,Greater Then Avil From Time"></asp:CustomValidator>
+                    <br />
+
+                    <!--Slot-->
+                    <asp:Label runat="server" ID="LbluSlot" Text="Slot Interval Duration<b style='color:red'> *</b>" AssociatedControlID="DroDownUSlot"></asp:Label>
+                    <asp:DropDownList runat="server" ID="DroDownUSlot" CssClass="form-control"></asp:DropDownList>
+                    <asp:RequiredFieldValidator ControlToValidate="DroDownUSlot" ID="ReqFilValiSlotTime" runat="server" ErrorMessage="Please Select SlotTimings" InitialValue="-1" ValidationGroup="valiDocUpdate" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                     <br />
 
                     <!--Image-->
@@ -201,9 +224,11 @@
                     <asp:Button ID="BtnUpdate" CssClass="btn btn-primary" OnClick="BtnUpdate_Click" ValidationGroup="valiDocUpdate" runat="server" Text="Update" />
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
+                <!-------------------------------Update Form Ends--------------------->
             </div>
         </div>
     </div>
+    <!------------------------------------------------------------->
 
     <!-- Delete ---->
     <div class="modal" tabindex="-1" id="DeleteDoctorModal">
@@ -225,5 +250,94 @@
             </div>
         </div>
     </div>
+    <!------------------------------------------------------------->
+    <script type="text/javascript">
+        // For Mobile Number
+        document.getElementById('<%= TxtBoxMobNum.ClientID%>').addEventListener('change', () => {
+           
+                var data = [document.getElementById('<%= TxtBoxMobNum.ClientID%>').value, document.getElementById('<%= TxtBoxEmail.ClientID%>').value];
+                $.ajax({
+                    url: "ManageDoctors.aspx/IsUserExits",
+                    data: "{'mobileNumber':'" + data[0] + "','email':''}",
+                    type: "POST",
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (data) {
+                        var result = data.d;
+                        if (result === true) {
+                            alert('User Alredy Exits');
+                        }
+                    },
+                    error: function (data) {
+                        alert("Error Occured");
+                    }
+                });
+        });
 
+        // For Email
+        document.getElementById('<%= TxtBoxEmail.ClientID%>').addEventListener('change', () => {
+
+            var data = [document.getElementById('<%= TxtBoxMobNum.ClientID%>').value, document.getElementById('<%= TxtBoxEmail.ClientID%>').value];
+            $.ajax({
+                url: "ManageDoctors.aspx/IsUserExits",
+                data: "{'mobileNumber':'','email':'" + data[1] + "'}",
+                type: "POST",
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (data) {
+                    var result = data.d;
+                    if (result === true) {
+                        alert('User Alredy Exits');
+                    }
+                },
+                error: function (data) {
+                    alert("Error Occured");
+                }
+            });
+        });
+
+        // For Mobile Number (Update)
+        document.getElementById('<%= TxtBoxUMobNum.ClientID%>').addEventListener('change', () => {
+
+            var data = [document.getElementById('<%= TxtBoxUMobNum.ClientID%>').value, document.getElementById('<%= TxtBoxUEmail.ClientID%>').value];
+            $.ajax({
+                url: "ManageDoctors.aspx/IsUserExits",
+                data: "{'mobileNumber':'" + data[0] + "','email':''}",
+                type: "POST",
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (data) {
+                    var result = data.d;
+                    if (result === true) {
+                        alert('User Alredy Exits');
+                    }
+                },
+                error: function (data) {
+                    alert("Error Occured");
+                }
+            });
+        });
+
+        // For Email (Update)
+        document.getElementById('<%= TxtBoxUEmail.ClientID%>').addEventListener('change', () => {
+
+            var data = [document.getElementById('<%= TxtBoxUMobNum.ClientID%>').value, document.getElementById('<%= TxtBoxUEmail.ClientID%>').value];
+            $.ajax({
+                url: "ManageDoctors.aspx/IsUserExits",
+                data: "{'mobileNumber':'','email':'" + data[1] + "'}",
+                type: "POST",
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (data) {
+                    var result = data.d;
+                    if (result === true) {
+                        alert('User Alredy Exits');
+                    }
+                },
+                error: function (data) {
+                    alert("Error Occured");
+                }
+            });
+        });
+    </script>
 </asp:Content>

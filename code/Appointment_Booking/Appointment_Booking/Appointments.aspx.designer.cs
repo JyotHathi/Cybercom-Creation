@@ -33,22 +33,22 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.TextBox TxtBoxPtName;
 
         /// <summary>
-        /// requiredfieldvalidator1 control.
+        /// ReqvaliPtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredfieldvalidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqvaliPtName;
 
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// RegexValiPtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegexValiPtName;
 
         /// <summary>
         /// LblDate control.
@@ -69,13 +69,13 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.TextBox TxtBoxDate;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// ReqValiDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValiDate;
 
         /// <summary>
         /// LblDoctor control.
@@ -96,13 +96,13 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.DropDownList DroDrownDoctor;
 
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// ReqValiAptWith control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValiAptWith;
 
         /// <summary>
         /// Label3 control.
@@ -123,13 +123,13 @@ namespace Appointment_Booking
         protected global::System.Web.UI.WebControls.DropDownList DrowDownSlots;
 
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// ReqValiTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValiTime;
 
         /// <summary>
         /// BtnSubmit control.
@@ -148,5 +148,14 @@ namespace Appointment_Booking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater RptrAppointments;
+
+        /// <summary>
+        /// BtnWarningYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnWarningYes;
     }
 }

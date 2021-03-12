@@ -25,8 +25,8 @@ namespace Appointment_Booking
         public DateTime ToTime { get; set; }
         public bool IsDeleted { get; set; }
         public int Designation { get; set; }
-
         public int Flag { get { return flag; } }
+        public int SlotIntervalID { get; set; }
         #endregion
 
         #region Methods
@@ -53,6 +53,7 @@ namespace Appointment_Booking
                     command.Parameters.AddWithValue("@doctorimage", this.DoctorImage);
                     command.Parameters.AddWithValue("@fromtime", this.FromTime.ToString("HH:mm:ss"));
                     command.Parameters.AddWithValue("@totime", this.ToTime.ToString("HH:mm:ss"));
+                    command.Parameters.AddWithValue("@slotIntervalID", SlotIntervalID);
                     con.Open();
                     flag= Convert.ToInt32(command.ExecuteScalar());
                     con.Close();
@@ -61,7 +62,7 @@ namespace Appointment_Booking
                     else
                         return false;
                 }
-                catch
+                catch(Exception ex)
                 {
                     return false;
                 }
@@ -138,6 +139,7 @@ namespace Appointment_Booking
                     command.Parameters.AddWithValue("@doctorimage", this.DoctorImage);
                     command.Parameters.AddWithValue("@fromtime", this.FromTime.ToString("HH:mm:ss"));
                     command.Parameters.AddWithValue("@totime", this.ToTime.ToString("HH:mm:ss"));
+                    command.Parameters.AddWithValue("@slotIntervalID", SlotIntervalID);
                     con.Open();
                     flag=Convert.ToInt32(command.ExecuteScalar());
                     con.Close();
@@ -199,10 +201,49 @@ namespace Appointment_Booking
                 return null;
             }
         }
+
+
+        public bool IsUserExists()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(StoredProcedre.ConnectionString);
+                SqlCommand command = new SqlCommand("spDoctorMaster", con);
+                command.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    command.Parameters.AddWithValue("@query", 5);
+                    command.Parameters.AddWithValue("@doctormobilenumber", this.DoctorMobileNumber);
+                    command.Parameters.AddWithValue("@doctoremail", this.DoctorEmail);
+                    con.Open();
+                    flag = Convert.ToInt32(command.ExecuteScalar());
+                    con.Close();
+                    if (flag != 0)
+                        return true;
+                    else
+                        return false;
+                }
+                catch
+                {
+                    return false;
+                }
+                finally
+                {
+                    command.Dispose();
+                    con.Close();
+                    con.Dispose();
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         #endregion
     }
-
-
+    
+    
     /// <summary>
     /// For StoredProcedure spDesignationMaster
     /// </summary>
@@ -251,12 +292,14 @@ namespace Appointment_Booking
         #region Propeties
         int flag = 0;
         public DateTime Date { get; set; }
-        public DateTime Time { get; set; }
+        public string Time { get; set; }
         public int AppointmentWith { get; set; }
         public string PatientName { get; set; }
         public int Id { get; set; }
         public int DoctorId { get; set; }
         public int Flag { get { return flag; } }
+
+        public int AppoinmentId { get; set; }
         #endregion
 
         #region Methods
@@ -337,9 +380,114 @@ namespace Appointment_Booking
                 return null;
             }
         }
+        public DataSet GetAppoinment()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(StoredProcedre.ConnectionString);
+                SqlCommand command = new SqlCommand("spAppointemntMaster", con);
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+                DataSet dataSet = new DataSet();
+                try
+                {
+                    command.Parameters.AddWithValue("@query", 2);
+                    command.Parameters.AddWithValue("@doctorid", this.DoctorId);
+                    sqlDataAdapter.Fill(dataSet);
+                    return dataSet;
+                }
+                catch
+                {
+                    return null;
+                }
+                finally
+                {
+                    sqlDataAdapter.Dispose();
+                    command.Dispose();
+                    con.Close();
+                    con.Dispose();
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public bool DeleteAppoinment()
+        {
+            try
+            {
+                flag = 0;
+                SqlConnection con = new SqlConnection(StoredProcedre.ConnectionString);
+                SqlCommand command = new SqlCommand("spAppointemntMaster", con);
+                command.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    command.Parameters.AddWithValue("@query", 3);
+                    command.Parameters.AddWithValue("@appoinmentid", this.AppoinmentId);
+                    con.Open();
+                    flag = Convert.ToInt32(command.ExecuteScalar());
+                    con.Close();
+                    if (flag == 0)
+                        return true;
+                    else
+                        return false;
+                }
+                catch
+                {
+                    return false;
+                }
+                finally
+                {
+                    command.Dispose();
+                    con.Close();
+                    con.Dispose();
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
         #endregion
     }
 
+    
+    public class SlotIntervalMaster
+    {
+        public static DataSet SelectSlots()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(StoredProcedre.ConnectionString);
+                SqlCommand command = new SqlCommand("spSlotIntervalMaster", con);
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter sqlData = new SqlDataAdapter(command);
+                DataSet ds = new DataSet();
+                try
+                {
+                    sqlData.Fill(ds);
+                    return ds;
+                }
+                catch
+                {
+                    return null;
+                }
+                finally
+                {
+                    sqlData.Dispose();
+                    command.Dispose();
+                    con.Dispose();
+                }
+
+            }
+            catch
+            {
+                return null;
+            }
+        }
+    }
 
     public class StoredProcedre
     {
