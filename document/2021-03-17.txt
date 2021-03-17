@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Gone Through all the Videoes of Todays and of dated 15th and 16th March as I had exeams on that so on leaves so, videoes covers
+    -> What is ASP MVC
+    -> How To Create Model, View and Control
+    -> What is Working flow of the MVC Project
+    -> What is RAZOR ViewEngine and RAZOR Pages also How to create UI using RAZOR
+    -> How To Perform Different Things in Razor pages like How To Code c# in pages
+    -> How to Create Helper or can say functions in Razor Pages and use or call that
+    -> What are Built In Helpers which use to create UI and What are The Difference Between Similar Kind of Helpers like    
+        - Difference Between HTML.TextBox and HTML.TextBoxFOR
+        - Difference Between HTML.Display and HTML.DisplayFor
+        - all Helpers With Ending For are Using Strongly Type using Models
+    -> How To Different Custome Helpers using Static class and method.
+    -> Use of @using to include Namespaces @model and other code and varibles accessing using @
+    -> What are the Different ways To Send Data From Controller to View using ViewBag and ViewData, also store data for next Requestes using Tempdata & Keep and Peek 
+       of that.
+    -> How to Send Data From View to Controller using Parameters, FormCollection, Post back of data using Strong Type and Request.
+    -> How to Perform Validation Using Different Attributes like Required, Range and Many Others 
+    -> Use of system.ContentModel Namespaces
+    -> How to Create Custom Validation attribute and Perform Custom Validation.
+    -> How to Manage or can say mapping of Url and Format using Different ways like Traditional Way using Routeconfig file and Attribute method.
+    -> How to Create Layouts like Master Page and Use them in Child Pages.
+    -> How to Use Enity Framework to deal with database in MVC Project.
+
+* Got all the concepts and Practiced too but as entity framework is little bit confusing so need to perform more practice so will do practice of that. 
