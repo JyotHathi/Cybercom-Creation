@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Gone Through all the videoes which mainly covers concepts like
+    - How to deal with database using Entity Frame work
+    - How To Use Jquery AJAX to perform many operations like Submit Data, Call Action Method an Many More
+
+* Also Gone Through in Depth About Like What we have to do For UI and Get Data from that from radio button, Checkbox any Many More as those are tricky
+ - Also Whats the solution to Create, handle and call events like check change and similar like that not have server control unlike ASPX 
+ - So Think and Search and based on that got idea that we need to use JQERY and JavaScript To Handle Events 
+ - Practiced That to so that when need to use those in Project then Not Create That Much Trobule.
+
+* Also Practice of All the Basic Concepts of MVC too as its new thing not that much familier like ASP.net and Basics
