@@ -1,0 +1,15 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Gone Through all the videoes which mainly covers concepts like
+    - Different types of Filters are in MVC
+    - OutputCache Action Filter Which is Use to Cache The Action Methods's Output which helps to improve performance 
+    - Handle Error Attribute which is use to Handle Unhandked Exception or Error, default Error Page and Custom Error Page
+    - In Authentication Forms Authentication and Roll Management To Ristrict The User Access and Define Level of Access by User types
+    - AllowHtmlAttribute and ValidateInput Attribute to allow wether allowing HTML input or Not , or Want to Validate the Input or Not
+
+* Got idea that How to Divide whole project by role wise which is very helpful so that We can restrict anonymous Access of Sources from Not Authorized Users.
+* How we can use Caching So that It Improve the performance of System but need to tack care in case of Both Authentication and Authentication and Caching 
+  otherwise it may lead to great trouble for example If On Global Level Stoping Access of all resources but we need to allow login page and basic information 
+  providing page without any aceess checking which is best.  
