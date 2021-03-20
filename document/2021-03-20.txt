@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Gone Through more concepts about ASP.net MVC Which Covers Different Things like
+  -> How To Create Custom Filter Atribute Which User Define Logic, Filter Likes
+    -Exception
+    -Authentication
+    -Action
+  -> What is Model Binder and How to Create Custom Model Binder
+  -> What is use of Bundle Config and How it is Useful to Save Bundle Information
+    -What is Bundle
+    -How To Create and Use Bundle 
+    -How Bundle is Useful to Improve Performance
+  ->What is Minification and Example of that
+  ->What is Area
+    - How To create an Area
+    - How are aria is Helpful in Developement or Large Projects
+    - How to Access Views and Controller which in the area or Global Level and vise-versa that How To Access Views and Controller at Global Level, Which is resides in Area
+    - What things Need to Keep in Mind While Using Area
+   -> Unit Testing in Asp MVC
+
+* Got most of the concepts clearly in few just need more practice.
+* Got Clear Idea that What is Need of Area and Bundling and it is very benicial in terms of Developement & To Improve Performance.
+* Also Got Need of Custom Exception Filter as it is similar to Handle Error in ASPX but not have idea about other custom filter as inbuilt are already fulfilling need 
+  may be when use in any project got more idea.
