@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Done Practice from Scratch and also referred Other Resources Like Javatpoint & Tutorials point to Get More Infomration about ASP MVC 
+* Not Faced any Issue in Practice going all things smoothly.
+* Today Mainly Focused on Basics of MVC Like 
+  - Controller and Async Controller
+  - View, Layout and LayoutStart
+  - Filters Like Authorise, Error and OutputChecing and How to Customise them
+  - Routing 
+  - Bunddeling
+  - Pass Data Form View to Controller and Controller To View (Using AJAX and Reguler Post Back Both)
+* Got Clear Idea of All Above Concepts and learn new thing that use of NonAction and ActionName Attribute in Action Method of Controller.
