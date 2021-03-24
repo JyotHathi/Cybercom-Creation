@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Gone Through Practice and Today Done Practice of All the COncepts of MVC Specially
+  - Unit Testing
+  - Entity Framework
+  - Use of Jquery for Show Loader When Postin Back Without using AJAX and also Displaying That in case of Ajax but in different batter manners
+  - Models
+
+* In Entity Framework find many things like
+  - New Methods Including in EF6 Like DbSet.SqlQuery(), Database.SqlQuery() and Database.ExecuteSqlCommand() which helps us to execute normal and complex queries just 
+    same like execution of SQL Statements and Stored Procedures which are best in Performance and reduce effors in compare of LINQ.
+  - Practiced Of Those Methods.
+
+* Explore Few More Things in JQUERY which helpful in MVC and in different parts of Web Development
+* Done Practice of AJAX Helpers too along with JQUERY.
+* Now Clear with All the Concepts which are basic concepts of MVC and covered in Given Series, also have more details into that like in Entity framework as methoned above and 
+  few other things too.
