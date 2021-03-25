@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Today Explore One More Thing That How To Upload Photo in ASP MVC.
+* Also Finally Got the Way HOw To Work with MVC Project Easily
+  - Add Needed References Like Bootstrap (If Not), Jquery Unobstrive Validation Reference, Entity Framework (If Not)
+  - Add Proper Configuration in Web.config, Routing for Routerconfig, Bunndeling and Buddle Config and If Needed the Filter confing
+  - First Done The Work With Modals then Controller and Finally Create View According Which Make Flow Easy.
+  - Other Mays Be Folders For Uploaded Files.
+* Implement Small Application and try to Apply All The Things in that.
