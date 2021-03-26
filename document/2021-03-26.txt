@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* As of Now Have Proper Idea of FLow and Each and Every Module So, Today Try To Implement All the Concepts Without making and Error and Any Help, and Observe 
+  That Done That Successfully and Have Good Idea Like ASPX or can say Now MVC is Not Like New Thing, its very quite familiar and can work with that easily.
+* Today try to keep every small-samll thing in mind like What Libraries Need To Include and what configuration needed in different cases.
