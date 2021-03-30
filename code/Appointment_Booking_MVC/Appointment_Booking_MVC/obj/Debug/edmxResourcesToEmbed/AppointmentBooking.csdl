@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblAppointmentMaster">
+    <Key>
+      <PropertyRef Name="Appointment_Id" />
+    </Key>
+    <Property Name="Appointment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Appointment_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Appointment_Time" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Appointment_with" Type="Int32" Nullable="false" />
+    <Property Name="Patient_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" />
+    <NavigationProperty Name="tblDoctorMaster" Relationship="Self.Fk_AppointmentMaster_to_DoctorMaster" FromRole="tblAppointmentMaster" ToRole="tblDoctorMaster" />
+  </EntityType>
+  <EntityType Name="tblDesignationMaster">
+    <Key>
+      <PropertyRef Name="Designation_Id" />
+    </Key>
+    <Property Name="Designation_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Designation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" />
+    <NavigationProperty Name="tblDoctorMasters" Relationship="Self.Fk_DoctorMaster_DesignationMaster" FromRole="tblDesignationMaster" ToRole="tblDoctorMaster" />
+  </EntityType>
+  <EntityType Name="tblDoctorMaster">
+    <Key>
+      <PropertyRef Name="Doctor_Id" />
+    </Key>
+    <Property Name="Doctor_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Doctor_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Doctor_ContactNo_" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Doctor_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Doctor_Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Doctor_Designation" Type="Int32" Nullable="false" />
+    <Property Name="From_Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="To_time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Is_Deleted" Type="Boolean" />
+    <Property Name="SlotIntervalID" Type="Int32" />
+    <NavigationProperty Name="tblAppointmentMasters" Relationship="Self.Fk_AppointmentMaster_to_DoctorMaster" FromRole="tblDoctorMaster" ToRole="tblAppointmentMaster" />
+    <NavigationProperty Name="tblDesignationMaster" Relationship="Self.Fk_DoctorMaster_DesignationMaster" FromRole="tblDoctorMaster" ToRole="tblDesignationMaster" />
+    <NavigationProperty Name="tblSlotsIntervalMaster" Relationship="Self.FK_tblDoctorMaster_tblSlotsIntervalMaster" FromRole="tblDoctorMaster" ToRole="tblSlotsIntervalMaster" />
+  </EntityType>
+  <EntityType Name="tblSlotsIntervalMaster">
+    <Key>
+      <PropertyRef Name="SlotId" />
+    </Key>
+    <Property Name="SlotId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SlotText" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SlotTime" Type="Int32" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" />
+    <NavigationProperty Name="tblDoctorMasters" Relationship="Self.FK_tblDoctorMaster_tblSlotsIntervalMaster" FromRole="tblSlotsIntervalMaster" ToRole="tblDoctorMaster" />
+  </EntityType>
+  <Association Name="Fk_AppointmentMaster_to_DoctorMaster">
+    <End Role="tblDoctorMaster" Type="Self.tblDoctorMaster" Multiplicity="1" />
+    <End Role="tblAppointmentMaster" Type="Self.tblAppointmentMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDoctorMaster">
+        <PropertyRef Name="Doctor_Id" />
+      </Principal>
+      <Dependent Role="tblAppointmentMaster">
+        <PropertyRef Name="Appointment_with" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_DoctorMaster_DesignationMaster">
+    <End Role="tblDesignationMaster" Type="Self.tblDesignationMaster" Multiplicity="1" />
+    <End Role="tblDoctorMaster" Type="Self.tblDoctorMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDesignationMaster">
+        <PropertyRef Name="Designation_Id" />
+      </Principal>
+      <Dependent Role="tblDoctorMaster">
+        <PropertyRef Name="Doctor_Designation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDoctorMaster_tblSlotsIntervalMaster">
+    <End Role="tblSlotsIntervalMaster" Type="Self.tblSlotsIntervalMaster" Multiplicity="0..1" />
+    <End Role="tblDoctorMaster" Type="Self.tblDoctorMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSlotsIntervalMaster">
+        <PropertyRef Name="SlotId" />
+      </Principal>
+      <Dependent Role="tblDoctorMaster">
+        <PropertyRef Name="SlotIntervalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AppointmentBookingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAppointmentMasters" EntityType="Self.tblAppointmentMaster" />
+    <EntitySet Name="tblDesignationMasters" EntityType="Self.tblDesignationMaster" />
+    <EntitySet Name="tblDoctorMasters" EntityType="Self.tblDoctorMaster" />
+    <EntitySet Name="tblSlotsIntervalMasters" EntityType="Self.tblSlotsIntervalMaster" />
+    <AssociationSet Name="Fk_AppointmentMaster_to_DoctorMaster" Association="Self.Fk_AppointmentMaster_to_DoctorMaster">
+      <End Role="tblDoctorMaster" EntitySet="tblDoctorMasters" />
+      <End Role="tblAppointmentMaster" EntitySet="tblAppointmentMasters" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_DoctorMaster_DesignationMaster" Association="Self.Fk_DoctorMaster_DesignationMaster">
+      <End Role="tblDesignationMaster" EntitySet="tblDesignationMasters" />
+      <End Role="tblDoctorMaster" EntitySet="tblDoctorMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDoctorMaster_tblSlotsIntervalMaster" Association="Self.FK_tblDoctorMaster_tblSlotsIntervalMaster">
+      <End Role="tblSlotsIntervalMaster" EntitySet="tblSlotsIntervalMasters" />
+      <End Role="tblDoctorMaster" EntitySet="tblDoctorMasters" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
