@@ -1,0 +1,9 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* Submited The Test, Done Completed 100% but near to 70-80%
+* Obesrve that Need to Practice More in Cases Like Dropdown Index change, Dynamically Binding of Trop Down Validation and validation May Need To Explore More as Its Tricky 
+  then ASP.net aspx so.
+* At the End Can Say Learnt Too Much and feel that as it is New and Not Faces Different Cases in ASP MVC like Dynamically Bindings and All so may 
+  after Practice Get More Clear idea Because if Which Not Able To Complete Project
