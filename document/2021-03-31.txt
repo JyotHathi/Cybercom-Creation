@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------
+                          ASP.net MVC
+---------------------------------------------------------------------------
+
+* As Faced Issue in ASP MVC Test so First of all Observed the code and floow to find that where done the mistake or where I Need to apply change
+  - So First Find That Minute need to change floow
+  - Also Figure out all the points where I Stucked In Test and found out Solution for That Like In Validation, Events of Controls.
+
+* After Observation Now Got The idea that How To Deal with MVC as Have Good Practice of ASPX which is Differing From MVC in Very Good Maner so looked at Every Possible cases
+  and Ready With Solution of Test where I got stuck.
