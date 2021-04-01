@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------
+                          ASP.net + Asp.net MVC
+---------------------------------------------------------------------------
+
+* Completed All The Remaining Parts of Test of MVC.
+* Also Added All the Given New Features in ASP .net Project 
+  - Use Icons instead of Name Of Action
+  - Merge The Doctors and Mangage Doctors Portal Such That
+    # Only One Portal, Has Option of Adding Doctors
+    # Display List of Doctors with the action View, View Appointments, Edit and Delete
+    # Allow Reschedule the Appointment if Date and Time Are Available To Change
+  - Now Only Paging Using Jquery DataTable is Remaning.
