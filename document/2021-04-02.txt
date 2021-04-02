@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------
+                          ASP.net 
+---------------------------------------------------------------------------
+
+* Today Mainly Deal With Jquery data Table for Paging Purpose.
+* As an Experiment first try that on Repeter Control, Sucessfully Done This and By This Done With Given Features
+  - Edit / Reschedule of Appointment (as Per Terms and Condition)
+  - Replace all actions with Proper Icons to get Good UI Experience.
+  - Add Paging using Jquery Data Table 
+* After That Try The Jquery Paging in which remove the repeter and Use WebService Method / Web Method Taking Data in Front End and Filling data in Data Table Using AJAX
+  and Successfully Done That too.
+* But as Now No Repeter So Need To Deal the Commands Manually So Learn More About Jquery Data Table like
+  - How To use Render any Comlumn to customize 
+  - Use of Seachable, Orderable at table level and column level, 
+  - ColumnDefs in which we can add Columns which want to target and Then Apply Customization like apply Searchable and Orderable for Individual Column 
+    but Seprate from Columns Property and Helpful When Want To Apply Same Thing on Many Columns
+  - How to set class of cell and How To set classname for row using createdrow
+* Now Done With JqueryTable Atleast From UI perspactive Like 
+  - Data Display 
+  - Show Action Icons and Bind Id For Modification
+ using AJAX Jquery and get little bit idea that now how to bind events with actions(Action Icons), So Get Good Idea of Jquery Table 
+ Now Just Have To Handle That Events Properly is Remaining
