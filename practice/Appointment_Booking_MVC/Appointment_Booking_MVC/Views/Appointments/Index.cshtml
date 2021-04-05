@@ -1,0 +1,149 @@
+﻿@using Appointment_Booking_MVC.Models
+@model Appointment
+@{
+    ViewBag.Title = "Appointments";
+}
+<div class="card cardModify" id="Appoinments">
+    <div class="card-body">
+        <h1>Appointments</h1>
+        <br />
+        <p style="color:red">* Indicate Mandatory Field</p>
+        <br />
+        <br />
+        @using (Html.BeginForm("SubmitData", "Appointments"))
+        {
+            @Html.ValidationSummary(false, "", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.LabelFor(x => x.Patient_Name, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Patient_Name, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.EditorFor(x => x.Patient_Name)
+            <br />
+            <br />
+            @Html.LabelFor(x => x.Appointment_Date, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Patient_Name, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.EditorFor(x => x.Appointment_Date)
+            <br />
+            <br />
+            @Html.LabelFor(x => x.Doctor_Id, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Doctor_Id, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.DropDownList("Doctor_Id")
+            <br />
+            <br />
+            @Html.LabelFor(x => x.Appointment_Time, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Appointment_Time, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.DropDownList("Appointment_Time")
+            <br />
+            <br />
+            <input type="submit" value="Submit" class="btn btn-primary" />
+
+        }
+        <!---Data-->
+        <br />
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Appointment With</th>
+                    <th>Appointment Date</th>
+                    <th>Appointment Time</th>
+                    <th>Patient Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Session["Appointments"] != null)
+                    {
+                        List<Appointment> appointments = (List<Appointment>)Session["Appointments"];
+                        foreach (Appointment appointment in appointments)
+                        {
+                            <tr>
+                                <td>@appointment.Doctor_Name</td>
+                                <td>@Convert.ToDateTime(appointment.Appointment_Date).ToString("dd-MMM-yyyy")</td>
+                                <td>@appointment.Appointment_Time</td>
+                                <td>@appointment.Patient_Name</td>
+                                <td><a href=@Url.Action("Confirmation",routeValues: new {id=appointment.Appointment_Id }) class="btn-danger">Delete</a></td>
+                            </tr>
+                        }
+                    }
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="ModalConfirmation">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are You Sure?</p>
+            </div>
+            <div class="modal-footer">
+                <a href=@Url.Action("DeleteAppointment") class="btn btn-danger">Delete</a>
+                <a href=@Url.Action("Index","Appointments") class="btn btn-secondary">Cancle</a>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script>
+    @if(ViewBag.ConfirmationMessage != null)
+    {
+                @Html.Raw(ViewBag.ConfirmationMessage)
+    }
+        @if(ViewBag.SuccessMessage != null)
+    {
+                @Html.Raw(ViewBag.SuccessMessage)
+    }
+        @if(ViewBag.ValidationMessage != null)
+    {
+                @Html.Raw(ViewBag.ValidationMessage)
+    }
+        $('#Doctor_Id').change(
+            function () {
+                var Appointment =
+                {
+                    Appointment_Date: $("#Appointment_Date").val(),
+                    Appointment_Time: $("#Appointment_Time").val(),
+                    Appointment_Id: 0,
+                    Patient_Name: $("#Patient_Name").val(),
+                    Doctor_Name: "",
+                    Doctor_Id: $("#Doctor_Id").val(),
+                }
+                $.ajax({
+                    url: "../Appointments/GetSlots",
+                    method: "POST",
+                    data: Appointment,
+                    success: function (data) {
+                        var dropDowndata = data;
+                        console.log(dropDowndata);
+                        var dropDown = document.getElementById("Appointment_Time");
+                        dropDown.innerHTML = "";
+                        for (var a of dropDowndata) {
+                            var option = document.createElement("option");
+                            option.text = a["Text"];
+                            option.value = a["Value"];
+                            dropDown.appendChild(option);
+                        }
+                    }
+                });
+            });
+        
+    </script>
+}
+
+
+
+
+
+

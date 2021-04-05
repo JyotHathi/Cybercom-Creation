@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="AppointmentBookingEntities">
+    <EntitySetMapping Name="tblAppointmentMasters">
+      <EntityTypeMapping TypeName="Model.tblAppointmentMaster">
+        <MappingFragment StoreEntitySet="tblAppointmentMaster">
+          <ScalarProperty Name="Appointment_Id" ColumnName="Appointment_Id" />
+          <ScalarProperty Name="Appointment_Date" ColumnName="Appointment_Date" />
+          <ScalarProperty Name="Appointment_Time" ColumnName="Appointment_Time" />
+          <ScalarProperty Name="Appointment_with" ColumnName="Appointment_with" />
+          <ScalarProperty Name="Patient_Name" ColumnName="Patient_Name" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDesignationMasters">
+      <EntityTypeMapping TypeName="Model.tblDesignationMaster">
+        <MappingFragment StoreEntitySet="tblDesignationMaster">
+          <ScalarProperty Name="Designation_Id" ColumnName="Designation_Id" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDoctorMasters">
+      <EntityTypeMapping TypeName="Model.tblDoctorMaster">
+        <MappingFragment StoreEntitySet="tblDoctorMaster">
+          <ScalarProperty Name="Doctor_Id" ColumnName="Doctor_Id" />
+          <ScalarProperty Name="Doctor_Name" ColumnName="Doctor Name" />
+          <ScalarProperty Name="Doctor_ContactNo_" ColumnName="Doctor ContactNo." />
+          <ScalarProperty Name="Doctor_Email" ColumnName="Doctor Email" />
+          <ScalarProperty Name="Doctor_Image" ColumnName="Doctor Image" />
+          <ScalarProperty Name="Doctor_Designation" ColumnName="Doctor_Designation" />
+          <ScalarProperty Name="From_Time" ColumnName="From Time" />
+          <ScalarProperty Name="To_time" ColumnName="To time" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is Deleted" />
+          <ScalarProperty Name="SlotIntervalID" ColumnName="SlotIntervalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSlotsIntervalMasters">
+      <EntityTypeMapping TypeName="Model.tblSlotsIntervalMaster">
+        <MappingFragment StoreEntitySet="tblSlotsIntervalMaster">
+          <ScalarProperty Name="SlotId" ColumnName="SlotId" />
+          <ScalarProperty Name="SlotText" ColumnName="SlotText" />
+          <ScalarProperty Name="SlotTime" ColumnName="SlotTime" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,141 @@
+﻿@using Appointment_Booking_MVC.Models
+@model Doctor
+@{
+    ViewBag.Title = "EditDoctor";
+}
+<div class="card cardModify" id="ManageDoctors">
+    <div class="card-body">
+        <h1>Update Doctors</h1>
+        <br />
+        <p style="color: red">* Indicate Mandatory Field</p>
+        <br />
+        <br />
+        @using (Html.BeginForm("UpdateData", "ManageDoctors", FormMethod.Post, new
+        {
+            enctype = "multipart/form-data"
+        }))
+        {
+            @Html.HiddenFor(x => x.Doctor_Id)
+            @Html.ValidationSummary(false, "", htmlAttributes: new { @class = "text-danger" })
+            <!--Name-->
+            @Html.LabelFor(x => x.Doctor_Name, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Doctor_Name, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.EditorFor(x => x.Doctor_Name);
+            <br />
+            <br />
+            <!--Mobile Number-->
+            @Html.LabelFor(x => x.Doctor_ContactNo, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Doctor_ContactNo, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.EditorFor(x => x.Doctor_ContactNo);
+            <br />
+            <br />
+            <!--Email-->
+            @Html.LabelFor(x => x.Doctor_Email, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Doctor_Email, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.EditorFor(x => x.Doctor_Email);
+            <br />
+            <br />
+            <!--Designation-->
+            @Html.LabelFor(x => x.Doc_Desg, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Doc_Desg, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.DropDownList("Doc_Desg")
+            <br />
+            <br />
+            <!--From Time-->
+            @Html.LabelFor(x => x.From_Time, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.From_Time, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.EditorFor(x => x.From_Time);
+            <br />
+            <br />
+            <!--To Time-->
+            @Html.LabelFor(x => x.To_Time, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.To_Time, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.EditorFor(x => x.To_Time);
+            <br />
+            <br />
+            @Html.LabelFor(x => x.SlotIntervalID, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.SlotIntervalID, "*", htmlAttributes: new { @class = "text-danger" })
+            <br />
+            @Html.DropDownList("SlotIntervalID");
+            <br />
+            <br />
+            <!--Image-->
+            <br />
+            <br />
+            @Html.LabelFor(x => x.Image, htmlAttributes: new { style = "font-weight: bold" })
+            @Html.ValidationMessageFor(x => x.Image, "*", htmlAttributes: new { @class = "text-danger" })
+            <input formenctype="multipart/form-data" type="file" name="Image" id="Image" />
+            <br />
+            <br />
+            <input type="submit" value="Update" class="btn btn-primary" />
+            <a href=@Url.Action("Index","ManageDoctors") class="btn btn-secondary">Cancle</a>
+        }
+
+        <br />
+        <br />
+    </div>
+</div>
+<script>
+    @Html.Raw(ViewBag.Scripts)
+    @if(ViewBag.VaidationMessage!=null)
+            {
+                @Html.Raw(ViewBag.VaidationMessage);
+            } @if(ViewBag.SuccssMessage != null)
+            {
+                @Html.Raw(ViewBag.SuccssMessage);
+            }
+</script>
+<script type="text/javascript">
+    // For Mobile Number
+    $('#Doctor_ContactNo').change(
+        function () {
+            var data = [$('#Doctor_ContactNo').val(), $('#Doctor_Email').val()];
+            $.ajax({
+                url: "../IsUserExits",
+                data: "{'mobileNumber':'" + data[0] + "','email':''}",
+                type: "POST",
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (data) {
+                    var result = data;
+                    if (result === true) {
+                        alert('User Alredy Exits');
+                    }
+                },
+                error: function (data) {
+                    alert("Error Occured");
+                }
+            });
+        });
+
+    // For Email
+    $('#Doctor_Email').change(
+        function () {
+            var data = [$('#Doctor_ContactNo').val(), $('#Doctor_Email').val()];
+            $.ajax({
+                url: "../IsUserExits",
+                data: "{'mobileNumber':'','email':'" + data[1] + "'}",
+                type: "POST",
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (data) {
+                    var result = data;
+                    if (result === true) {
+                        alert('User Alredy Exits');
+                    }
+                },
+                error: function (data) {
+                    alert("Error Occured");
+                }
+            });
+        });
+
+
+</script>
+

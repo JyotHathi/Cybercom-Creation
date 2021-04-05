@@ -1,0 +1,122 @@
+//[WebMethod, ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        //public static string GetSlots(int docid)
+        //{
+        //    List<string> slots = new List<string>();
+        //    DoctorMaster doctorMaster = new DoctorMaster();
+        //    doctorMaster.DoctorId = docid;
+        //    DataSet ds=doctorMaster.SelectDoctors(false);
+        //    DataRow dataRow = ds.Tables[0].Rows[0];
+        //    DateTime time1 = Convert.ToDateTime(dataRow["From Time"].ToString());
+        //    DateTime time2 = Convert.ToDateTime(dataRow["To Time"].ToString());
+        //    int intervalMins = Convert.ToInt32(dataRow["SlotTime"].ToString());
+        //    for (; time1 <= time2 && time1.AddMinutes(30) <= time2; time1 = time1.AddMinutes(intervalMins))
+        //    {
+        //        slots.Add(time1.ToString("hh:mm tt") + " - " + time1.AddMinutes(intervalMins).ToString("hh:mm tt"));
+        //    }
+        //    JavaScriptSerializer javaScript = new JavaScriptSerializer();
+        //    return javaScript.Serialize(slots);
+        //}
+
+
+
+        <%--<script>
+        document.getElementById('<%=DroDrownDoctor.ClientID%>').addEventListener('change', ChangedData);
+        function ChangedData() {
+            var slots = document.getElementById("<%=DrowDownSlots.ClientID%>");
+            var docs = document.getElementById('<%=DroDrownDoctor.ClientID%>');
+            slots.innerHTML = "";
+            if (docs.value === "-1") {
+                var slot = document.createElement('option');
+                slot.text = "Select Time Slot";
+                slot.value = "-1";
+                slot.selected = true;
+                slots.appendChild(slot);
+            }
+            else {
+                $.ajax(
+                    {
+                        url: "Appointments.aspx/GetSlots",
+                        contentType: "application/json",
+                        dataType: "json",
+                        method: "post",
+                        data: "{'docid' : '" + docs.value + "'}",
+                        success: function (data) {
+                            var slotData = JSON.parse(data.d);
+                            var slot = document.createElement('option');
+                            slot.text = "Select Time Slot";
+                            slot.value = "-1";
+                            slot.selected = true;
+                            slots.appendChild(slot);
+                            for (var slotD of slotData) {
+                                slot = document.createElement('option');
+                                slot.text = slotD;
+                                slot.value = slotD;
+                                slots.appendChild(slot);
+                            }
+                        },
+                        error: function (data) {
+                            alert
+                        }
+                    })
+            }
+        }
+    </script>--%>
+
+
+
+    --------------------------------------------------------------------------------------------------------------------------------------------------------
+    // To Gete the Page Content
+        function LoadData() {
+            $.ajax({
+                url: "Appointments.aspx/AppointmentsData",
+                method: 'post',
+                dataType: 'json',
+                contentType: "application/json; charset=utf-8",
+                success: sucessFunction,
+                error: function (data) {
+                    alert("Error!!");
+                }
+            });
+        }
+
+        // To Fill Data if LoadData Can Get The Data
+        function sucessFunction(data) {
+            var dataForTable = JSON.parse(data.d);
+            var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July',
+                'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+            $('#appointmentsAjaxTable').DataTable(
+                {
+                    createdRow: function (row) {
+                        $(row).addClass('tr')
+                    },
+                    processing: true,
+                    data: dataForTable,
+                    columns: [
+                        {
+                            'data': 'Doctor_Name',
+                            'className': 'centerText'
+                        },
+                        {
+                            'data': 'Appointment_Date',
+                            'render': function (apdate) {
+                                var appDate = new Date(parseInt(apdate.substr(6)));
+                                return appDate.getDate() + '-' + months[appDate.getMonth()] + '-' + appDate.getFullYear();
+                            },
+                            'className': 'centerText'
+                        },
+                        { 'data': 'Appointment_Time', 'className': 'centerText' },
+                        { 'data': 'Patient_Name', 'className': 'centerText' },
+                        {
+                            'data': 'Appointment_Id',
+                            'className': 'centerText', 'searchable': false,
+                            orderable: false,
+                            render: function (apoId) {
+                                return "<img class='actionIcon' src='/Images/Icons/edit.png' onclick='editAppointment(" + apoId + ")' />" +
+                                    "<img class='actionIcon' src='/Images/Icons/delete.png' onclick='deleteAppontment(" + apoId + ")' />";
+                            }
+                        }
+                    ],
+                    lengthMenu: [[5, 10, 15, 20, -1], [5, 10, 15, 20, "ALL"]]
+                });
+        }
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,134 @@
+﻿@using Appointment_Booking_MVC.Models
+@{
+    ViewBag.Title = "Doctors";
+}
+<div class="card cardModify" id="Doctors">
+    <div class="card-body">
+        <!---------------Data---------------------->
+        <h1>Doctors List With Associated Appointments</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Doctor Designation</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    List<Doctor> doctors = (List<Doctor>)Session["Doctors"];
+                    foreach (Doctor doctor in doctors)
+                    {
+                        <tr>
+                            <td>
+                                <label>@doctor.Doctor_Name</label>
+                            </td>
+                            <td>
+                                <label>@doctor.Doctor_Designation</label>
+                            </td>
+                            <td>
+                                <a href=@Url.Action("ViewDoctorDetails", new { id = doctor.Doctor_Id })>View</a>
+                            </td>
+                            <td>
+                                <a href=@Url.Action("ViewDoctorAppointments", new { id = doctor.Doctor_Id })>View Appointments</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    @*---------------------------Modals--------------------------------*@
+    <div class="modal" tabindex="-1" id="ViewDoctorModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Doctor Details</h5>
+                    <button type="button" class="close fonts" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @{
+                        Doctor doctor1 = ViewBag.Doctor;
+                        if (doctor1 != null)
+                        {
+                            string ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])doctor1.Doctor_Image);
+                            <img src=@ImageUrl alt="DoctorImage" width="100" height="100" />
+                            <br />
+                            <label><b>Doctor Name: </b></label><label>@doctor1.Doctor_Name</label>
+                            <br />
+                            <label><b>Doctor Designation:</b></label><label>@doctor1.Doctor_Name</label>
+                            <br />
+                            <label><b>Doctor Email:</b></label><label>@doctor1.Doctor_Email</label>
+                            <br />
+                            <label><b>Doctor Mobile Number: </b></label><label>@doctor1.Doctor_ContactNo</label>
+                            <br />
+                            <label><b>Doctor Avail From: </b></label><label>@doctor1.From_Time.ToString()</label>
+                            <br />
+                            <label><b>Doctor Avail Till: </b></label><label>@doctor1.To_Time.ToString()</label>
+                        }
+                    }
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="AppoinmentList">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Appointment List</h5>
+                    <button type="button" class="close fonts" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table style="width:auto">
+                        <tr>
+                            <th>
+                                Appointment time
+                            </th>
+                            <th>
+                                Patient Name
+                            </th>
+                        </tr>
+                        @{
+                            if (ViewBag.Appointments != null)
+                            {
+                                List<Appointment> appointments = ViewBag.Appointments;
+                                foreach (Appointment appointment in appointments)
+                                {
+                                    <tr>
+                                        <td>
+                                            <label>@appointment.Appointment_Time</label>
+                                        </td>
+
+                                        <td>
+                                            <label>@appointment.Patient_Name</label>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        @if(ViewBag.ModalShow!=null)
+        {
+            @Html.Raw(ViewBag.ModalShow);
+        }
+    </script>
+
+</div>
+
