@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------
+                          ASP.net 
+---------------------------------------------------------------------------
+
+* Done With all Given Features like
+  - Fill Dat using AJAX in Jquery Datatable
+  - Jquery Data Table for paging.
+
+* Today Mainly Deal With Jquery data Table but instead of all datas how to retrieve only those data which is require in that page or needed based on search
+  as may possible in application have large amount of data and if load all then may lead to an big issue.
+
+* Got The Idea that how to implete above feature now just need to implement.
