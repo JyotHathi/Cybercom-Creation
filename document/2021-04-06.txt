@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+                          ASP.net 
+---------------------------------------------------------------------------
+
+* Done With all Given Features(Till 06th April 2021).
+* Last Feature Which is Given to me is
+  - Server Side Processing of jQuery Data Table and Perform
+    1. Sorting and Searching
+    2. Paging
+    on Server Side
+  - Retrieve Data Based on Inputs Like
+    1. Retrieve Data Based On Search
+    2. Retrieve Data Based On Sorting
+    3. Retrieve Data Based on PageSize and PageSize
+  - Basically Taking Page Size, Initial of Page, Search string, Sorting Column and Sorting Direction of Column
+* After Implementation Got Idea that its reduce great data loading speed and helpful when we dealing with large data.
