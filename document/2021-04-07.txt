@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------
+                          ASP.net 
+---------------------------------------------------------------------------
+
+* Today Mainly Focused on Serverside Processing as Performed things in a way which is Depricated so Gone Through New Things About Jquery data table.
+* Got avery Good Idea about New Things Now Just Facing Small Error Which I Need To resolve other then then done with alll the things and clear with all the things
