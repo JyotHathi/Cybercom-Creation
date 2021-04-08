@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------
+                          ASP.net 
+---------------------------------------------------------------------------
+
+* Today Done with jQuery Data Table Server Side Processing using new properties ajax and ServerSide and using Web Method and Web Service Both.
+* Completed New Given Features Custome Filters
+    - For Doctor : Filter Based on Designation Only
+    - For Appointment Two Different Based On SUer Choice
+        ~ Filter BY Name of Doctor or Patient
+        ~ Filter By Appointment date
+     using smae web Method which used for Previously for Server Side Scripting
+
+* Learn New Thing that how to deal with referesh or reinitialization of DataTable, as once it get generated not easy to Re-Initialize that 
