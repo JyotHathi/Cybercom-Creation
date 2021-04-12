@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+                        Anguler Js
+----------------------------------------------------------------------
+
+* Found about what is Anguler Js, What is Use of Anguler JS and how it is useful over other web technology like ASP.dotnet, ASP dotnet MVC.
+* What are advantages and dis-advantages of Anguler JS like it is not secure but it is faster and puerly uses HTML and TypeScripting which is easy to understand by 
+  developers.
+* Generally We are Getting Data from Web APIs which is in any technology like Dotnet or Java or any, and it will not effect in any way as it is independent from API 
+  technology.
+* Seted Up Envirnoment for Anguler by below steps,
+    1. Installation of Node
+    2. Then Installation of Anguler CLI using npm commands
+    3. Installed TypeScripting and Got Basic Idea that how to compile typesript file and it generate JS after compiling
+* By Default where the project get created as well what we need to do if we want to create project in any sepecific location
+    - Basically it create project on the location where command Prompt is working.
+    - Need to change Working Directory if we want to create project on any specific location
+* Also, Learn and run first application using ng serve.
