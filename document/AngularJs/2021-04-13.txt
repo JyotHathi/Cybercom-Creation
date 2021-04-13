@@ -1,0 +1,25 @@
+----------------------------------------------------------------------
+                        Angular Js
+----------------------------------------------------------------------
+
+* Gone through TypeScript Videos and Got idea that what is TypeScript and How we can create code using TypeScript.
+* So After gone through TypeScript I can Say TypeScript is like c# in dotnet framework means coding language which helps us to code.
+* In TypeScript gone through many concepts like
+  - Data Types
+  - How to declare any variable with particular type
+  - Assertion 
+  - classes
+  - interface
+  - enums
+  - Generic function & classes
+  - Arrow function
+  - How to make parameter optional in function or constructor
+  - Looping, Conditional Statements, Switch Statement
+  - Namespace and Modules: What is Use, What is Difference and Whats the need of that
+* Gone Through the Videos of Blocks of Angular Application like Component, Module.
+* Got Basic Idea of those that Component is like Small Part of Angular Application whereas module is Group of Component.
+* How to Create Component from CLI and manually using decorators and Register in Module, and Got Idea about Component like
+  - Basically it has logic + Data and Front End Code which are use to display any small block or area which is Known as component.
+  - Generally Logic, Code, Data is Separated in to different files like .component.html, .component.ts, .component.css. 
+* What is Service and what is use of that, why we use dependency injection and if we use dependency injection we need to add that in provider 
+  list or of Module.
