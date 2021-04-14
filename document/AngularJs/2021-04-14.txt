@@ -1,0 +1,24 @@
+---------------------------------------------------------------------
+                    Angular Js
+--------------------------------------------------------------------
+
+* Done Practice of How To Create Component, Module, Service using CLI and Manually Both and got clear idea of that.
+* Done With videos of How to Bind The class properties with
+  - Class of html
+  - attribute
+  - style
+  - Property of DOM
+  - Also How To Bind Events to event.
+* Also Gone Through different things which are introduced in angular like
+  - Piping to display a data in proper way basically 5 types : date, number, upperCase, Lower case, date
+  - How To Create Custom Pipe.
+* Done Complete Practice of all above topics to get proper idea of concepts and got idea clearly.
+* After that Gone throw videos 
+    -> Input Properties & Output Properties to extend the Component
+    -> What is Template and how we can define template in different ways
+    -> How To Add Styles for Template
+    -> How To Import Bootstrap 
+    -> What is Shadow DOM and How it is Useful
+    -> What is ngContainer and ngContent, how they are useful and what is difference between both of them.
+    -> Got basic idea of all of the concepts now just thinking about application perspective to co-relate in batter way and practice of 
+       this concepts are remaining.
