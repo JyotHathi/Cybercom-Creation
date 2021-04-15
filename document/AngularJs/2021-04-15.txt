@@ -1,0 +1,11 @@
+---------------------------------------------------------------------
+                    Angular Js
+--------------------------------------------------------------------
+
+* Done with till How to Bind Properties (class, style, attribute, DOm Properties), Input & out Properties  and its aliasing.
+* Also Got good idea about all concepts from application perspective which helped to understand how angular application work.
+* Today Gone through about videos which covers
+  - Different Directives like ngIf, ngFor, ngClass, ngStyle and ngSwitch and where to use when and how to use
+  - How to add validation using form control and form group control.
+* Done Practice of different directives and also got idea how they are helpful and can say its similar coding in Razor Pages.
+* Done with partial practice of how to add validation and doing more as its very helpful and best concept but feel tricky minute so.
