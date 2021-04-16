@@ -1,0 +1,12 @@
+---------------------------------------------------------------------
+                    Angular Js
+--------------------------------------------------------------------
+
+* Done Practice of Directives and thought Application Perspective, and try to get more idea about that as it main thing when it come to 
+  deal with view.
+* Also, Gone Through Videos of Template Driven Forms which basically covers how to add validations in Form and Get Data For From and 
+  got good amount of idea about of all those concepts
+* Practiced all form related concepts as form is key thing of application.
+* Also try to get solution of small queries which I Found Like What is Difference between Declaration and Import in app.module,
+  also got good some idea about application.json to set basic configuration like setting of default page.
+
