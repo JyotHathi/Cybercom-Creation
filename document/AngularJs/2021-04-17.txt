@@ -1,0 +1,11 @@
+---------------------------------------------------------------------
+                    Angular Js
+--------------------------------------------------------------------
+
+* Today Mainly Gone Through Videos of Template Driven Forms and Reactive Forms.
+* Also Got the Idea about both the ways and where to use when and what is helpful in terms of application development.
+* Practice Template Driven Forms and Reactive forms.
+
+
+
+
