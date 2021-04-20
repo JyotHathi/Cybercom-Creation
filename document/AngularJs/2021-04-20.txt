@@ -2,9 +2,14 @@
                     Angular Js
 --------------------------------------------------------------------
 
-* Today Mainly Gone Through Videos of Template Driven Forms and Reactive Forms.
-* Also Got the Idea about both the ways and where to use when and what is helpful in terms of application development.
-* Practice Template Driven Forms and Reactive forms.
+* Today Watched the videos of Consuming of HTTP Service and got basic idea of that.
+* Also Done practice of Reactive Form and Based on Suggestion Explore More too like
+    - Validation of Radio Button
+    - Validation of Single Checkbox and also Multiple too
+    - Validation of Dropdown and in that Single selection and Multiple Selection too.
+    - Validation of Image Upload
+    - Comparison Validation of Two Controls 
+* Got Almost Idea About that and sure that at least can code based on requirnments.
 
 
 
