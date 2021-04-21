@@ -1,0 +1,20 @@
+---------------------------------------------------------------------
+                    Angular Js
+--------------------------------------------------------------------
+
+* Done With Reactive Forms and Small Issues Which facing in Reactive Forms Like Not getting data of File Which Is Uploaded to verify and Getting then in 
+  next request not in same request so resolved that.
+* Also  as per suggestion done reactive form in given steps like'
+  - Create FormBuilder and Form Group separately.
+  - Proper use of Constructor as well initialization method.
+  - Need Use FormBuilder To Create Form while Initialization and Create Property which return all formControls so that can access them 
+    easily.
+* Done with videos of Consuming of Http Services which covers;
+  - How To Retrieve data, Update or Add data and Delete Data.
+  - How to Manage Code Properly like;  
+    - Create Parent Service and From that Child Services based on need to make Services ReUsable.
+    - Handle Error using Reusable Function/Handler and Global Handler.
+* Done Practice of Thar find That There are Certain Changes are there as version got updated changes like;
+  - Now we are using Http Client instead of Http. 
+  - Generally Using Catch Error instead of catch.
+
