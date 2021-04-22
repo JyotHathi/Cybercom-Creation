@@ -1,0 +1,15 @@
+---------------------------------------------------------------------
+                    Angular Js
+--------------------------------------------------------------------
+
+* Today done with Navigation and Routing topics like
+  - How We Can Set Routing Paths
+  - How We Can Set Links to navigate
+  - Use of RouterLink, RouterLinkActive and Router-Outlet
+  - Hwo To set and Pass Required and Query Parameters and Retrieve those on Backend.
+
+* Done Practice of That and also while Practice Face Some Issues as Few Functions got Deprecated but at the got resolved.
+* Tomorrow, Will do Practice of Entire Series in single and small example so that get complete idea in terms of development as while 
+  practice of individual or section and topics get clear idea but now have to think in terms of single structure from development 
+  perspective.
+
