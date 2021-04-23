@@ -1,0 +1,22 @@
+---------------------------------------------------------------------
+                    Angular Js
+--------------------------------------------------------------------
+
+* Done With Entire Series.
+* Today Practiced entire series by creating a small application (90% Done till 7:00PM) which cover below functionalities;
+  - Home Page in Which Just Greeting Message Based on Time Good Morning / Evening / Afternoon
+  - Applicant Token / Link generator in which just have to add email and Mobile Number and One Link Get generated for that user only ,
+    to fill other details and can fill by visit that link and once submit data can not submit response again
+  - Also Take care there no duplication record take placed using email and Mobile Number.
+  - Applications page in which displayed the data of Applications and status that Filled data or Not and If Filled Option to View Data.
+  - Here Used Local storage to store and retrieve data instead of API as still not have idea that how to create API, but created services 
+    to consume data just like API.
+  - Also got idea hwo to include CSS and JS file, at this time used bootstrap files only
+  - Other : Navigation Bar to Navigation purpose and Navs which have options of Contact Us and About us and modal popup to display 
+    contact us and About us Data and other styling like background and colors.
+* In Application used/Covered concepts like
+  - Navigation and Routing , Links To Navigate, Retrieval of data from url
+  - Reactive form using in proper way (Using Form Builder).
+  - Built in Directives like ngFor, ngSwitch
+  - Services
+
