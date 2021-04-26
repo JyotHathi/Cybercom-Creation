@@ -1,0 +1,14 @@
+---------------------------------------------------------------------
+                    Asp .net Web API
+--------------------------------------------------------------------
+
+* Gone Through with Basics of Asp.net Video Tutorials which gives basic idea link
+  - How To Create Web API
+  - How Routing in Web Api Works
+  - Different Status Codes and Verbs Which are Helpful in case of web api and Need To Follow So That Whoever use API not face any issue.
+  - How to create Methods to Get, Add, Update or Deleted Data
+  - How to retrieve data and In Which Form We Get Data and How We Can Set and change that and also how strictly allow only JSOn or XML
+    format as return type data.
+  - How to call different methods and tools like Fidler, POSTMAN Which helps us to test the API.
+  - How to Call API From JQuery and retrieve data or send data input and accordingly get an input.
+* Got Idea of that as its very similar to Web Service and Generic Handler.
