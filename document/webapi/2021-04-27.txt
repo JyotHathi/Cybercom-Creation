@@ -1,0 +1,12 @@
+---------------------------------------------------------------------
+                    Asp .net Web API
+--------------------------------------------------------------------
+
+* Gone through with videos of Asp .net web api which covers
+  - How to Allow other domain and web to access (Cross Access)
+  - What error can occur in case of cross domain access of API
+  - How to add Authentication to restrict access of API
+  - Use Identity (Individual User which is builtin of microsoft) just like we have userId and password
+* Got the concept properly and done practice of that but as little bit tricky need more practice of that so will do tomorrow too before
+  starting new concepts from video.
+* Also got basic idea that how secure and restrict API (likes whether and many more) works and how to develop that.
