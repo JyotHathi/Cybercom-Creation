@@ -1,0 +1,14 @@
+---------------------------------------------------------------------
+                    Asp .net Web API
+--------------------------------------------------------------------
+
+* Gone through with videos of Asp .net web api which covers
+  - How To Add Authentication 
+  - How to Add Tokens To Access the API
+  - How APIs of Google and Facebook is Working In-Terms of Login
+  - How To Deal With Versioning of API in Different Way.
+
+* Got More Idea About About Add Authentication in API Access and Use Token 
+* Got Idea How Generally Allow To Login Via Add Third Party like Google & FaceBook, 
+  But Felt that little bit tricky to work so searching More About That And Working on That 
+  As Possible that Need To Create That Kind Of Stuff, Such That Anyone Can Login Via Our Application/API
