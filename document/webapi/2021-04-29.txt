@@ -1,0 +1,8 @@
+---------------------------------------------------------------------
+                    Asp .net Web API
+--------------------------------------------------------------------
+
+* Done Practice of API Development.
+* Specifically All Those Points where getting Stuck Like How to Use Google API and Facebook API and Generation of Token to Access Web API.
+* Also Gone Through How To Generate Token With Out Identity, No Doubt Looks Similar But Minute Difference is there and Exploring that to 
+  get more Idea.
