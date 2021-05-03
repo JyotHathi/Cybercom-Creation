@@ -1,0 +1,10 @@
+---------------------------------------------------------------------
+            Project related Asp .net Web API + Angular 
+--------------------------------------------------------------------
+
+* Done with Complete list of Features like What we need to include in Angular app, Database structure and based on that Required Stored 
+  Procedures and API.
+* Completed Database part including Data tales and Stored Procedures and Testing of that at that level.
+* Completed Web API and Hosted that on Local IIS Server For easy ness and Done With Testing of that too.
+* Started Working on Angular app done with 30-40% in that like basic imports and Ready With Complete Structure Like Components and Services
+  and Started Working on Individual Module.
