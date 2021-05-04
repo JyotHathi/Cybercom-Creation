@@ -1,0 +1,13 @@
+---------------------------------------------------------------------
+            Project related Asp .net Web API + Angular 
+--------------------------------------------------------------------
+
+* Done With Features Like,
+	- Login And Proper Session Management like to access any part of app need to login first 
+	  if User Gets Logout then Need To Login Again.
+	- Done With All Roting and Adding Link when Needed.
+	- Done With Custom Error Handler Which Handle Error and Notify user By Redirecting on Error Page.
+	- Done With Displaying Data in Dashboard, Customers, Products and Orders (As per need of that page).
+
+* Tested Everything and working Properly and Also Learnt How to host angular web in IIS Server and Hosted My Practice web and 
+  Working Properly so after Completion of This Hosting This Too On Server so that it is easy to access.
