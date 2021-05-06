@@ -1,0 +1,6 @@
+---------------------------------------------------------------------
+            Project related Asp .net Web API + Angular 
+--------------------------------------------------------------------
+
+* Done with all modules basic functionalities like Data Addition / Edit and Data display
+* Edit is Working on Encryption of key while user gets navigate from Module to edit and also data get populated.

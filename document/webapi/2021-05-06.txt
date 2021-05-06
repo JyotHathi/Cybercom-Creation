@@ -1,0 +1,7 @@
+---------------------------------------------------------------------
+            Project related Asp .net Web API + Angular 
+--------------------------------------------------------------------
+
+* As Done with Main Functionalities so Tested application and Optimized an application on Sum Points.
+* Also Started Working on Functionalities like search for customer and product.
+* Find How to Deal With Pagination and Other FIlters and Got Some Idea and Tomorrow try to implement that
