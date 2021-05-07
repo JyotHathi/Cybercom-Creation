@@ -1,0 +1,7 @@
+---------------------------------------------------------------------
+            Project related Asp .net Web API + Angular 
+--------------------------------------------------------------------
+
+* Completed Pagination Using Web Api and Pipe.
+* Needed To change API and Store Proc So Modified Accordingly and then based on that Implemented Pagination and Working Properly.
+* With That 95% of Application is completed and Will Complete remaining 5% work as soon as possible.
