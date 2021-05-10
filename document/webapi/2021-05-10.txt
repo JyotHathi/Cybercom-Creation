@@ -1,0 +1,7 @@
+---------------------------------------------------------------------
+            Project related Asp .net Web API + Angular 
+--------------------------------------------------------------------
+
+* Completed Project 100%.
+* Filters Were Remaining and completed that to day and Working Perfectly.
+* Also, Started Exploring NgRx.
