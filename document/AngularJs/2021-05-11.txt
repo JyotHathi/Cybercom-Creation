@@ -1,0 +1,12 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Started Exploring about NgRx from Official Website and from Videos.
+* Got Basic Idea that what is Store, Action, Reducer and how it is working in NgRx
+* Also From Video Tutorial created small counter application in which 
+    -> counter value is in store, increment, Decrement and Reset are Action and created Reducer based on that.
+    -> Then Registered Reducer in app.module
+    -> Then injected Store in Counter Component and from that retrieve the value and with components methods which handling event 
+    call then bind actions accordingly using dispatch method.
+* Fro That Got basic idea and also explored more things regarding same.
