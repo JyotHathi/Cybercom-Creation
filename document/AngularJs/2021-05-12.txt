@@ -1,0 +1,9 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* As Seems little bit tricky so Practiced What ever done like how to to create state, Action and Reducer.
+* Also Gone Through With Few More things like what is need of selector and how to create selector, How to Pass data in Action Method
+  in Ngrx and few other topics.
+
+* From Whatever topics Gone through today understand half of them and need to explore again remaining to get more idea.
