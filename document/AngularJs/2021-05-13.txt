@@ -1,0 +1,8 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Practiced the All Concepts which already done by me.
+* Apart From That Learn and Practiced What is Selector and How we can use that to retrieve data from Store.
+* Also Gone Through how to debug Running of NgRx like Action & store using for that what code we need to addd and what extension we need to add.
+* Also Gone through with small concepts.
