@@ -1,0 +1,6 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Today Gone Through With Effect library packages of @ngrx/effects.
+* Gone Through with the Videos of that topic and try to understand working and need and get good idea of that.
