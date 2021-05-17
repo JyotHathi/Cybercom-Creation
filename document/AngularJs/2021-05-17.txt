@@ -1,0 +1,6 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Done Practice of Effects in Ngrx and Try to Get More Idea About That and Get More Idea About That after Practicing.
+* Also, Gone Through Routing Navigation using Effects after login and how we can save user token.
