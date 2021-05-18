@@ -1,0 +1,10 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Gone through the concepts which covers how to Retrieve data, Update data & Delete Data  using API and Effect.
+* How Effects is useful to Maintain data dealing separately which make code more readable in case of big application.
+* Now Got little bit idea of how Ngrx Works means gone through whatever structure / flow of Ngrx like
+    - How to Use State to maintain data which can sharable between Component.
+    - How Action, Reducer and selector works to deal with store and also role of effect.
+    - Now As Per Basic Idea and Video Series only few concepts are remaining.
