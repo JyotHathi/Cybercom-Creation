@@ -1,0 +1,23 @@
+-------------------------------------------
+Products (Done From SP Perspactive)
+-------------------------------------------
+List Of Products Which Are Available
+Quantity less 10
+List of Product
+Add Product
+Edit Product
+
+
+-------------------------------------------
+Order (Done From SP Perspactive)
+-------------------------------------------
+OrderPlaced Today
+List of Order
+
+
+-------------------------------------------
+Customer (Done From SP Perspactive)
+-------------------------------------------
+List of Customer
+Add Customer
+Edit Customer
