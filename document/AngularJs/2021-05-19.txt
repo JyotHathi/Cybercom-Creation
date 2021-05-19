@@ -1,0 +1,11 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Gone Through Concepts like
+    - Ngrx/store-router
+    - Entity
+    - Entity Adapters
+    - Entity State 
+* Got Idea about those concepts now just few Concepts Are Remaining and also got all the concepts which Done today, also just practice 
+  of those concepts are remaining
