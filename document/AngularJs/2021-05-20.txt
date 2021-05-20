@@ -1,0 +1,14 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Gone Through & Revise below Concepts again as Got Confusion at the Time of Practice 
+    - Ngrx/store-router
+    - Entity
+    - Entity Adapters
+    - Entity State 
+  
+* Got More idea about above concepts.
+* Practiced State, Action, Reducer, Selector, Effect to get more idea that how to create those in application and How to build Application 
+  With Ngrx
+  
