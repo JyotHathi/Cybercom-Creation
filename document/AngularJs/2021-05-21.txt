@@ -1,0 +1,12 @@
+---------------------------------------------------------------------
+                    Angular (Ngrx)
+--------------------------------------------------------------------
+
+* Done with all videos of Series and Got Idea of Most of the Concepts and exploring more about few concepts like 
+  - Entity
+  - ngrx/data
+  , how these concepts are useful from application perspective so that its easy to co-relate, remember and useful when it needed.
+
+* So, At the end of series at least got idea about working like what is store, action, reducer, effect and selector also router-store
+  from application perspective too and exploring more about angular and ngrx concepts to get more idea about that. 
+  
