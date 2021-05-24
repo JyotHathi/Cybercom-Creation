@@ -1,0 +1,23 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Explore the Difference Between Asp.net Asp.net MVC and ASP.net Core and Find that
+  - Main things is .net Core is Cross-Platform, its useful as we can develop and Use applications in Any OS Windows, UNIX or MAC where as
+    .net framework based application can develop and use in Windows Environment only.
+  - We Can Host ASP.net and ASP.net MVC in IIS only whereas we can host ASP.net core based webapp in IIS, docker, Apache etc as 
+    it not dependent.
+  - ASP.net and ASP.net MVC based webApps have Global.asax and Config files where .net core web app has appSetting.json file 
+  - ASP.net core is more better performance in compare of all Versions from 4.X of .net framework
+  - Also There is change in structure of MVC project using .net core and asp using .net framework.
+  - We Can create Web Forms, MVC , API Project whereas we can create Web Pages, MVC and APi only not web forms
+
+* Gone through Videos which covers
+  - How to make set up for .net Framework like VScode, Visual Studio 
+  - How to create API, MVC Web App and Empty Project
+  - What is structure of Those Projects
+  - Also Few Basic Things About .net Core Project
+
+* Got all the concepts whatever done today
+  
+  
