@@ -1,0 +1,20 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Gone Through With Concepts Like
+  - Middleware in ASP.net Core
+  - How We need to create pipe line which have Middleware in proper order to get desire output
+  - Registration of Middleware using Run and Use
+  - How to pass Request from One Middleware to next and How to Log the message to get idea of sequence of Execution of Middleware when 
+    request send to server
+  - UseStaticFiles(), UseDefaultFiles() & how to add FileName in List of Default File, 
+  - UseFileServer() which performing task of three UseStaticFiles(), UseDefaultFiles() and UseDirectoryBrowser() and Adding FileName to 
+    DefaultFilename List.
+  - Different Environment Default and Custom and How Set Value of That (ASPNETCORE_ENVIRONMENT) in OS's System Variable and 
+    launchSetting.json.
+  - How To Implement MVC in Aspnet core, Controller, Model, View, Dependency Injection, ViewBag, ViewData, ViewModel to send data to View
+     &  _ViewImports, _viewstart and _Layout Files 
+  - How to Add Bootstrap and Client Side Libraries
+  - Basic Routing & Attribute Routing in MVC
+  
