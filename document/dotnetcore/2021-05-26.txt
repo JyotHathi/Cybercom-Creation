@@ -1,0 +1,8 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Done Practice of All the Concepts through which gone yesterday.
+* Not Faced Any Issue During Practice and Got All The Concepts Properly from Practical Perspactive too.
+* Today,Gone through Videos which Cover Entity Framework and Almost Done with Practice of That.
+  
