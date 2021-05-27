@@ -1,0 +1,9 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Done Practice of Entity Framework and Explored More to get more idea.
+* Started Watching Further Videos of Tutorials Series which gives basic idea of 
+    - How Handle Error
+    - How To Perform Logging the Exception
+  
