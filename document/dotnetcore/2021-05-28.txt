@@ -1,0 +1,10 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Completed Videos related How Handle Exceptions on Global Level, Logging the exception and Display that to Developer and For Users Other Environments & 
+  Done Practice of that.
+
+* Started videos related Identity to Perform Login and SignUp Operations for Users.
+  
+  
