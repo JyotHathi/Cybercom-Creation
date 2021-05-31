@@ -1,0 +1,8 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Mainly Gone through the videos of Identity in .net core and Done Practice of that parallely.
+* Done With Basic Videos of Identity and Practice of That.
+* Started further Videos which cover Authorization related Concepts
+  
