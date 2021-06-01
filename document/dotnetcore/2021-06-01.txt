@@ -1,0 +1,16 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Today, Completed below Topics and Practice of those
+    - Authorization
+    - Client Side and Remote Validation
+    - Custom Validation Attribute
+
+* After completion of that Started Further Videos which covers
+    - How to Implement Role based Authorization
+    - Create, Edit and List Roles
+    - Add and Remove user/s for particular Role and Handle Navigation Menu Based on that
+    - Edit user using Identity
+    - Delete Role in Identity
+  
