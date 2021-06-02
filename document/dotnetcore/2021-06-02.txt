@@ -1,0 +1,21 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Done with Videos of Below topics and Got Idea(How it work, how to code, application) of that
+    - Role Based Authorization
+    - How to Add Role
+    - How to List Roles
+    - How To Manage (Edit/Delete) Roles
+    - How Add Users under any Roles
+    - How To Manges Users Role 
+        # As User with Role Got Stored on AspNetUserRole Have ForeignKey Constraint on User and Role table, and when we Delete any Role 
+          or User Then Delete User-Role but Its not that much effective so how to change(Set to No Action) that cascading option on Delete
+          so that
+               1. If Delete User Directly (From User) then wont allow            (To Delete Need to Remove From that Role)
+               2. If Try to delete role (From Role) then also wont allow         (To Delete Need to Remove All user from that role)
+    - What is Claims and How to manage that & Claims Based Authorization
+    - Difference between Role and Claims Based Authorization
+
+* Done With Practice of Role Based Authorization & Started Practice of Claims Based Authorization.
+          
