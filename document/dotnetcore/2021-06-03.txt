@@ -1,0 +1,9 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Done Practice of Claims Based Authentication
+* Gone through Videos related Custom Authorization Requirements and Handler also how to associate multiple Handler With One Requirement &
+  Almost Done with practice of that.
+
+          
