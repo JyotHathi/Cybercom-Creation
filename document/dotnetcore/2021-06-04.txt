@@ -1,0 +1,13 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Gone throw with External Login Provider related Videos Like
+  - How to Add Option to SignIn With Google and Store Related Information in Identity Related Database
+  - How to Add Option to SignIn With Facebook and Store Related Information in Identity Related Database
+  - How to Allow login to user only if they confirmed email
+  - How to create link for confirmation of Email and Reset Password
+  - How to implement Forgot and Reset Password
+  - How To Change expiry time of token for email as well reset Password
+
+* Done with practice of more than half of the topics and soon complete remaining.
