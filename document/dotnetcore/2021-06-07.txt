@@ -1,0 +1,9 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Done with remaining Videos Which Covers How To Encrypt & Decrypt Route Values, Change and Add Password and Lock & unlock user 
+  account in different situations.
+* Got Clear Idea of those concepts and Done with Practice too.
+* Now Started Practice of Entire Series with small Demo Project which covers all topics and also along with that trying to remember 
+  basic code like services and Extension method to add middleware so that in save lot time, when we want to use same.
