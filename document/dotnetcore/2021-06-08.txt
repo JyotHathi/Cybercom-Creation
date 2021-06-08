@@ -1,0 +1,6 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Done Practice of Entire Series.
+* Mainly gone through Concepts like MVC, Logging, Login,SignUp, Authorization, Change Password and Add Password and Few Small small Concepts
