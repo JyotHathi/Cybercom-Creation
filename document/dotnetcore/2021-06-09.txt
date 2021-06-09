@@ -1,0 +1,7 @@
+---------------------------------------------------------------------
+                    ASP.net Core
+--------------------------------------------------------------------
+
+* Done Practice of Entire Series, Explore few points, Got Good Idea about of all concepts and Also Observe few points where mistakes 
+  can be happen as well how to handle them.
+* Also, explored how to add option of Login using Microsoft account and Practice that and Successfully implemented that and working properly.
