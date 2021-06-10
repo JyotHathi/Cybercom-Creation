@@ -1,0 +1,9 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* First Gone through All requirements which are given and then gone through each requirement Properly to get clear idea about whole task.
+* After Get Idea about all requirements construct flow of application and create sample diagram.
+* Observe needed database design and designed database accordingly.
+* Prepare plan of working as application has various modules and sub-modules, and started development accordingly.
+* Ready With Needed Nu-get Packages and Libraries and Basic Setup.
