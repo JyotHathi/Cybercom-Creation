@@ -1,0 +1,8 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Constructed Database with Required data tables & Required Fields.
+* Configure Application from Mvc, Routing and Dependency Injection Perspective.
+* Set All Routes, Error & Exception Handling and controllers, actions and Views with basic working (To Check Routing)
+* Whatever Implemented today is working completely fine and will start working on individual component.
