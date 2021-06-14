@@ -1,0 +1,9 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Find and explore About ViewComponent and How it works and what are benfits and applications of that.
+* Also, As have to use Dummy Payment Gateway so find and explore Stripe Payment Gateway and how it works and how to use that In 
+  Asp .net core 
+* Now Done With All Exploration part of those which are newer and Need To Learn.
+* Worked on Registraton and Login Part and Doing Further Developement.
