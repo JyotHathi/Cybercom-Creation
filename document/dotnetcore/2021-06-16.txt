@@ -1,0 +1,7 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Apply Change in Database as small Error there.
+* Almost Done With User Regsitration as per requirnemnet like Need to Show option (Roles / User type) to Manager if Registering Employee  
+  Not To Customer but both using Same Page and Login Part.
