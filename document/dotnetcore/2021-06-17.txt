@@ -1,0 +1,18 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Done with All Authentication And Login Related Tasks Like
+ - Login:
+   # Navigation Menu According That
+   # User Data Like Numebr of Items In Cart and User Name Using ViewComponent
+   # Role Based Login Only
+ - Sign Up and registration of Users 
+   # Customer 
+   # Other Types of Users Via Manager
+ - Forgot & Reset Password (At this Time Giving Link After enter email, Add option of Email when Perfrom Email Related Task)
+ - Access Denied, Error Handling Pages
+ - Above All Things Working Completly Fine, Code is almost Optimized.
+ - Started Working on Manger Portal and Basic Things in Customer Portal too.
+
+
