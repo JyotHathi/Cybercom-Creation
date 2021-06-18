@@ -1,0 +1,13 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Implemented Sub Modules Of Manager Portal Like
+ - Users
+ - Category List and Related Operations
+ - Sub-Category List and Related Operations
+ - Coupon List and Related Operations
+ of Manage Content with almost Code Optimization.
+
+* These All working Fine, Applied Server Side Paging and developed with Mixure of Client Side and Server Side Codes based on 
+functionality.
