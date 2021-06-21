@@ -1,0 +1,8 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Apply Changee in Users, Category and Sub Category Modules to Provide Better Filter Facility.
+* Worked on Menu Items Part and Almost Done With that.
+* Will Start Customer Side Cart Adding and Order Placing along With that Email Generation to notify User.
+* Till Now Parallely Handling Code Optimization and Code Is Working Properly.
