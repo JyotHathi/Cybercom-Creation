@@ -1,0 +1,12 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Donw With Email Functionality and At this Time Tested on Forgot Password and working Properly.
+* Added Email Functionality on Global Level and Adding as Dependency where ever needed and using it also handled Error Specifically multiple Request in case of Async 
+  Mailing and stored Data in appsetting File.
+* Added Third Partly Nlog Logging to get track of Errors.
+* Solved Few Errors which found in coupon module and for that as part of solution added more validations (Custom) to get more accurate Data input and to Make User 
+  Friednly.
+* Worked on Menu Items View too Now Dealing with How to add those in cart and Dealing with Order Handling from Customer and Manager Perspactive so, donw ith menu items adding from Manager Side and 
+  Manage That, Now Just Shooping of that handling of Shooping is remaining.
