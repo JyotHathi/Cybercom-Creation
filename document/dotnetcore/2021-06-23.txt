@@ -1,0 +1,6 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Completly Done with Menu-Items and Manage Content Section of Admin Navigation Panel.
+* Started Working on Customer Part.
