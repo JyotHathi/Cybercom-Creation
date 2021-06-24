@@ -1,0 +1,7 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Worked on Customer Addition of Items in Cart.
+* Successfully Displayed Items Menu In DashBoard and Addition of Item in Cart.
+* Now Started Working of Placing of Order And Mangment of them.
