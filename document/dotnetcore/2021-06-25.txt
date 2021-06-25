@@ -1,0 +1,16 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Worked on Cart Part, Implement that by keeping most of possible cases like
+ - What if Items Got Deleted By Admin Team and Customer Has that in Cart : Only Displaying those in cart which are Not Yet Deleted
+ - What if Customer is Try to decerement Quantity whose quantity is one Only : Displaying Message that as its one only so you will lose that from cart, based on confirmation Removing 
+   Item or keeping
+ - What if User is Adding Those items in cart which are already in cart : In That Case Not Adding As seprate Enetry Instead of that Make Total Quantity of those items = 
+   old Quantity + new quantity of that particular items
+
+* Also Handling Coupons in best way means if Items are there in cart then only display option of coupon also validating in client side first and then only check for eligibilty of that and accordingly 
+  displaying message.
+
+* Done With Adding Items in cart as well Car Related Operations, Now Just Placing of Order and Manging By Admin Is Remaining, work which is done is done from UI and Testing 
+  Perspective and Possible Code Optimization.
