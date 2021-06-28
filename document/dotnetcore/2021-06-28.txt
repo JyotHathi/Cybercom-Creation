@@ -1,0 +1,10 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Worked On Applying Coupon, Order Summary and Placing of Order By Payment and Strip Payment Gateway.
+* Almost Done With Placement of Order Just Payment Part is Remaining Using Stripe Payment Gateway, Worked on Payment gateway but Backend is Not Complete Facing Small Issue and 
+  Working on That.
+* Done With Applying of Code From Every Perspactive like No Need To Display Summary and Coupon Option which may already Save Process Time If User Try TO Do that.
+* Successfully Able To Summarise Order Just Payment is Remaining.
+
