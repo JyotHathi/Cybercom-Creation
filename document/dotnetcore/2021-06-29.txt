@@ -1,0 +1,8 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Done With Payment of Order and Placement of Order.
+* Payment Work Successfully Checked on Payment Portal.
+* Started Working on Other Orders Related Modules and Now Almost Donw With Displaying of Order and then Start Working on Managing or Order and Pickup Order.
+* Expecting By Tomorrow (30th June 2021) or At Max Day After Tomorrow(1St July 2021) Done With all Functionality With Complete Testing and Basic UI (Almost Proper UI).
