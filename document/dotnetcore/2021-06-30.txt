@@ -1,0 +1,10 @@
+---------------------------------------------------------------------
+                    ASP.net Core - Project
+--------------------------------------------------------------------
+
+* Done With All Remaining Functionalities like
+    - Manage Orders
+    - Confrm Pickup of Orders
+    - History of Orders
+* Done With all Functionalities, Just Need To Test Every thing and Check Once.
+* Just need Few Hours For That (Testing);
