@@ -1,0 +1,78 @@
+<!----------------------------- Card  ------------------------------>
+<div class="card card-sm">
+    <!---- Card Header ----->
+    <div class="card-header">
+        <h1 class="card-title text-center font-weight-bold text-secondary">Login</h1>
+    </div>
+    <!---- Card Body ----->
+    <div class="card-body">
+        <% if(successRegistration===true) { %>
+            <div class="alert alert-success">Kindly Verify Email and Login Here.</div>
+            <% } %>
+                <!---- Form ----->
+                <form method="post" action="/login">
+                    <!-- Validation Summary (Server Side) -->
+                    <% if(errors!=null && errors.length!=0) { %>
+                        <div class="alert alert-danger error-summary">
+                            <% errors.forEach((error)=>{ %>
+                                <li>
+                                    <%= error.msg %>
+                                </li>
+                                <% }) %>
+                        </div>
+                        <% } %>
+                            <!-- Email as UserId  -->
+                            <div class="form-group">
+                                <label class="text-primary">UserId:</label>
+                                <input type="email" class="form-control" name="UserId" id="UserId" required />
+                            </div>
+                            <!-- Password  -->
+                            <div class="form-group">
+                                <label class="text-primary">Password:</label>
+                                <input type="password" class="form-control" name="Password" id="Password" required />
+                            </div>
+                            <br />
+                            <br />
+                            <!---- Submit ---->
+                            <input type="submit" class="btn btn-lg btn-primary font-weight-bold" value="Login" />
+                </form>
+                <!-- Verfication Mail -->
+                <a class="text-primary" onClick="clearEmailField()" data-toggle="modal"
+                    data-target="#resendEmailVerification">Re-send Verfication
+                    Email</a>
+    </div>
+</div>
+
+<!------------------------- Modal  --------------------------->
+<!-- Modal -->
+<div class="modal fade" id="resendEmailVerification" tabindex="-1" role="dialog"
+    aria-labelledby="resendEmailVerification" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Modal Header  -->
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary font-weight-bold" id="exampleModalLabel">Resend Verification Email
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- form -->
+                <form class="form-horizontal" method="POST" action="/email-verfication">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <lable class="text-info">Email:</lable>
+                        <input type="email" class="form-control" id="Email_For_Verify" name="Email_For_Verify"
+                            required />
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Send" />
+                </form>
+            </div>
+            <!---- Modal Footer ---->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

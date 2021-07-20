@@ -1,0 +1,33 @@
+.card-medium {
+    width:90%;
+    height:70%;
+    overflow: auto;
+    margin:auto;
+    margin-top:2%;
+}
+
+.card-sm {
+    width:60%;
+    height:70%;
+    overflow: auto;
+    margin:auto;
+    margin-top:2%;
+}
+
+.card-sm2 {
+    width:70%;
+    height:100%;
+    overflow:auto;
+    margin:auto;
+    margin-top:2%;
+}
+
+body{
+    background-color:rgb(247, 241, 234);
+}
+
+.error-summary
+{
+    height:15%;
+    overflow:auto;
+}

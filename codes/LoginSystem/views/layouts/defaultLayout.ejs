@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>
+        <%- title %>
+    </title>
+    <script type="text/javascript" src="/./js/jquery.min.js"></script>
+    <script type="text/javascript" src="/./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/./custom//css/defaultChanges.css" />
+    
+</head>
+
+<body>
+    <!------ Navbar ------>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/login">LOGIN SYSTEM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <%- include('../partials/default.ejs') %>
+    </nav>
+
+    <!----- Body ----->
+    <%- body %>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/./custom/js/defaultPage.js"></script>
+</body>
+</html>

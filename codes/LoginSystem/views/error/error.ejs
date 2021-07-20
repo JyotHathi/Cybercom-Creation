@@ -1,0 +1,16 @@
+<!------ Card ----->
+<div class="card alert alert-danger card-medium">
+    <!----- Card Header ----->
+    <div class="card-header">
+        <h1 class="card-title text-center font-weight-bold">OOPS... Error Occured</h1>
+    </div>
+    <!----- Card Body  ---->
+    <div class="card-body">
+        <% if(error && error!=null) {%>
+            <h2>Error Code: <%= error.code %></h2>
+            <hr />
+            <h2 >Error Details:</h2> 
+            <h4><%- error.details %></h4>
+        <% }%>
+    </div>
+</div>

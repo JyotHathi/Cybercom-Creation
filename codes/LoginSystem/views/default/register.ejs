@@ -1,0 +1,56 @@
+<!--------- Card ----------->
+<div class="card card-sm2">
+    <!--------- Card Header ----------->
+    <div class="card-header">
+        <h1 class="card-title text-center font-weight-bold text-secondary">SignUp</h1>
+    </div>
+    <!--------- Card Body ----------->
+    <div class="card-body">
+        <!-- Form  -->
+        <form method="post" onsubmit="return onRegisterSubmit()" action="/register">
+            <!-- Error Summary (Client Side) -->
+            <div class="form-group alert alert-danger error-summary" id="registerErrorSummary"></div>
+            <!-- Validation Summary (Server Side) -->
+            <% if(errors !=null && errors.length!=0) { %>
+                <div class="alert alert-danger error-summary">
+                    <input type="hidden" id="Pre_Fill_Added_Data" />
+                    <% errors.forEach((error)=>{ %>
+                        <li>
+                            <%= error.msg %>
+                        </li>
+                        <% }) %>
+                </div>
+                <% } %>
+                    <!-- User Name -->
+                    <div class="form-group">
+                        <label class="text-primary">Username:</label>
+                        <input type="text" class="form-control" value="<%= data.UserName %>" name="UserName" id="UserName" required />
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="text-primary">Email:</label>
+                        <input type="email" class="form-control" value="<%= data.Email %>" name="Email" id="Email" required />
+                    </div>
+                    <!-- Contact Number -->
+                    <div class="form-group">
+                        <label class="text-primary">Contact Number:</label>
+                        <input type="phone" class="form-control"  value="<%= data.ContactNumber %>" name="ContactNumber" id="ContactNumber" required />
+                    </div>
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label class="text-primary">Password:</label>
+                        <input type="password" class="form-control" name="Password" id="Password" required />
+                    </div>
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label class="text-primary">Confirm Password:</label>
+                        <input type="password" class="form-control" name="ConfPassword" id="ConfPassword" required />
+                    </div>
+                    <br />
+                    <br />
+                    <!-- Submit Button -->
+                    <input type="submit" id="onSignUp" class="btn btn-lg btn-primary font-weight-bold"
+                        value="Sign Up" />
+        </form>
+    </div>
+</div>
